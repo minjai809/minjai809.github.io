@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 
 		<style>
-			/* Expertise 독립 원형 스타일 (메인과 통일) */
+			/* Expertise 독립 원형 스타일 */
 			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
 			.exp-circle-item { 
 				width: 250px; height: 250px; border-radius: 50%; 
@@ -28,6 +28,10 @@
 			}
 			.exp-circle-item:hover { border-color: #000; transform: translateY(-10px); background: #000; color: #fff; }
 			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
+			
+			/* Philosophy 텍스트 스타일 */
+			.philosophy-text { font-size: 1.8rem; line-height: 1.6; font-weight: 400; letter-spacing: -0.02em; }
+			@media (max-width: 768px) { .philosophy-text { font-size: 1.4rem; } }
 		</style>
 	</head>
 
@@ -122,8 +126,6 @@
 									<div class="text-lg tt-anim-fadeinup">
 										<p>I’m Minjai Jung, a Seoul-based Scenographer and Creative Technologist.</p>
 										<p>I believe great design is more than just aesthetics—it’s about strategy, usability, and creating meaningful connections between brands and their audiences.</p>
-										<p>With a keen eye for detail, a passion for innovation, and a user-centered approach, I collaborate with brands of all sizes to bring their vision to life.</p>
-										
 										<div class="tt-big-round-ptn margin-top-20">
 											<a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item">
 												<div class="tt-big-round-ptn-inner">Explore<br> My Work</div>
@@ -137,21 +139,57 @@
 
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
+							<div class="tt-row">
+								<div class="tt-col-xl-4 margin-bottom-60">
+									<div class="tt-heading tt-heading-xxlg">
+										<h3 class="tt-heading-subtitle tt-text-reveal">Biography</h3>
+										<h2 class="tt-heading-title tt-text-reveal">Education</h2>
+									</div>
+								</div>
+								<div class="tt-col-xl-1"></div>
+								<div class="tt-col-xl-7">
+									<div class="tt-accordion tt-ac-xlg tt-ac-counter tt-ac-borders">
+										<div class="tt-accordion-item tt-anim-fadeinup">
+											<div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University Name 01</h4><div class="tt-ac-head-subtitle">2018 - 2022</div></div></div></div>
+										</div>
+										<div class="tt-accordion-item tt-anim-fadeinup">
+											<div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University Name 02</h4><div class="tt-ac-head-subtitle">2015 - 2018</div></div></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tt-section padding-top-xlg-140 border-top">
+						<div class="tt-section-inner tt-wrap">
 							<div class="tt-heading tt-heading-xxxlg tt-heading-center">
 								<h3 class="tt-heading-subtitle tt-text-reveal">Core Focus</h3>
 								<h2 class="tt-heading-title tt-text-reveal">Expertise</h2>
 							</div>
-							
 							<div class="expertise-circles tt-anim-fadeinup">
-								<a href="expertise-scenography.html" class="exp-circle-item">
-									<div class="exp-circle-text">Immersive<br>Scenography</div>
-								</a>
-								<a href="expertise-interactive.html" class="exp-circle-item">
-									<div class="exp-circle-text">Interactive<br>Media Art</div>
-								</a>
-								<a href="expertise-tech.html" class="exp-circle-item">
-									<div class="exp-circle-text">Creative<br>Technology</div>
-								</a>
+								<a href="expertise-scenography.html" class="exp-circle-item"><div class="exp-circle-text">Immersive<br>Scenography</div></a>
+								<a href="expertise-interactive.html" class="exp-circle-item"><div class="exp-circle-text">Interactive<br>Media Art</div></a>
+								<a href="expertise-tech.html" class="exp-circle-item"><div class="exp-circle-text">Creative<br>Technology</div></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="tt-section padding-top-xlg-140 border-top">
+						<div class="tt-section-inner tt-wrap">
+							<div class="tt-row">
+								<div class="tt-col-xl-4">
+									<div class="tt-heading tt-heading-xxlg">
+										<h3 class="tt-heading-subtitle tt-text-reveal">Mindset</h3>
+										<h2 class="tt-heading-title tt-text-reveal">Work<br>Philosophy</h2>
+									</div>
+								</div>
+								<div class="tt-col-xl-1"></div>
+								<div class="tt-col-xl-7">
+									<div class="philosophy-text tt-anim-fadeinup">
+										<p>"Design is not just what it looks like and feels like. Design is how it works. I strive to create immersive experiences that leave a lasting impact through the fusion of technology and art. My goal is to bridge the gap between human emotion and digital precision."</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -162,12 +200,12 @@
 								<div class="tt-col-xl-8">
 									<div class="tt-heading tt-heading-xxxlg no-margin">
 										<h3 class="tt-heading-subtitle tt-text-reveal">Contact</h3>
-										<h2 class="tt-heading-title tt-text-reveal">Let's Work<br> Together</h2>
+										<h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2>
 									</div>
 								</div> 
 								<div class="tt-col-xl-4 tt-align-self-end tt-xl-column-reverse margin-top-40">
 									<div class="max-width-600 margin-bottom-10 tt-text-uppercase text-pretty tt-text-reveal">
-										Feeling good about a new project? Write me what's in your mind!
+										Feeling good about a new project? Let's connect!
 									</div>
 									<div class="tt-big-round-ptn margin-top-30">
 										<a href="contact.html" class="tt-btn tt-btn-outline tt-magnetic-item">
@@ -184,38 +222,15 @@
 				<footer id="tt-footer" class="border-top">
 					<div class="tt-footer-inner tt-wrap">
 						<div class="tt-row">
+							<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Back to Home</a></li></ul></div> 
+							<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About Me</a></li><li><a href="portfolio.html" class="tt-link">My Work</a></li></ul></div> 
 							<div class="tt-col-xl-3 tt-col-sm-6">
-								<div class="tt-footer-widget">
-									<h5 class="tt-footer-widget-heading">Home</h5>
-									<ul class="tt-footer-widget-list">
-										<li><a href="index.html" class="tt-link">Back to Home</a></li>
-									</ul> 
-								</div> 
-							</div> 
-							<div class="tt-col-xl-3 tt-col-sm-6">
-								<div class="tt-footer-widget">
-									<h5 class="tt-footer-widget-heading">Sitemap</h5>
-									<ul class="tt-footer-widget-list">
-										<li><a href="about-me.html" class="tt-link">About Me</a></li>
-										<li><a href="portfolio.html" class="tt-link">My Work</a></li>
-									</ul> 
-								</div> 
-							</div> 
-							<div class="tt-col-xl-3 tt-col-sm-6">
-								<div class="tt-footer-widget">
-									<h5 class="tt-footer-widget-heading">Contact</h5>
-									<ul class="tt-footer-widget-list">
-										<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">minjaiworks@gmail.com</a></li>
-										<li><a href="tel:+821071400389" class="tt-link">+82 10 7140 0389</a></li>
-										<li>
-											<div class="tt-social-buttons">
-												<ul>
-													<li><a href="https://www.instagram.com/min_jai_i" class="tt-magnetic-item" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-												</ul>
-											</div> 
-										</li>
-									</ul> 
-								</div> 
+								<h5 class="tt-footer-widget-heading">Contact</h5>
+								<ul class="tt-footer-widget-list">
+									<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">minjaiworks@gmail.com</a></li>
+									<li><a href="tel:+821071400389" class="tt-link">+82 10 7140 0389</a></li>
+									<li><div class="tt-social-buttons"><ul><li><a href="https://www.instagram.com/min_jai_i" class="tt-magnetic-item" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></li>
+								</ul> 
 							</div> 
 							<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end">
 								<div class="tt-footer-widget">
@@ -237,7 +252,8 @@
 					</div> 
 				</a>
 
-			</div> </main>
+			</div> 
+		</main>
 
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
 		<script src="assets/vendor/gsap/gsap.min.js"></script> 
@@ -249,6 +265,5 @@
 		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
 		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
-
 	</body>
 </html>
