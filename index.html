@@ -22,6 +22,13 @@
 			.mj-logo-wrap { text-decoration: none; color: currentColor; display: flex; align-items: center; font-family: 'Big Shoulders Display', sans-serif; line-height: 1; transition: all 0.3s ease; font-size: 1.8rem; font-weight: 800; }
 			.mj-logo-wrap span { border: 1.5px solid currentColor; padding: 2px 8px; margin-right: 10px; letter-spacing: 2px; }
 
+			/* Skill Bar (White/White) */
+			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
+			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
+			.skill-bar-inner { height: 100%; background: #ffffff !important; transition: width 1.5s ease-in-out; }
+
+			/* RGB Slider Background */
 			.ph-bg-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #000; }
 			.ph-bg-image { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; animation: phFadeInOut 15s infinite; }
 			.bg-img-1 { background-color: rgba(255, 0, 0, 0.2); animation-delay: 0s; }
@@ -34,10 +41,7 @@
 				43% { opacity: 0; }
 				100% { opacity: 0; }
 			}
-			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
-			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
-			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
-			.skill-bar-inner { height: 100%; background: #ffffff !important; transition: width 1.5s ease-in-out; }
+
 			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
 			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); text-decoration: none; color: inherit; position: relative; overflow: hidden; }
 			.exp-circle-item:hover { border-color: #000; transform: translateY(-10px); background: #000; color: #fff; }
@@ -81,30 +85,16 @@
 					<div class="tt-header-col tt-header-col-right">
 						<a href="contact.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item"><span data-hover="Contact">Contact</span></a>
 						<div class="tt-style-switch">
-							<div class="tt-style-switch-inner tt-magnetic-item">
-								<div class="tt-stsw-light"><i class="fas fa-sun"></i></div>
-								<div class="tt-stsw-dark"><i class="fas fa-moon"></i></div>
-							</div>
+							<div class="tt-style-switch-inner tt-magnetic-item"><div class="tt-stsw-light"><i class="fas fa-sun"></i></div><div class="tt-stsw-dark"><i class="fas fa-moon"></i></div></div>
 						</div>
 					</div>
 				</div>
 			</header>
 
 			<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
-				<div class="ph-bg-slider">
-					<div class="ph-bg-image bg-img-1"></div>
-					<div class="ph-bg-image bg-img-2"></div>
-					<div class="ph-bg-image bg-img-3"></div>
-				</div>
-				<div class="page-header-inner tt-wrap">
-					<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div></div></div>
-				</div>
-				<div class="tt-scroll-down">
-					<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
-						<div class="tt-scrd-icon"></div>
-						<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
-					</a>
-				</div>
+				<div class="ph-bg-slider"><div class="ph-bg-image bg-img-1"></div><div class="ph-bg-image bg-img-2"></div><div class="ph-bg-image bg-img-3"></div></div>
+				<div class="page-header-inner tt-wrap"><div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div></div></div></div>
+				<div class="tt-scroll-down"><a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item"><div class="tt-scrd-icon"></div><svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg></a></div>
 			</div>
 
 			<div id="tt-page-content">
@@ -204,21 +194,13 @@
 					<div class="tt-row">
 						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="#body" class="tt-link tt-scroll-to">Back to Top</a></li></ul></div> 
 						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About Me</a></li><li><a href="portfolio.html" class="tt-link">My Work</a></li></ul></div> 
-						<div class="tt-col-xl-3 tt-col-sm-6">
-							<h5 class="tt-footer-widget-heading">Contact</h5>
-							<ul class="tt-footer-widget-list">
-								<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">minjaiworks@gmail.com</a></li>
-								<li><a href="tel:+821071400389" class="tt-link">+82 10 7140 0389</a></li>
-								<li><div class="tt-social-buttons"><ul><li><a href="https://www.instagram.com/min_jai_i" class="tt-magnetic-item" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></li>
-							</ul> 
-						</div> 
-						<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end">
-							<div class="tt-footer-logo"><a href="index.html" class="mj-logo-wrap"><span>MJ</span> MINJAI JUNG</a></div>
-						</div> 
+						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list"><li><a href="mailto:minjaiworks@gmail.com" class="tt-link">minjaiworks@gmail.com</a></li><li><a href="tel:+821071400389" class="tt-link">+82 10 7140 0389</a></li></ul></div> 
+						<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end"><div class="tt-footer-logo"><a href="index.html" class="mj-logo-wrap"><span>MJ</span> MINJAI JUNG</a></div></div> 
 					</div> 
 				</div> 
 			</footer>
 		</main>
+
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
 		<script src="assets/vendor/gsap/gsap.min.js"></script> 
 		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
@@ -226,7 +208,6 @@
 		<script src="assets/vendor/lenis.min.js"></script> 
 		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
 		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
-		<script src="assets/vendor/isotope/packery-mode.pkgd.min.js"></script> 
 		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
 		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
