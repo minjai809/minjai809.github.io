@@ -32,6 +32,22 @@
 			/* Philosophy 텍스트 스타일 */
 			.philosophy-text { font-size: 1.8rem; line-height: 1.6; font-weight: 400; letter-spacing: -0.02em; }
 			@media (max-width: 768px) { .philosophy-text { font-size: 1.4rem; } }
+
+			/* Technical Skill 바 스타일 수정 (흰색 강제 적용) */
+			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
+			.skill-label { 
+				width: 180px; font-family: 'Poppins', sans-serif; 
+				font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; 
+			}
+			.skill-bar-outer { 
+				flex-grow: 1; height: 12px; 
+				border: 1px solid #ffffff !important; /* 흰색 테두리 강제 */
+				position: relative; background: transparent; 
+			}
+			.skill-bar-inner { 
+				height: 100%; background: #ffffff !important; /* 흰색 채움 강제 */
+				transition: width 1.5s ease-in-out; 
+			}
 		</style>
 	</head>
 
@@ -173,6 +189,34 @@
 								<a href="expertise-tech.html" class="exp-circle-item"><div class="exp-circle-text">Creative<br>Technology</div></a>
 							</div>
 						</div>
+					</div>
+
+					<div class="tt-section padding-top-xlg-140 border-top">
+						<div class="tt-section-inner tt-wrap max-width-1500">
+							<div class="tt-row">
+								<div class="tt-col-xl-4 margin-bottom-60">
+									<div class="tt-heading tt-heading-xxlg">
+										<h3 class="tt-heading-subtitle tt-text-reveal">What I Use</h3>
+										<h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2>
+									</div>
+								</div> 
+								<div class="tt-col-xl-1"></div>
+								<div class="tt-col-xl-7 tt-align-self-center">
+									<div class="skill-container tt-anim-fadeinup">
+										<div class="skill-label">Resolume Arena</div>
+										<div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 95%;"></div></div>
+									</div>
+									<div class="skill-container tt-anim-fadeinup">
+										<div class="skill-label">MadMapper</div>
+										<div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%;"></div></div>
+									</div>
+									<div class="skill-container tt-anim-fadeinup">
+										<div class="skill-label">Millumin</div>
+										<div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 85%;"></div></div>
+									</div>
+								</div> 
+							</div>
+						</div> 
 					</div>
 
 					<div class="tt-section padding-top-xlg-140 border-top">
