@@ -16,6 +16,23 @@
 		<link rel="stylesheet" href="assets/css/helper.css">
 		<link rel="stylesheet" href="assets/css/theme.css">
 		<link rel="stylesheet" href="assets/css/theme-light.css">
+
+		<style>
+			/* Project Archive Table Style */
+			.archive-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+			.archive-row { border-bottom: 1px solid #e2e2e2; transition: background 0.3s ease; }
+			.archive-row:hover { background: #f9f9f9; }
+			.archive-cell { padding: 25px 10px; font-size: 1rem; color: #111; }
+			.cell-year { width: 10%; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 1.2rem; }
+			.cell-title { width: 40%; font-weight: 600; text-transform: uppercase; }
+			.cell-client { width: 25%; color: #666; }
+			.cell-role { width: 25%; text-align: right; font-style: italic; color: #888; }
+
+			@media (max-width: 768px) {
+				.archive-cell { padding: 15px 5px; font-size: 0.85rem; }
+				.cell-client { display: none; } /* 모바일에서는 클라이언트 숨김 */
+			}
+		</style>
 	</head>
 
 	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
@@ -81,14 +98,10 @@
 							</div> 
 						</div> 
 					</div> 
-
 					<div class="tt-scroll-down">
 						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
 							<div class="tt-scrd-icon"></div>
-							<svg viewBox="0 0 500 500">
-								<defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs>
-								<text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text>
-							</svg>
+							<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
 						</a> 
 					</div>
 				</div>
@@ -100,151 +113,65 @@
 							<div id="portfolio-grid" class="pgi-hover">
 								<div class="tt-grid ttgr-layout-creative-1 ttgr-gap-4">
 									<div class="tt-grid-items-wrap isotope-items-wrap">
-
 										<div class="tt-grid-item isotope-item">
 											<div class="ttgr-item-inner">
 												<div class="portfolio-grid-item">
 													<a href="single-project-1.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-														<div class="pgi-image-holder">
-															<div class="pgi-image-inner tt-anim-zoomin">
-																<figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-1.jpg" loading="lazy" alt="image"></figure>
-															</div>
-														</div>
+														<div class="pgi-image-holder"><div class="pgi-image-inner tt-anim-zoomin"><figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-1.jpg" loading="lazy" alt="image"></figure></div></div>
 													</a>
-													<div class="pgi-caption">
-														<div class="pgi-caption-inner">
-															<h2 class="pgi-title"><a href="single-project-1.html">Project Title 01</a></h2>
-															<div class="pgi-categories-wrap"><div class="pgi-category">Category</div></div>
-														</div>
-													</div>
+													<div class="pgi-caption"><div class="pgi-caption-inner"><h2 class="pgi-title"><a href="single-project-1.html">Featured Project 01</a></h2><div class="pgi-categories-wrap"><div class="pgi-category">Scenography</div></div></div></div>
 												</div>
 											</div>
 										</div>
-
-										<div class="tt-grid-item isotope-item">
-											<div class="ttgr-item-inner">
-												<div class="portfolio-grid-item">
-													<a href="single-project-2.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-														<div class="pgi-image-holder">
-															<div class="pgi-image-inner tt-anim-zoomin">
-																<figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-2.jpg" loading="lazy" alt="image"></figure>
-															</div>
-														</div>
-													</a>
-													<div class="pgi-caption">
-														<div class="pgi-caption-inner">
-															<h2 class="pgi-title"><a href="single-project-2.html">Project Title 02</a></h2>
-															<div class="pgi-categories-wrap"><div class="pgi-category">Category</div></div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="tt-grid-item isotope-item">
-											<div class="ttgr-item-inner">
-												<div class="portfolio-grid-item">
-													<a href="single-project-3.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-														<div class="pgi-image-holder">
-															<div class="pgi-image-inner tt-anim-zoomin">
-																<figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-3.jpg" loading="lazy" alt="image"></figure>
-															</div>
-														</div>
-													</a>
-													<div class="pgi-caption">
-														<div class="pgi-caption-inner">
-															<h2 class="pgi-title"><a href="single-project-3.html">Project Title 03</a></h2>
-															<div class="pgi-categories-wrap"><div class="pgi-category">Category</div></div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-                                        <div class="tt-grid-item isotope-item">
-											<div class="ttgr-item-inner">
-												<div class="portfolio-grid-item">
-													<a href="single-project-4.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-														<div class="pgi-image-holder">
-															<div class="pgi-image-inner tt-anim-zoomin">
-																<figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-4.jpg" loading="lazy" alt="image"></figure>
-															</div>
-														</div>
-													</a>
-													<div class="pgi-caption">
-														<div class="pgi-caption-inner">
-															<h2 class="pgi-title"><a href="single-project-4.html">Project Title 04</a></h2>
-															<div class="pgi-categories-wrap"><div class="pgi-category">Category</div></div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-                                        <div class="tt-grid-item isotope-item">
-											<div class="ttgr-item-inner">
-												<div class="portfolio-grid-item">
-													<a href="single-project-5.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-														<div class="pgi-image-holder">
-															<div class="pgi-image-inner tt-anim-zoomin">
-																<figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-5.jpg" loading="lazy" alt="image"></figure>
-															</div>
-														</div>
-													</a>
-													<div class="pgi-caption">
-														<div class="pgi-caption-inner">
-															<h2 class="pgi-title"><a href="single-project-5.html">Project Title 05</a></h2>
-															<div class="pgi-categories-wrap"><div class="pgi-category">Category</div></div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-                                        <div class="tt-grid-item isotope-item">
-											<div class="ttgr-item-inner">
-												<div class="portfolio-grid-item">
-													<a href="single-project-6.html" class="pgi-image-wrap" data-cursor="View<br>Project">
-														<div class="pgi-image-holder">
-															<div class="pgi-image-inner tt-anim-zoomin">
-																<figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-6.jpg" loading="lazy" alt="image"></figure>
-															</div>
-														</div>
-													</a>
-													<div class="pgi-caption">
-														<div class="pgi-caption-inner">
-															<h2 class="pgi-title"><a href="single-project-6.html">Project Title 06</a></h2>
-															<div class="pgi-categories-wrap"><div class="pgi-category">Category</div></div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-									</div>
+                                        </div>
 								</div>
 							</div>
+						</div>
+					</div>
+
+					<div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150 border-top">
+						<div class="tt-section-inner tt-wrap">
+							<div class="tt-heading tt-heading-xxlg">
+								<h3 class="tt-heading-subtitle tt-text-reveal">History</h3>
+								<h2 class="tt-heading-title tt-text-reveal">Project Archive</h2>
+							</div>
+
+							<table class="archive-table tt-anim-fadeinup">
+								<tr class="archive-row">
+									<td class="archive-cell cell-year">2025</td>
+									<td class="archive-cell cell-title">Infinite Space Exhibition</td>
+									<td class="archive-cell cell-client">Seoul Museum of Art</td>
+									<td class="archive-cell cell-role">Lead Scenographer</td>
+								</tr>
+								<tr class="archive-row">
+									<td class="archive-cell cell-year">2024</td>
+									<td class="archive-cell cell-title">Digital Resonance Concert</td>
+									<td class="archive-cell cell-client">Lotte Concert Hall</td>
+									<td class="archive-cell cell-role">Media Technologist</td>
+								</tr>
+								<tr class="archive-row">
+									<td class="archive-cell cell-year">2024</td>
+									<td class="archive-cell cell-title">Interactive Stage "Flow"</td>
+									<td class="archive-cell cell-client">National Theater</td>
+									<td class="archive-cell cell-role">Visual Director</td>
+								</tr>
+								<tr class="archive-row">
+									<td class="archive-cell cell-year">2023</td>
+									<td class="archive-cell cell-title">Light & Shadow Project</td>
+									<td class="archive-cell cell-client">Private Collection</td>
+									<td class="archive-cell cell-role">Creative Developer</td>
+								</tr>
+							</table>
 						</div>
 					</div>
 
 					<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row margin-bottom-40">
-								<div class="tt-col-xl-8">
-									<div class="tt-heading tt-heading-xxxlg no-margin">
-										<h3 class="tt-heading-subtitle tt-text-reveal">Contact</h3>
-										<h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2>
-									</div>
-								</div> 
+								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h3 class="tt-heading-subtitle tt-text-reveal">Contact</h3><h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2></div></div> 
 								<div class="tt-col-xl-4 tt-align-self-end tt-xl-column-reverse margin-top-40">
-									<div class="max-width-600 margin-bottom-10 tt-text-uppercase text-pretty tt-text-reveal">
-										Looking for a unique visual experience? Let's connect!
-									</div>
-									<div class="tt-big-round-ptn margin-top-30">
-										<a href="contact.html" class="tt-btn tt-btn-outline tt-magnetic-item">
-											<span data-hover="Let's Connect!">Let's Connect!</span>
-										</a>
-									</div>
+									<div class="max-width-600 margin-bottom-10 tt-text-uppercase text-pretty tt-text-reveal">Looking for a unique visual experience? Let's connect!</div>
+									<div class="tt-big-round-ptn margin-top-30"><a href="contact.html" class="tt-btn tt-btn-outline tt-magnetic-item"><span data-hover="Let's Connect!">Let's Connect!</span></a></div>
 								</div> 
 							</div> 
 						</div> 
@@ -255,30 +182,15 @@
 				<footer id="tt-footer" class="border-top">
 					<div class="tt-footer-inner tt-wrap">
 						<div class="tt-row">
+							<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Back to Home</a></li></ul></div> 
+							<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About Me</a></li><li><a href="portfolio.html" class="tt-link">My Work</a></li></ul></div> 
 							<div class="tt-col-xl-3 tt-col-sm-6">
-								<div class="tt-footer-widget">
-									<h5 class="tt-footer-widget-heading">Home</h5>
-									<ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Back to Home</a></li></ul> 
-								</div> 
-							</div> 
-							<div class="tt-col-xl-3 tt-col-sm-6">
-								<div class="tt-footer-widget">
-									<h5 class="tt-footer-widget-heading">Sitemap</h5>
-									<ul class="tt-footer-widget-list">
-										<li><a href="about-me.html" class="tt-link">About Me</a></li>
-										<li><a href="portfolio.html" class="tt-link">My Work</a></li>
-									</ul> 
-								</div> 
-							</div> 
-							<div class="tt-col-xl-3 tt-col-sm-6">
-								<div class="tt-footer-widget">
-									<h5 class="tt-footer-widget-heading">Contact</h5>
-									<ul class="tt-footer-widget-list">
-										<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">minjaiworks@gmail.com</a></li>
-										<li><a href="tel:+821071400389" class="tt-link">+82 10 7140 0389</a></li>
-										<li><div class="tt-social-buttons"><ul><li><a href="https://www.instagram.com/min_jai_i" class="tt-magnetic-item" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></li>
-									</ul> 
-								</div> 
+								<h5 class="tt-footer-widget-heading">Contact</h5>
+								<ul class="tt-footer-widget-list">
+									<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">minjaiworks@gmail.com</a></li>
+									<li><a href="tel:+821071400389" class="tt-link">+82 10 7140 0389</a></li>
+									<li><div class="tt-social-buttons"><ul><li><a href="https://www.instagram.com/min_jai_i" class="tt-magnetic-item" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></li>
+								</ul> 
 							</div> 
 							<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end">
 								<div class="tt-footer-widget">
@@ -294,9 +206,7 @@
 
 				<a href="#" class="tt-scroll-to-top">
 					<div class="tt-stt-progress tt-magnetic-item">
-						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
-							<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
-						</svg>
+						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg>
 					</div> 
 				</a>
 
@@ -310,7 +220,8 @@
 		<script src="assets/vendor/lenis.min.js"></script> 
 		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
 		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
-		<script src="assets/vendor/isotope/packery-mode.pkgd.min.js"></script> <script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
+		<script src="assets/vendor/isotope/packery-mode.pkgd.min.js"></script> 
+		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
 		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
 	</body>
