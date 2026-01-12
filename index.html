@@ -18,7 +18,43 @@
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 
 		<style>
-			/* Expertise 독립 원형 스타일 */
+			/* 1. 배경 이미지 슬라이더 스타일 */
+			.ph-bg-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
+			.ph-bg-image { 
+				position: absolute; width: 100%; height: 100%; 
+				background-size: cover; background-position: center; 
+				opacity: 0; animation: phFadeInOut 15s infinite; 
+			}
+			/* 내일 이미지 경로를 아래에 넣으세요 */
+			.bg-img-1 { background-image: url('assets/img/portfolio/1920/portfolio-1.jpg'); animation-delay: 0s; }
+			.bg-img-2 { background-image: url('assets/img/portfolio/1920/portfolio-2.jpg'); animation-delay: 5s; }
+			.bg-img-3 { background-image: url('assets/img/portfolio/1920/portfolio-3.jpg'); animation-delay: 10s; }
+
+			@keyframes phFadeInOut {
+				0% { opacity: 0; transform: scale(1.1); }
+				10% { opacity: 0.4; transform: scale(1); }
+				33% { opacity: 0.4; }
+				43% { opacity: 0; }
+				100% { opacity: 0; }
+			}
+
+			/* 2. Technical Skill 바 스타일 수정 */
+			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
+			.skill-label { 
+				width: 180px; font-family: 'Poppins', sans-serif; 
+				font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; 
+			}
+			.skill-bar-outer { 
+				flex-grow: 1; height: 12px; 
+				border: 1px solid rgba(255, 255, 255, 0.8); /* 전체 테두리 흰색 */
+				position: relative; background: transparent; 
+			}
+			.skill-bar-inner { 
+				height: 100%; background: #fff; /* 채워진 곳 흰색 */
+				transition: width 1.5s ease-in-out; 
+			}
+
+			/* 3. Expertise 독립 원형 스타일 */
 			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
 			.exp-circle-item { 
 				width: 250px; height: 250px; border-radius: 50%; 
@@ -28,13 +64,6 @@
 			}
 			.exp-circle-item:hover { border-color: #000; transform: translateY(-10px); background: #000; color: #fff; }
 			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
-
-			/* Skill Bar 스타일 업데이트 */
-			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
-			.skill-label { width: 180px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-			.skill-bar-outer { flex-grow: 1; height: 4px; background: #e2e2e2; position: relative; }
-			.skill-bar-inner { height: 100%; background: #000; position: relative; transition: width 1.5s ease-in-out; }
-			.skill-bar-inner::after { content: ''; position: absolute; right: 0; top: -4px; width: 12px; height: 12px; background: #000; border-radius: 50%; }
 		</style>
 	</head>
 
@@ -88,6 +117,11 @@
 			</header>
 
 			<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
+				<div class="ph-bg-slider">
+					<div class="ph-bg-image bg-img-1"></div>
+					<div class="ph-bg-image bg-img-2"></div>
+					<div class="ph-bg-image bg-img-3"></div>
+				</div>
 				<div class="page-header-inner tt-wrap">
 					<div class="ph-caption">
 						<div class="ph-caption-inner">
@@ -148,7 +182,10 @@
 							<div class="tt-col-xl-7">
 								<div class="tt-accordion tt-ac-xlg tt-ac-counter tt-ac-borders">
 									<div class="tt-accordion-item tt-anim-fadeinup">
-										<div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University / Major Name</h4><div class="tt-ac-head-subtitle">2018 - 2022</div></div></div></div>
+										<div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University Name 01</h4><div class="tt-ac-head-subtitle">2018 - 2022</div></div></div></div>
+									</div>
+									<div class="tt-accordion-item tt-anim-fadeinup">
+										<div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University Name 02</h4><div class="tt-ac-head-subtitle">2015 - 2018</div></div></div></div>
 									</div>
 								</div>
 							</div>
