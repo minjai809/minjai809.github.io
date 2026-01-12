@@ -1,233 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Minjai Jung | Bio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"> 
-    <link rel="stylesheet" href="assets/vendor/fancybox/css/fancybox.css"> 
-    <link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css"> 
-    <link rel="stylesheet" href="assets/css/helper.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/css/theme-light.css">
+	<head>
+		<title>Minjai Jung | Bio</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet"> 
 
-    <style>
-        /* 포인트 컬러 네이비 적용 */
-        :root { --tt-main-color: #001f3f; }
-        .tt-btn.tt-btn-outline:hover, .ph-caption-title, .pcli-title:hover { color: #001f3f !important; }
-        .tt-scroll-down-inner:after { background-color: #001f3f !important; }
-        
-        /* 벤다이어그램 스타일 */
-        .venn-wrapper { position: relative; height: 500px; display: flex; justify-content: center; align-items: center; margin-top: 50px; }
-        .venn-circle { position: absolute; width: 280px; height: 280px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; color: #fff; font-weight: 600; font-size: 1.1rem; transition: all 0.4s ease; cursor: pointer; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); }
-        .circle-1 { background: rgba(0, 31, 63, 0.85); transform: translate(-60px, -40px); z-index: 1; }
-        .circle-2 { background: rgba(0, 51, 102, 0.85); transform: translate(60px, -40px); z-index: 2; }
-        .circle-3 { background: rgba(20, 20, 20, 0.9); transform: translate(0, 60px); z-index: 3; }
-        .venn-circle:hover { transform: scale(1.1) translate(var(--tw-translate-x), var(--tw-translate-y)); z-index: 10; background: #001f3f; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .venn-center { position: absolute; font-size: 0.9rem; font-weight: 800; color: #fff; z-index: 5; pointer-events: none; text-transform: uppercase; }
+		<link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"> 
+		<link rel="stylesheet" href="assets/vendor/fancybox/css/fancybox.css"> 
+		<link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css"> 
+		<link rel="stylesheet" href="assets/css/helper.css">
+		<link rel="stylesheet" href="assets/css/theme.css">
+		<link rel="stylesheet" href="assets/css/theme-light.css">
 
-        /* 테크니컬 스킬 바 디자인 */
-        .skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 25px; }
-        .skill-label { width: 150px; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
-        .skill-bar-outer { flex-grow: 1; height: 8px; background: #eee; position: relative; border-radius: 4px; overflow: hidden; }
-        .skill-bar-inner { height: 100%; background: #001f3f; border-radius: 4px; transition: width 1.5s ease-in-out; }
-    </style>
-</head>
+		<style>
+			/* Expertise 독립 원형 스타일 */
+			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
+			.exp-circle-item { 
+				width: 250px; height: 250px; border-radius: 50%; 
+				display: flex; justify-content: center; align-items: center; text-align: center;
+				border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+				text-decoration: none; color: inherit; position: relative; overflow: hidden;
+			}
+			.exp-circle-item:hover { border-color: #000; transform: translateY(-10px); background: #000; color: #fff; }
+			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
 
-<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
-    <main id="body-inner">
-        <div id="tt-page-transition">
-            <div class="tt-ptr-overlay-top tt-noise"></div>
-            <div class="tt-ptr-overlay-bottom tt-noise"></div>
-            <div class="tt-ptr-preloader">
-                <div class="tt-ptr-prel-content"><img src="assets/img/logo-light.png" class="tt-ptr-prel-image" alt="Logo"></div> 
-            </div> 
-        </div>
-        <div id="magic-cursor"><div id="ball"></div></div>
+			/* Skill Bar 스타일 업데이트 */
+			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
+			.skill-label { width: 180px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+			.skill-bar-outer { flex-grow: 1; height: 4px; background: #e2e2e2; position: relative; }
+			.skill-bar-inner { height: 100%; background: #000; position: relative; transition: width 1.5s ease-in-out; }
+			.skill-bar-inner::after { content: ''; position: absolute; right: 0; top: -4px; width: 12px; height: 12px; background: #000; border-radius: 50%; }
+		</style>
+	</head>
 
-        <header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
-            <div class="tt-header-inner tt-noise"> 
-                <div class="tt-header-col tt-header-col-left">
-                    <div class="tt-logo"> 
-                        <a href="index.html" class="tt-magnetic-item">
-                            <img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo">
-                            <img src="assets/img/logo-dark.png" class="tt-logo-dark" alt="Logo">
-                        </a>
-                    </div>
-                </div>
-                <div class="tt-header-col tt-header-col-center">
-                    <nav class="tt-main-menu tt-m-menu-center">
-                        <div class="tt-main-menu-holder">
-                            <div class="tt-main-menu-inner">
-                                <div class="tt-main-menu-content">
-                                    <ul class="tt-main-menu-list">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about-me.html">About</a></li>
-                                        <li><a href="portfolio.html">Work</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="tt-header-col tt-header-col-right">
-                    <a href="contact.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item"><span data-hover="Contact">Contact</span></a>
-                    <div class="tt-style-switch">
-                        <div class="tt-style-switch-inner tt-magnetic-item">
-                            <div class="tt-stsw-light"><i class="fas fa-sun"></i></div>
-                            <div class="tt-stsw-dark"><i class="fas fa-moon"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
+		<main id="body-inner">
 
-        <div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
-            <div class="page-header-inner tt-wrap">
-                <div class="ph-caption">
-                    <div class="ph-caption-inner">
-                        <h1 class="ph-caption-title">Minjai<br> Jung</h1>
-                        <div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div>
-                    </div>
-                </div>
-            </div>
-            <div class="page-header-inner ph-mask">
-                <div class="ph-mask-inner tt-wrap">
-                    <div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div></div></div>
-                </div>
-            </div>
-            <div class="tt-scroll-down">
-                <a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
-                    <div class="tt-scrd-icon"></div>
-                    <svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
-                </a>
-            </div>
-        </div>
+			<div id="tt-page-transition">
+				<div class="tt-ptr-overlay-top tt-noise"></div>
+				<div class="tt-ptr-overlay-bottom tt-noise"></div>
+				<div class="tt-ptr-preloader">
+					<div class="tt-ptr-prel-content"><img src="assets/img/logo-light.png" class="tt-ptr-prel-image" alt="Logo"></div> 
+				</div> 
+			</div>
+			<div id="magic-cursor"><div id="ball"></div></div>
 
-        <div id="tt-page-content">
+			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
+				<div class="tt-header-inner tt-noise"> 
+					<div class="tt-header-col tt-header-col-left">
+						<div class="tt-logo"> 
+							<a href="index.html" class="tt-magnetic-item">
+								<img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo">
+								<img src="assets/img/logo-dark.png" class="tt-logo-dark" alt="Logo">
+							</a>
+						</div>
+					</div>
+					<div class="tt-header-col tt-header-col-center">
+						<nav class="tt-main-menu tt-m-menu-center">
+							<div class="tt-main-menu-holder">
+								<div class="tt-main-menu-inner">
+									<div class="tt-main-menu-content">
+										<ul class="tt-main-menu-list">
+											<li><a href="index.html">Home</a></li>
+											<li><a href="about-me.html">About</a></li>
+											<li><a href="portfolio.html">Work</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="tt-header-col tt-header-col-right">
+						<a href="contact.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item"><span data-hover="Contact">Contact</span></a>
+						<div class="tt-style-switch">
+							<div class="tt-style-switch-inner tt-magnetic-item">
+								<div class="tt-stsw-light"><i class="fas fa-sun"></i></div>
+								<div class="tt-stsw-dark"><i class="fas fa-moon"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
 
-            <div class="tt-section padding-top-xlg-140 border-top">
-                <div class="tt-section-inner tt-wrap">
-                    <div class="tt-row">
-                        <div class="tt-col-xl-4 margin-bottom-60">
-                            <div class="tt-heading tt-heading-xxlg">
-                                <h3 class="tt-heading-subtitle tt-text-reveal">Biography</h3>
-                                <h2 class="tt-heading-title tt-text-reveal">Education</h2>
-                            </div>
-                        </div>
-                        <div class="tt-col-xl-1"></div>
-                        <div class="tt-col-xl-7">
-                            <div class="tt-accordion tt-ac-xlg tt-ac-counter tt-ac-borders">
-                                <div class="tt-accordion-item tt-anim-fadeinup">
-                                    <div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University / Major Name</h4><div class="tt-ac-head-subtitle">2018 - 2022</div></div></div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
+				<div class="page-header-inner tt-wrap">
+					<div class="ph-caption">
+						<div class="ph-caption-inner">
+							<h1 class="ph-caption-title">Minjai<br> Jung</h1>
+							<div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-header-inner ph-mask">
+					<div class="ph-mask-inner tt-wrap">
+						<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div></div></div>
+					</div>
+				</div>
+				<div class="tt-scroll-down">
+					<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
+						<div class="tt-scrd-icon"></div>
+						<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
+					</a>
+				</div>
+			</div>
 
-            <div class="tt-section padding-top-xlg-140 border-top">
-                <div class="tt-section-inner tt-wrap max-width-1500">
-                    <div class="tt-row">
-                        <div class="tt-col-xl-4 margin-bottom-60">
-                            <div class="tt-heading tt-heading-xxlg">
-                                <h3 class="tt-heading-subtitle tt-text-reveal">What I Use</h3>
-                                <h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2>
-                            </div>
-                        </div> 
-                        <div class="tt-col-xl-1"></div>
-                        <div class="tt-col-xl-7 tt-align-self-center">
-                            <div class="skill-container tt-anim-fadeinup">
-                                <div class="skill-label">Resolume Arena</div>
-                                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 95%;"></div></div>
-                            </div>
-                            <div class="skill-container tt-anim-fadeinup">
-                                <div class="skill-label">MadMapper</div>
-                                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%;"></div></div>
-                            </div>
-                            <div class="skill-container tt-anim-fadeinup">
-                                <div class="skill-label">Millumin</div>
-                                <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 85%;"></div></div>
-                            </div>
-                        </div> 
-                    </div>
-                </div> 
-            </div>
+			<div id="tt-page-content">
 
-            <div class="tt-section padding-top-xlg-140 border-top">
-                <div class="tt-section-inner tt-wrap">
-                    <div class="tt-heading tt-heading-xxxlg tt-heading-center">
-                        <h3 class="tt-heading-subtitle tt-text-reveal">Core Focus</h3>
-                        <h2 class="tt-heading-title tt-text-reveal">Expertise</h2>
-                    </div>
-                    
-                    <div class="venn-wrapper tt-anim-fadeinup">
-                        <a href="expertise-scenography.html" class="venn-circle circle-1">Immersive<br>Scenography</a>
-                        <a href="expertise-interactive.html" class="venn-circle circle-2">Interactive<br>Media Art</a>
-                        <a href="expertise-tech.html" class="venn-circle circle-3">Creative<br>Technology</a>
-                        <div class="venn-center">Minjai Jung</div>
-                    </div>
-                </div>
-            </div>
+				<div class="tt-section padding-top-xlg-140 padding-bottom-xlg-120 border-top">
+					<div class="tt-section-inner tt-wrap">
+						<div class="tt-row">
+							<div class="tt-col-lg-4">
+								<div class="tt-image ttv-portrait">
+									<img src="assets/img/portfolio/800/portfolio-1.jpg" class="tt-anim-zoomin" alt="Minjai Jung">
+								</div>
+								<div class="tt-text-uppercase margin-top-30 tt-text-reveal">
+									Scenographer & Creative Technologist<br> based in Seoul
+								</div>
+							</div>
+							<div class="tt-col-lg-1"></div>
+							<div class="tt-col-lg-7 tt-align-self-center">
+								<div class="text-xxlg font-500 tt-text-reveal">
+									I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations.
+								</div>
+								<a href="about-me.html" class="tt-btn tt-btn-outline margin-top-40 tt-magnetic-item tt-anim-fadeinup">
+									<span data-hover="More About Me">More About Me</span>
+								</a>
+							</div> 
+						</div>
+					</div> 
+				</div>
 
-            <div class="tt-section padding-top-xlg-140 border-top">
-                <div class="tt-section-inner tt-wrap">
-                    <div class="tt-row">
-                        <div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle tt-text-reveal">Work</h3><h2 class="tt-heading-title tt-text-reveal">Projects</h2></div></div> 
-                        <div class="tt-col-xl-4 tt-align-self-end margin-top-30"><div class="tt-big-round-ptn tt-anim-fadeinup"><a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">All<br> Projects</div></a></div></div> 
-                    </div>
-                </div> 
-            </div>
+				<div class="tt-section padding-top-xlg-140 border-top">
+					<div class="tt-section-inner tt-wrap">
+						<div class="tt-row">
+							<div class="tt-col-xl-4 margin-bottom-60">
+								<div class="tt-heading tt-heading-xxlg">
+									<h3 class="tt-heading-subtitle tt-text-reveal">Biography</h3>
+									<h2 class="tt-heading-title tt-text-reveal">Education</h2>
+								</div>
+							</div>
+							<div class="tt-col-xl-1"></div>
+							<div class="tt-col-xl-7">
+								<div class="tt-accordion tt-ac-xlg tt-ac-counter tt-ac-borders">
+									<div class="tt-accordion-item tt-anim-fadeinup">
+										<div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University / Major Name</h4><div class="tt-ac-head-subtitle">2018 - 2022</div></div></div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-            <div class="tt-section">
-                <div class="tt-section-inner max-width-2200">
-                    <div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover">
-                        <div class="pcli-inner">
-                            <a href="single-project-1.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 01</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
-                        </div> 
-                    </div> 
-                </div> 
-            </div>
+				<div class="tt-section padding-top-xlg-140 border-top">
+					<div class="tt-section-inner tt-wrap max-width-1500">
+						<div class="tt-row">
+							<div class="tt-col-xl-4 margin-bottom-60">
+								<div class="tt-heading tt-heading-xxlg">
+									<h3 class="tt-heading-subtitle tt-text-reveal">What I Use</h3>
+									<h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2>
+								</div>
+							</div> 
+							<div class="tt-col-xl-1"></div>
+							<div class="tt-col-xl-7 tt-align-self-center">
+								<div class="skill-container tt-anim-fadeinup">
+									<div class="skill-label">Resolume Arena</div>
+									<div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 95%;"></div></div>
+								</div>
+								<div class="skill-container tt-anim-fadeinup">
+									<div class="skill-label">MadMapper</div>
+									<div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%;"></div></div>
+								</div>
+								<div class="skill-container tt-anim-fadeinup">
+									<div class="skill-label">Millumin</div>
+									<div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 85%;"></div></div>
+								</div>
+							</div> 
+						</div>
+					</div> 
+				</div>
 
-            <div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120 border-top">
-                <div class="tt-section-inner tt-wrap">
-                    <div class="tt-row">
-                        <div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h3 class="tt-heading-subtitle tt-text-reveal">Contact</h3><h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2></div></div> 
-                        <div class="tt-col-xl-4 tt-align-self-end margin-top-40"><div class="tt-big-round-ptn tt-anim-fadeinup"><a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">Let's Connect!</div></a></div></div> 
-                    </div>
-                </div> 
-            </div>
-        </div> 
+				<div class="tt-section padding-top-xlg-140 border-top">
+					<div class="tt-section-inner tt-wrap">
+						<div class="tt-heading tt-heading-xxxlg tt-heading-center">
+							<h3 class="tt-heading-subtitle tt-text-reveal">Core Focus</h3>
+							<h2 class="tt-heading-title tt-text-reveal">Expertise</h2>
+						</div>
+						
+						<div class="expertise-circles tt-anim-fadeinup">
+							<a href="expertise-scenography.html" class="exp-circle-item">
+								<div class="exp-circle-text">Immersive<br>Scenography</div>
+							</a>
+							<a href="expertise-interactive.html" class="exp-circle-item">
+								<div class="exp-circle-text">Interactive<br>Media Art</div>
+							</a>
+							<a href="expertise-tech.html" class="exp-circle-item">
+								<div class="exp-circle-text">Creative<br>Technology</div>
+							</a>
+						</div>
+					</div>
+				</div>
 
-        <footer id="tt-footer" class="border-top">
-            <div class="tt-footer-inner tt-wrap">
-                <div class="tt-row">
-                    <div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="#body" class="tt-link tt-scroll-to">Back to Top</a></li></ul></div> 
-                    <div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About Me</a></li><li><a href="portfolio.html" class="tt-link">My Work</a></li></ul></div> 
-                    <div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list"><li><a href="mailto:minjaiworks@gmail.com" class="tt-link">minjaiworks@gmail.com</a></li><li><a href="tel:+821071400389" class="tt-link">+82 10 7140 0389</a></li><li><div class="tt-social-buttons"><ul><li><a href="https://www.instagram.com/min_jai_i" class="tt-magnetic-item" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></li></ul></div> 
-                    <div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end">
-                        <div class="tt-footer-logo"><a href="index.html" class="tt-magnetic-item"><img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo"></a></div>
-                    </div> 
-                </div> 
-            </div> 
-        </footer>
-    </main>
+				<div class="tt-section padding-top-xlg-140 border-top">
+					<div class="tt-section-inner tt-wrap">
+						<div class="tt-row">
+							<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle tt-text-reveal">Work</h3><h2 class="tt-heading-title tt-text-reveal">Projects</h2></div></div> 
+							<div class="tt-col-xl-4 tt-align-self-end margin-top-30"><div class="tt-big-round-ptn tt-anim-fadeinup"><a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">All<br> Projects</div></a></div></div> 
+						</div>
+					</div> 
+				</div>
 
-    <script src="assets/vendor/jquery/jquery.min.js"></script> 
-    <script src="assets/vendor/gsap/gsap.min.js"></script> 
-    <script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
-    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> 
-    <script src="assets/vendor/lenis.min.js"></script> 
-    <script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
-    <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
-    <script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
-    <script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
-    <script src="assets/js/theme.js"></script>
-</body>
+				<div class="tt-section">
+					<div class="tt-section-inner max-width-2200">
+						<div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover">
+							<div class="pcli-inner">
+								<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 01</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 02</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-3.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 03</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-4.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 04</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-5.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-5.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 05</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-6.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 06</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+							</div> 
+						</div> 
+					</div> 
+				</div>
+
+				<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120 border-top">
+					<div class="tt-section-inner tt-wrap">
+						<div class="tt-row">
+							<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h3 class="tt-heading-subtitle tt-text-reveal">Contact</h3><h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2></div></div> 
+							<div class="tt-col-xl-4 tt-align-self-end margin-top-40"><div class="tt-big-round-ptn tt-anim-fadeinup"><a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">Let's Connect!</div></a></div></div> 
+						</div>
+					</div> 
+				</div>
+			</div> 
+
+			<footer id="tt-footer" class="border-top">
+				<div class="tt-footer-inner tt-wrap">
+					<div class="tt-row">
+						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="#body" class="tt-link tt-scroll-to">Back to Top</a></li></ul></div> 
+						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About Me</a></li><li><a href="portfolio.html" class="tt-link">My Work</a></li></ul></div> 
+						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list"><li><a href="mailto:minjaiworks@gmail.com" class="tt-link">minjaiworks@gmail.com</a></li><li><a href="tel:+821071400389" class="tt-link">+82 10 7140 0389</a></li><li><div class="tt-social-buttons"><ul><li><a href="https://www.instagram.com/min_jai_i" class="tt-magnetic-item" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></li></ul></div> 
+						<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end">
+							<div class="tt-footer-logo"><a href="index.html" class="tt-magnetic-item"><img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo"></a></div>
+						</div> 
+					</div> 
+				</div> 
+			</footer>
+		</main>
+
+		<script src="assets/vendor/jquery/jquery.min.js"></script> 
+		<script src="assets/vendor/gsap/gsap.min.js"></script> 
+		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
+		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> 
+		<script src="assets/vendor/lenis.min.js"></script> 
+		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
+		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
+		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
+		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
+		<script src="assets/js/theme.js"></script>
+	</body>
 </html>
