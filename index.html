@@ -17,9 +17,9 @@
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			/* 비정형 MJ 로고 스타일 */
+			/* 비정형 MJ 로고 (텍스트 중앙 정렬) */
 			.mj-logo-blob {
-				display: flex;
+				display: inline-flex;
 				align-items: center;
 				justify-content: center;
 				width: 65px;
@@ -30,21 +30,22 @@
 				font-weight: 800;
 				color: #ffffff !important;
 				text-decoration: none;
-				/* 비정형 원 형태 및 애니메이션 */
 				border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
 				animation: blob-morph 8s infinite alternate;
 				transition: all 0.5s ease;
+				text-align: center;
 			}
 			.mj-logo-blob span {
-				display: inline-block;
-				transform: rotate(-5deg) translate(-1px, 1px); /* 글자도 비정형적으로 배치 */
+				display: block;
+				line-height: 1;
+				margin-top: 2px; /* 시각적 중앙 보정 */
 			}
 			@keyframes blob-morph {
 				0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
 				100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; }
 			}
 
-			/* Skill Bar (White) */
+			/* 스킬 바 (화이트) */
 			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
 			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
@@ -55,9 +56,9 @@
 			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); color: inherit; position: relative; overflow: hidden; cursor: default; }
 			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
 
-			/* Footer Centering */
+			/* Footer Layout */
 			.tt-footer-column-wrap { text-align: center; }
-			.tt-footer-widget-heading { margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; }
+			.tt-footer-widget-heading { font-size: 1.2rem !important; margin-bottom: 25px; font-weight: 600; }
 		</style>
 	</head>
 
@@ -66,15 +67,15 @@
 			<div id="tt-page-transition">
 				<div class="tt-ptr-overlay-top tt-noise"></div>
 				<div class="tt-ptr-overlay-bottom tt-noise"></div>
-				<div class="tt-ptr-preloader"><div class="tt-ptr-prel-content"><div class="mj-logo-blob" style="width: 100px; height: 100px; font-size: 2.5rem;"><span>MJ</span></div></div></div> 
+				<div class="tt-ptr-preloader">
+					<div class="tt-ptr-prel-content"><div class="mj-logo-blob" style="width: 100px; height: 100px; font-size: 2.5rem;"><span>MJ</span></div></div> 
+				</div> 
 			</div>
 			<div id="magic-cursor"><div id="ball"></div></div>
 
 			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
 				<div class="tt-header-inner tt-noise"> 
-					<div class="tt-header-col tt-header-col-left">
-						<div class="tt-logo"><a href="index.html" class="mj-logo-blob tt-magnetic-item"><span>MJ</span></a></div>
-					</div>
+					<div class="tt-header-col tt-header-col-left"><div class="tt-logo"><a href="index.html" class="mj-logo-blob tt-magnetic-item"><span>MJ</span></a></div></div>
 					<div class="tt-header-col tt-header-col-center">
 						<nav class="tt-main-menu tt-m-menu-center">
 							<div class="tt-main-menu-holder">
@@ -92,7 +93,7 @@
 					</div>
 					<div class="tt-header-col tt-header-col-right">
 						<a href="contact.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item"><span data-hover="Contact">Contact</span></a>
-						</div>
+					</div>
 				</div>
 			</header>
 
@@ -106,7 +107,16 @@
 				<div class="page-header-inner ph-mask">
 					<div class="ph-mask-inner tt-wrap"><div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div></div></div></div>
 				</div>
-				<div class="tt-scroll-down"><a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item"><div class="tt-scrd-icon"></div></a></div>
+				
+				<div class="tt-scroll-down">
+					<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
+						<div class="tt-scrd-icon"></div>
+						<svg viewBox="0 0 500 500">
+							<defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs>
+							<text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text>
+						</svg>
+					</a>
+				</div>
 			</div>
 
 			<div id="tt-page-content">
