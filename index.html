@@ -18,9 +18,9 @@
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 
 		<style>
-			/* MJ Logo Style (스타일 1: Architectural Frame) */
-			.mj-logo-wrap { text-decoration: none; color: currentColor; display: flex; align-items: center; font-family: 'Big Shoulders Display', sans-serif; line-height: 1; transition: all 0.3s ease; font-size: 1.8rem; font-weight: 800; }
-			.mj-logo-wrap span { border: 1.5px solid currentColor; padding: 2px 8px; margin-right: 10px; letter-spacing: 2px; }
+			/* MJ Logo Style (White Only) */
+			.mj-logo-wrap { text-decoration: none; color: #ffffff !important; display: flex; align-items: center; font-family: 'Big Shoulders Display', sans-serif; line-height: 1; transition: all 0.3s ease; font-size: 1.8rem; font-weight: 800; }
+			.mj-logo-wrap span { border: 1.5px solid #ffffff !important; padding: 2px 8px; margin-right: 10px; letter-spacing: 2px; }
 
 			/* Skill Bar Style (White Gauges) */
 			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
@@ -36,7 +36,7 @@
 			.bg-img-3 { background-color: rgba(0, 0, 255, 0.2); animation-delay: 10s; }
 			@keyframes phFadeInOut { 0% { opacity: 0; transform: scale(1.1); } 10% { opacity: 1; transform: scale(1); } 33% { opacity: 1; } 43% { opacity: 0; } 100% { opacity: 0; } }
 
-			/* Philosophy (Expertise) Circles - No Link Version */
+			/* Philosophy Circles */
 			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
 			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); color: inherit; position: relative; overflow: hidden; cursor: default; }
 			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
@@ -81,9 +81,27 @@
 
 			<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
 				<div class="ph-bg-slider"><div class="ph-bg-image bg-img-1"></div><div class="ph-bg-image bg-img-2"></div><div class="ph-bg-image bg-img-3"></div></div>
+				
 				<div class="page-header-inner tt-wrap">
-					<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title tt-text-reveal">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700 tt-text-reveal">Scenographer & Creative Technologist</div></div></div>
+					<div class="ph-caption">
+						<div class="ph-caption-inner">
+							<h1 class="ph-caption-title tt-text-reveal">Minjai<br> Jung</h1>
+							<div class="ph-caption-description max-width-700 tt-text-reveal">Scenographer & Creative Technologist</div>
+						</div>
+					</div>
 				</div>
+
+				<div class="page-header-inner ph-mask">
+					<div class="ph-mask-inner tt-wrap">
+						<div class="ph-caption">
+							<div class="ph-caption-inner">
+								<h1 class="ph-caption-title">Minjai<br> Jung</h1>
+								<div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="tt-scroll-down">
 					<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
 						<div class="tt-scrd-icon"></div>
@@ -173,12 +191,7 @@
 			<footer id="tt-footer" class="border-top">
 				<div class="tt-footer-inner tt-wrap">
 					<div class="tt-row">
-						<div class="tt-col-xl-3 tt-col-sm-6">
-							<h5 class="tt-footer-widget-heading">Home</h5>
-							<ul class="tt-footer-widget-list">
-								<li><a href="index.html" class="tt-link">Home</a></li>
-							</ul>
-						</div> 
+						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul></div> 
 						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About Me</a></li><li><a href="portfolio.html" class="tt-link">My Work</a></li></ul></div> 
 						<div class="tt-col-xl-3 tt-col-sm-6">
 							<h5 class="tt-footer-widget-heading">Contact</h5>
@@ -188,8 +201,7 @@
 								<li><div class="tt-social-buttons"><ul><li><a href="https://www.instagram.com/min_jai_i" class="tt-magnetic-item" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></li>
 							</ul> 
 						</div> 
-						<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end">
-							</div> 
+						<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end"></div> 
 					</div> 
 				</div> 
 			</footer>
