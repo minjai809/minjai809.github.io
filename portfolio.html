@@ -17,8 +17,8 @@
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			.mj-logo-blob { display: flex; align-items: center; justify-content: center; width: 65px; height: 65px; border: 1.5px solid #ffffff; font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 800; color: #ffffff !important; text-decoration: none; border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; animation: blob-morph 8s infinite alternate; transition: all 0.5s ease; }
-			.mj-logo-blob span { display: inline-block; transform: rotate(-5deg) translate(-1px, 1px); }
+			.mj-logo-blob { display: inline-flex; align-items: center; justify-content: center; width: 65px; height: 65px; border: 1.5px solid #ffffff; font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 800; color: #ffffff !important; text-decoration: none; border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; animation: blob-morph 8s infinite alternate; transition: all 0.5s ease; text-align: center; }
+			.mj-logo-blob span { display: block; line-height: 1; margin-top: 2px; }
 			@keyframes blob-morph { 0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; } 100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; } }
 			
 			.archive-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
@@ -28,6 +28,7 @@
 			.cell-year { width: 15%; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; }
 			
 			.tt-footer-column-wrap { text-align: center; }
+			.tt-footer-widget-heading { font-size: 1.2rem !important; margin-bottom: 25px; font-weight: 600; }
 		</style>
 	</head>
 
@@ -54,6 +55,15 @@
 			<div id="tt-content-wrap">
 				<div id="page-header" class="ph-full ph-full-m ph-cap-xxxxlg ph-center ph-image-parallax ph-caption-parallax">
 					<div class="page-header-inner tt-wrap"><div class="ph-caption"><h1 class="ph-caption-title tt-text-reveal">Projects</h1></div></div> 
+					<div class="tt-scroll-down">
+						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
+							<div class="tt-scrd-icon"></div>
+							<svg viewBox="0 0 500 500">
+								<defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs>
+								<text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text>
+							</svg>
+						</a>
+					</div>
 				</div>
 
 				<div id="tt-page-content">
