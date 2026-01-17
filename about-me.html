@@ -17,26 +17,78 @@
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			.mj-logo-blob { display: inline-flex; align-items: center; justify-content: center; width: 65px; height: 65px; border: 1.5px solid #ffffff; font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 800; color: #ffffff !important; text-decoration: none; border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; animation: blob-morph 8s infinite alternate; transition: all 0.5s ease; text-align: center; }
-			.mj-logo-blob span { display: block; line-height: 1; margin-top: 2px; }
-			@keyframes blob-morph { 0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; } 100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; } }
-			
+			/* 1. 비정형 MJ 로고 (Home과 동일하게 세로축 보정) */
+			.mj-logo-blob {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 65px;
+				height: 65px;
+				border: 1.5px solid #ffffff;
+				font-family: 'Big Shoulders Display', sans-serif;
+				font-size: 1.6rem;
+				font-weight: 800;
+				color: #ffffff !important;
+				text-decoration: none;
+				border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+				animation: blob-morph 8s infinite alternate;
+				transition: all 0.5s ease;
+				text-align: center;
+			}
+			.mj-logo-blob span {
+				display: block;
+				line-height: 1;
+				transform: translateY(4px); 
+			}
+			@keyframes blob-morph {
+				0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+				100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; }
+			}
+
+			/* 2. Page Header Mask (Revealing White Background) */
+			.ph-mask { background-color: #ffffff; color: #000000; }
+
+			/* 3. Skill Bar (White) */
 			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
 			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
 			.skill-bar-inner { height: 100%; background: #ffffff !important; transition: width 1.5s ease-in-out; }
 
+			/* 4. Philosophy Circles (No Link) */
 			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
 			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); color: inherit; position: relative; overflow: hidden; cursor: default; }
 			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
-			
+
+			/* 5. Philosophy Text Style */
+			.philosophy-text { font-size: 1.8rem; line-height: 1.6; font-weight: 400; letter-spacing: -0.02em; }
+			@media (max-width: 768px) { .philosophy-text { font-size: 1.4rem; } }
+
+			/* 6. Footer Styling (Index와 동일하게 대형화) */
 			.tt-footer-column-wrap { text-align: center; }
-			.tt-footer-widget-heading { font-size: 1.2rem !important; margin-bottom: 25px; font-weight: 600; }
+			.tt-footer-widget-heading { 
+				font-size: 3.2rem !important; 
+				margin-bottom: 30px; 
+				font-weight: 800; 
+				letter-spacing: -1px; 
+				color: #fff;
+				font-family: 'Big Shoulders Display', sans-serif;
+				text-transform: uppercase;
+			}
+			.tt-footer-widget-list li { margin-bottom: 10px; }
+			.tt-footer-widget-list li a { font-size: 1.1rem; opacity: 0.7; transition: opacity 0.3s ease; }
+			.tt-footer-widget-list li a:hover { opacity: 1; }
 		</style>
 	</head>
 
 	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll tt-style-dark">
 		<main id="body-inner">
+			<div id="tt-page-transition">
+				<div class="tt-ptr-overlay-top tt-noise"></div>
+				<div class="tt-ptr-overlay-bottom tt-noise"></div>
+				<div class="tt-ptr-preloader"><div class="tt-ptr-prel-content"><div class="mj-logo-blob" style="width: 100px; height: 100px; font-size: 2.5rem;"><span>MJ</span></div></div></div> 
+			</div>
+			<div id="magic-cursor"><div id="ball"></div></div>
+
 			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
 				<div class="tt-header-inner tt-noise"> 
 					<div class="tt-header-col tt-header-col-left"><div class="tt-logo"><a href="index.html" class="mj-logo-blob tt-magnetic-item"><span>MJ</span></a></div></div>
@@ -57,23 +109,46 @@
 
 			<div id="tt-content-wrap">
 				<div id="page-header" class="ph-full ph-full-m ph-cap-xxxxlg ph-center ph-image-parallax ph-caption-parallax">
-					<div class="page-header-inner tt-wrap"><div class="ph-caption"><h1 class="ph-caption-title tt-text-reveal">About Me</h1></div></div> 
+					<div class="page-header-inner tt-wrap">
+						<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title tt-text-reveal">About Me</h1></div></div> 
+					</div> 
+					<div class="page-header-inner ph-mask">
+						<div class="ph-mask-inner tt-wrap">
+							<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">About Me</h1></div></div>
+						</div>
+					</div>
 					<div class="tt-scroll-down">
 						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
 							<div class="tt-scrd-icon"></div>
-							<svg viewBox="0 0 500 500">
-								<defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs>
-								<text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text>
-							</svg>
+							<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
 						</a>
 					</div>
 				</div>
 
 				<div id="tt-page-content">
+					<div class="tt-section no-padding-bottom padding-bottom-xlg-40 border-top">
+						<div class="tt-section-inner tt-wrap">
+							<div class="tt-row tt-lg-row-reverse">
+								<div class="tt-col-lg-6 margin-bottom-20"><div class="tt-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" class="tt-anim-zoomin" alt="Minjai Jung"></div></div>
+								<div class="tt-col-lg-1"></div>
+								<div class="tt-col-lg-5">
+									<h2 class="tt-font-alter tt-anim-fadeinup">Hello!</h2>
+									<div class="text-lg tt-anim-fadeinup">
+										<p>I’m Minjai Jung, a Seoul-based Scenographer and Creative Technologist.</p>
+										<p>I believe great design is more than just aesthetics—it’s about strategy, usability, and creating meaningful connections between brands and their audiences.</p>
+										<div class="tt-btn-stack margin-top-30">
+											<a href="portfolio.html" class="tt-btn tt-btn-outline tt-magnetic-item"><span data-hover="Explore My Work">Explore My Work</span></a>
+										</div>
+									</div>
+								</div> 
+							</div> 
+						</div> 
+					</div>
+
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap max-width-1500">
 							<div class="tt-row">
-								<div class="tt-col-xl-4 margin-bottom-60"><h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2></div> 
+								<div class="tt-col-xl-4 margin-bottom-60"><div class="tt-heading tt-heading-xxlg"><h3 class="tt-heading-subtitle tt-text-reveal">What I Use</h3><h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2></div></div> 
 								<div class="tt-col-xl-1"></div>
 								<div class="tt-col-xl-7 tt-align-self-center">
 									<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Media server</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 80%;"></div></div></div>
@@ -86,7 +161,7 @@
 
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-heading tt-heading-xxxlg tt-heading-center"><h2 class="tt-heading-title tt-text-reveal">Philosophy</h2></div>
+							<div class="tt-heading tt-heading-xxxlg tt-heading-center"><h3 class="tt-heading-subtitle tt-text-reveal">Core Vision</h3><h2 class="tt-heading-title tt-text-reveal">Philosophy</h2></div>
 							<div class="expertise-circles tt-anim-fadeinup">
 								<div class="exp-circle-item"><div class="exp-circle-text">Technology</div></div>
 								<div class="exp-circle-item"><div class="exp-circle-text">Interactive</div></div>
@@ -98,9 +173,13 @@
 					<div class="tt-section padding-top-xlg-140 border-top padding-bottom-xlg-150">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
-								<div class="tt-col-xl-4"><h2 class="tt-heading-title tt-text-reveal">Work Philosophy</h2></div>
+								<div class="tt-col-xl-4"><div class="tt-heading tt-heading-xxlg"><h3 class="tt-heading-subtitle tt-text-reveal">Mindset</h3><h2 class="tt-heading-title tt-text-reveal">Work Philosophy</h2></div></div>
 								<div class="tt-col-xl-1"></div>
-								<div class="tt-col-xl-7"><div class="philosophy-text tt-anim-fadeinup"><p>"Design is how it works. My goal is to bridge the gap between human emotion and digital precision."</p></div></div>
+								<div class="tt-col-xl-7">
+									<div class="philosophy-text tt-anim-fadeinup">
+										<p>"Design is not just what it looks like and feels like. Design is how it works. I strive to create immersive experiences that leave a lasting impact through the fusion of technology and art. My goal is to bridge the gap between human emotion and digital precision."</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -109,18 +188,36 @@
 				<footer id="tt-footer" class="border-top">
 					<div class="tt-footer-inner tt-wrap">
 						<div class="tt-row justify-content-center">
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Index</a></li></ul></div> 
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About</a></li><li><a href="portfolio.html" class="tt-link">Work</a></li></ul></div> 
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list"><li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li></ul></div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
+								<h5 class="tt-footer-widget-heading">Home</h5>
+								<ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul>
+							</div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
+								<h5 class="tt-footer-widget-heading">Sitemap</h5>
+								<ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About</a></li><li><a href="portfolio.html" class="tt-link">Work</a></li></ul>
+							</div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
+								<h5 class="tt-footer-widget-heading">Contact</h5>
+								<ul class="tt-footer-widget-list">
+									<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li>
+									<li><a href="https://www.instagram.com/min_jai_i" class="tt-link" target="_blank">Instagram</a></li>
+								</ul> 
+							</div> 
 						</div> 
 					</div> 
 				</footer>
 			</div> 
 		</main>
+
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
 		<script src="assets/vendor/gsap/gsap.min.js"></script> 
+		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
 		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> 
 		<script src="assets/vendor/lenis.min.js"></script> 
+		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
+		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
+		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
+		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
 	</body>
 </html>
