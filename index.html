@@ -18,25 +18,27 @@
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 
 		<style>
+			/* MJ Logo Style (스타일 1: Architectural Frame) */
+			.mj-logo-wrap { text-decoration: none; color: currentColor; display: flex; align-items: center; font-family: 'Big Shoulders Display', sans-serif; line-height: 1; transition: all 0.3s ease; font-size: 1.8rem; font-weight: 800; }
+			.mj-logo-wrap span { border: 1.5px solid currentColor; padding: 2px 8px; margin-right: 10px; letter-spacing: 2px; }
+
+			/* Skill Bar Style (White Gauges) */
+			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
+			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
+			.skill-bar-inner { height: 100%; background: #ffffff !important; transition: width 1.5s ease-in-out; }
+
+			/* Background RGB Slider */
 			.ph-bg-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #000; }
 			.ph-bg-image { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; animation: phFadeInOut 15s infinite; }
 			.bg-img-1 { background-color: rgba(255, 0, 0, 0.2); animation-delay: 0s; }
 			.bg-img-2 { background-color: rgba(0, 255, 0, 0.2); animation-delay: 5s; }
 			.bg-img-3 { background-color: rgba(0, 0, 255, 0.2); animation-delay: 10s; }
-			@keyframes phFadeInOut {
-				0% { opacity: 0; transform: scale(1.1); }
-				10% { opacity: 1; transform: scale(1); }
-				33% { opacity: 1; }
-				43% { opacity: 0; }
-				100% { opacity: 0; }
-			}
-			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
-			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
-			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
-			.skill-bar-inner { height: 100%; background: #ffffff !important; transition: width 1.5s ease-in-out; }
+			@keyframes phFadeInOut { 0% { opacity: 0; transform: scale(1.1); } 10% { opacity: 1; transform: scale(1); } 33% { opacity: 1; } 43% { opacity: 0; } 100% { opacity: 0; } }
+
+			/* Philosophy (Expertise) Circles - No Link Version */
 			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
-			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); text-decoration: none; color: inherit; position: relative; overflow: hidden; }
-			.exp-circle-item:hover { border-color: #000; transform: translateY(-10px); background: #000; color: #fff; }
+			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); color: inherit; position: relative; overflow: hidden; cursor: default; }
 			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
 		</style>
 	</head>
@@ -46,21 +48,14 @@
 			<div id="tt-page-transition">
 				<div class="tt-ptr-overlay-top tt-noise"></div>
 				<div class="tt-ptr-overlay-bottom tt-noise"></div>
-				<div class="tt-ptr-preloader">
-					<div class="tt-ptr-prel-content"><img src="assets/img/logo-light.png" class="tt-ptr-prel-image" alt="Logo"></div> 
-				</div> 
+				<div class="tt-ptr-preloader"><div class="tt-ptr-prel-content"><img src="assets/img/logo-light.png" class="tt-ptr-prel-image" alt="Logo"></div></div> 
 			</div>
 			<div id="magic-cursor"><div id="ball"></div></div>
 
 			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
 				<div class="tt-header-inner tt-noise"> 
 					<div class="tt-header-col tt-header-col-left">
-						<div class="tt-logo"> 
-							<a href="index.html" class="tt-magnetic-item">
-								<img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo">
-								<img src="assets/img/logo-dark.png" class="tt-logo-dark" alt="Logo">
-							</a>
-						</div>
+						<div class="tt-logo"><a href="index.html" class="mj-logo-wrap tt-magnetic-item"><span>MJ</span> MINJAI JUNG</a></div>
 					</div>
 					<div class="tt-header-col tt-header-col-center">
 						<nav class="tt-main-menu tt-m-menu-center">
@@ -79,34 +74,15 @@
 					</div>
 					<div class="tt-header-col tt-header-col-right">
 						<a href="contact.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item"><span data-hover="Contact">Contact</span></a>
-						<div class="tt-style-switch">
-							<div class="tt-style-switch-inner tt-magnetic-item">
-								<div class="tt-stsw-light"><i class="fas fa-sun"></i></div>
-								<div class="tt-stsw-dark"><i class="fas fa-moon"></i></div>
-							</div>
-						</div>
+						<div class="tt-style-switch"><div class="tt-style-switch-inner tt-magnetic-item"><div class="tt-stsw-light"><i class="fas fa-sun"></i></div><div class="tt-stsw-dark"><i class="fas fa-moon"></i></div></div></div>
 					</div>
 				</div>
 			</header>
 
 			<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
-				<div class="ph-bg-slider">
-					<div class="ph-bg-image bg-img-1"></div>
-					<div class="ph-bg-image bg-img-2"></div>
-					<div class="ph-bg-image bg-img-3"></div>
-				</div>
+				<div class="ph-bg-slider"><div class="ph-bg-image bg-img-1"></div><div class="ph-bg-image bg-img-2"></div><div class="ph-bg-image bg-img-3"></div></div>
 				<div class="page-header-inner tt-wrap">
-					<div class="ph-caption">
-						<div class="ph-caption-inner">
-							<h1 class="ph-caption-title">Minjai<br> Jung</h1>
-							<div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div>
-						</div>
-					</div>
-				</div>
-				<div class="page-header-inner ph-mask">
-					<div class="ph-mask-inner tt-wrap">
-						<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div></div></div>
-					</div>
+					<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title tt-text-reveal">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700 tt-text-reveal">Scenographer & Creative Technologist</div></div></div>
 				</div>
 				<div class="tt-scroll-down">
 					<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
@@ -134,43 +110,14 @@
 				</div>
 
 				<div class="tt-section padding-top-xlg-140 border-top">
-					<div class="tt-section-inner tt-wrap">
-						<div class="tt-row">
-							<div class="tt-col-xl-4 margin-bottom-60">
-								<div class="tt-heading tt-heading-xxlg">
-									<h3 class="tt-heading-subtitle tt-text-reveal">Biography</h3>
-									<h2 class="tt-heading-title tt-text-reveal">Education</h2>
-								</div>
-							</div>
-							<div class="tt-col-xl-1"></div>
-							<div class="tt-col-xl-7">
-								<div class="tt-accordion tt-ac-xlg tt-ac-counter tt-ac-borders">
-									<div class="tt-accordion-item tt-anim-fadeinup">
-										<div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University Name 01</h4><div class="tt-ac-head-subtitle">2018 - 2022</div></div></div></div>
-									</div>
-									<div class="tt-accordion-item tt-anim-fadeinup">
-										<div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University Name 02</h4><div class="tt-ac-head-subtitle">2015 - 2018</div></div></div></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="tt-section padding-top-xlg-140 border-top">
 					<div class="tt-section-inner tt-wrap max-width-1500">
 						<div class="tt-row">
-							<div class="tt-col-xl-4 margin-bottom-60">
-								<div class="tt-heading tt-heading-xxlg">
-									<h3 class="tt-heading-subtitle tt-text-reveal">What I Use</h3>
-									<h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2>
-								</div>
-							</div> 
+							<div class="tt-col-xl-4 margin-bottom-60"><div class="tt-heading tt-heading-xxlg"><h3 class="tt-heading-subtitle tt-text-reveal">What I Use</h3><h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2></div></div> 
 							<div class="tt-col-xl-1"></div>
 							<div class="tt-col-xl-7 tt-align-self-center">
-								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Resolume Arena</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 95%;"></div></div></div>
-								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">MadMapper</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%;"></div></div></div>
-								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Millumin</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 85%;"></div></div></div>
+								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Media server</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 80%;"></div></div></div>
+								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">AI</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 70%;"></div></div></div>
+								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Rendering</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 60%;"></div></div></div>
 							</div> 
 						</div>
 					</div> 
@@ -179,13 +126,13 @@
 				<div class="tt-section padding-top-xlg-140 border-top">
 					<div class="tt-section-inner tt-wrap">
 						<div class="tt-heading tt-heading-xxxlg tt-heading-center">
-							<h3 class="tt-heading-subtitle tt-text-reveal">Core Focus</h3>
-							<h2 class="tt-heading-title tt-text-reveal">Expertise</h2>
+							<h3 class="tt-heading-subtitle tt-text-reveal">Core Vision</h3>
+							<h2 class="tt-heading-title tt-text-reveal">Philosophy</h2>
 						</div>
 						<div class="expertise-circles tt-anim-fadeinup">
-							<a href="expertise-scenography.html" class="exp-circle-item"><div class="exp-circle-text">Immersive<br>Scenography</div></a>
-							<a href="expertise-interactive.html" class="exp-circle-item"><div class="exp-circle-text">Interactive<br>Media Art</div></a>
-							<a href="expertise-tech.html" class="exp-circle-item"><div class="exp-circle-text">Creative<br>Technology</div></a>
+							<div class="exp-circle-item"><div class="exp-circle-text">Technology</div></div>
+							<div class="exp-circle-item"><div class="exp-circle-text">Interactive</div></div>
+							<div class="exp-circle-item"><div class="exp-circle-text">Disruption<br>in the field</div></div>
 						</div>
 					</div>
 				</div>
@@ -202,12 +149,12 @@
 					<div class="tt-section-inner max-width-2200">
 						<div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover">
 							<div class="pcli-inner">
-								<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 01</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
-								<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 02</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
-								<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-3.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 03</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
-								<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-4.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 04</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
-								<a href="single-project-5.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-5.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 05</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
-								<a href="single-project-6.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 06</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 01</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 02</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-3.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 03</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-4.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 04</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-5.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-5.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 05</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-6.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 06</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
 							</div> 
 						</div> 
 					</div> 
@@ -226,7 +173,12 @@
 			<footer id="tt-footer" class="border-top">
 				<div class="tt-footer-inner tt-wrap">
 					<div class="tt-row">
-						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="#body" class="tt-link tt-scroll-to">Back to Top</a></li></ul></div> 
+						<div class="tt-col-xl-3 tt-col-sm-6">
+							<h5 class="tt-footer-widget-heading">Home</h5>
+							<ul class="tt-footer-widget-list">
+								<li><a href="index.html" class="tt-link">Home</a></li>
+							</ul>
+						</div> 
 						<div class="tt-col-xl-3 tt-col-sm-6"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About Me</a></li><li><a href="portfolio.html" class="tt-link">My Work</a></li></ul></div> 
 						<div class="tt-col-xl-3 tt-col-sm-6">
 							<h5 class="tt-footer-widget-heading">Contact</h5>
@@ -237,12 +189,12 @@
 							</ul> 
 						</div> 
 						<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end">
-							<div class="tt-footer-logo"><a href="index.html" class="tt-magnetic-item"><img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo"></a></div>
-						</div> 
+							</div> 
 					</div> 
 				</div> 
 			</footer>
 		</main>
+
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
 		<script src="assets/vendor/gsap/gsap.min.js"></script> 
 		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
