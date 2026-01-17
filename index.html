@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			/* 1. 비정형 MJ 로고 (로딩 화면과 동일하게 완벽 정중앙 정렬) */
+			/* 1. 비정형 MJ 로고 (세로축 위치 하향 조정) */
 			.mj-logo-blob {
 				display: flex;
 				align-items: center;
@@ -34,12 +34,13 @@
 				animation: blob-morph 8s infinite alternate;
 				transition: all 0.5s ease;
 				text-align: center;
-				padding: 0; /* 패딩 제거로 중앙 정렬 보장 */
+				padding: 0;
 			}
 			.mj-logo-blob span {
 				display: block;
-				line-height: 1; /* 텍스트 높이 고정 */
-				transform: translateY(1px); /* 시각적 미세 보정 */
+				line-height: 1;
+				/* 세로축 위치를 더 아래로 조정 */
+				transform: translateY(4px); 
 			}
 			@keyframes blob-morph {
 				0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
@@ -57,10 +58,20 @@
 			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); color: inherit; position: relative; overflow: hidden; cursor: default; }
 			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
 
-			/* 4. Footer Styling (Center Align & Title Font Increase) */
+			/* 4. Footer Styling (Title Size x2 & Center) */
 			.tt-footer-column-wrap { text-align: center; }
-			.tt-footer-widget-heading { font-size: 1.6rem !important; margin-bottom: 25px; font-weight: 700; letter-spacing: 1px; color: #fff; }
-			.tt-footer-widget-list li { margin-bottom: 8px; }
+			.tt-footer-widget-heading { 
+				font-size: 3.2rem !important; /* 기존 1.6rem의 2배 */
+				margin-bottom: 30px; 
+				font-weight: 800; 
+				letter-spacing: -1px; 
+				color: #fff;
+				font-family: 'Big Shoulders Display', sans-serif;
+				text-transform: uppercase;
+			}
+			.tt-footer-widget-list li { margin-bottom: 10px; }
+			.tt-footer-widget-list li a { font-size: 1.1rem; opacity: 0.7; transition: opacity 0.3s ease; }
+			.tt-footer-widget-list li a:hover { opacity: 1; }
 		</style>
 	</head>
 
@@ -189,7 +200,7 @@
 					<div class="tt-row justify-content-center">
 						<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
 							<h5 class="tt-footer-widget-heading">Home</h5>
-							<ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Index</a></li></ul>
+							<ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul>
 						</div> 
 						<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
 							<h5 class="tt-footer-widget-heading">Sitemap</h5>
@@ -199,7 +210,7 @@
 							<h5 class="tt-footer-widget-heading">Contact</h5>
 							<ul class="tt-footer-widget-list">
 								<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li>
-								<li><a href="tel:+821071400389" class="tt-link">Call</a></li>
+								<li><a href="https://www.instagram.com/min_jai_i" class="tt-link" target="_blank">Instagram</a></li>
 							</ul> 
 						</div> 
 					</div> 
