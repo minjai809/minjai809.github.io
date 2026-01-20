@@ -17,23 +17,69 @@
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			.mj-logo-blob { display: inline-flex; align-items: center; justify-content: center; width: 65px; height: 65px; border: 1.5px solid #ffffff; font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 800; color: #ffffff !important; text-decoration: none; border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; animation: blob-morph 8s infinite alternate; transition: all 0.5s ease; text-align: center; }
-			.mj-logo-blob span { display: block; line-height: 1; margin-top: 2px; }
-			@keyframes blob-morph { 0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; } 100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; } }
-			
+			/* 1. 비정형 MJ 로고 (세로축 중앙 보정) */
+			.mj-logo-blob {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 65px;
+				height: 65px;
+				border: 1.5px solid #ffffff;
+				font-family: 'Big Shoulders Display', sans-serif;
+				font-size: 1.6rem;
+				font-weight: 800;
+				color: #ffffff !important;
+				text-decoration: none;
+				border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+				animation: blob-morph 8s infinite alternate;
+				transition: all 0.5s ease;
+				text-align: center;
+			}
+			.mj-logo-blob span {
+				display: block;
+				line-height: 1;
+				transform: translateY(4px); 
+			}
+			@keyframes blob-morph {
+				0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+				100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; }
+			}
+
+			/* 2. Archive Table Styling */
 			.archive-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
-			.archive-row { border-bottom: 1px solid #e2e2e2; transition: background 0.3s ease; }
-			.archive-row:hover { background: #f9f9f9; }
-			.archive-cell { padding: 25px 10px; font-size: 1rem; color: #ffffff; }
-			.cell-year { width: 15%; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; }
-			
+			.archive-row { border-bottom: 1px solid #333; transition: background 0.3s ease; }
+			.archive-row:hover { background: rgba(255,255,255,0.05); }
+			.archive-cell { padding: 25px 15px; font-size: 1.1rem; color: #fff; }
+			.cell-year { width: 15%; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 1.3rem; color: #888; }
+			.cell-title { width: 50%; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+			.cell-field { width: 35%; text-align: right; font-style: italic; color: #aaa; }
+
+			/* 3. Footer Styling (Title Size x2 & Center) */
 			.tt-footer-column-wrap { text-align: center; }
-			.tt-footer-widget-heading { font-size: 1.2rem !important; margin-bottom: 25px; font-weight: 600; }
+			.tt-footer-widget-heading { 
+				font-size: 3.2rem !important; 
+				margin-bottom: 30px; 
+				font-weight: 800; 
+				letter-spacing: -1px; 
+				color: #fff;
+				font-family: 'Big Shoulders Display', sans-serif;
+				text-transform: uppercase;
+			}
+			.tt-footer-widget-list li { margin-bottom: 10px; }
+			.tt-footer-widget-list li a { font-size: 1.1rem; opacity: 0.7; transition: opacity 0.3s ease; }
+			.tt-footer-widget-list li a:hover { opacity: 1; }
 		</style>
 	</head>
 
 	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll tt-style-dark">
 		<main id="body-inner">
+			<div id="tt-page-transition">
+				<div class="tt-ptr-overlay-top tt-noise"></div>
+				<div class="tt-ptr-overlay-bottom tt-noise"></div>
+				<div class="tt-ptr-preloader"><div class="tt-ptr-prel-content"><div class="mj-logo-blob" style="width: 100px; height: 100px; font-size: 2.5rem;"><span>MJ</span></div></div></div> 
+			</div>
+			<div id="magic-cursor"><div id="ball"></div></div>
+
 			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
 				<div class="tt-header-inner tt-noise"> 
 					<div class="tt-header-col tt-header-col-left"><div class="tt-logo"><a href="index.html" class="mj-logo-blob tt-magnetic-item"><span>MJ</span></a></div></div>
@@ -54,24 +100,115 @@
 
 			<div id="tt-content-wrap">
 				<div id="page-header" class="ph-full ph-full-m ph-cap-xxxxlg ph-center ph-image-parallax ph-caption-parallax">
-					<div class="page-header-inner tt-wrap"><div class="ph-caption"><h1 class="ph-caption-title tt-text-reveal">Projects</h1></div></div> 
+					<div class="page-header-inner tt-wrap">
+						<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title tt-text-reveal">Projects</h1></div></div> 
+					</div> 
+					<div class="page-header-inner ph-mask">
+						<div class="ph-mask-inner tt-wrap">
+							<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Projects</h1></div></div>
+						</div>
+					</div>
 					<div class="tt-scroll-down">
 						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
 							<div class="tt-scrd-icon"></div>
-							<svg viewBox="0 0 500 500">
-								<defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs>
-								<text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text>
-							</svg>
+							<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
 						</a>
 					</div>
 				</div>
 
 				<div id="tt-page-content">
+					<div class="tt-section">
+						<div class="tt-section-inner max-width-2200">
+							<div id="portfolio-grid" class="pgi-hover">
+								<div class="tt-grid ttgr-layout-creative-1 ttgr-gap-4">
+									<div class="tt-grid-items-wrap isotope-items-wrap">
+										
+										<div class="tt-grid-item isotope-item">
+											<div class="ttgr-item-inner">
+												<div class="portfolio-grid-item">
+													<a href="single-project-1.html" class="pgi-image-wrap" data-cursor="View">
+														<div class="pgi-image-holder"><div class="pgi-image-inner tt-anim-zoomin"><figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-1.jpg" loading="lazy" alt="image"></figure></div></div>
+													</a>
+													<div class="pgi-caption"><div class="pgi-caption-inner"><h2 class="pgi-title">Project Title 01</h2><div class="pgi-categories-wrap"><div class="pgi-category">Scenography</div></div></div></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tt-grid-item isotope-item">
+											<div class="ttgr-item-inner">
+												<div class="portfolio-grid-item">
+													<a href="single-project-2.html" class="pgi-image-wrap" data-cursor="View">
+														<div class="pgi-image-holder"><div class="pgi-image-inner tt-anim-zoomin"><figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-2.jpg" loading="lazy" alt="image"></figure></div></div>
+													</a>
+													<div class="pgi-caption"><div class="pgi-caption-inner"><h2 class="pgi-title">Project Title 02</h2><div class="pgi-categories-wrap"><div class="pgi-category">Media Art</div></div></div></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tt-grid-item isotope-item">
+											<div class="ttgr-item-inner">
+												<div class="portfolio-grid-item">
+													<a href="single-project-3.html" class="pgi-image-wrap" data-cursor="View">
+														<div class="pgi-image-holder"><div class="pgi-image-inner tt-anim-zoomin"><figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-3.jpg" loading="lazy" alt="image"></figure></div></div>
+													</a>
+													<div class="pgi-caption"><div class="pgi-caption-inner"><h2 class="pgi-title">Project Title 03</h2><div class="pgi-categories-wrap"><div class="pgi-category">Creative Tech</div></div></div></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tt-grid-item isotope-item">
+											<div class="ttgr-item-inner">
+												<div class="portfolio-grid-item">
+													<a href="single-project-4.html" class="pgi-image-wrap" data-cursor="View">
+														<div class="pgi-image-holder"><div class="pgi-image-inner tt-anim-zoomin"><figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-4.jpg" loading="lazy" alt="image"></figure></div></div>
+													</a>
+													<div class="pgi-caption"><div class="pgi-caption-inner"><h2 class="pgi-title">Project Title 04</h2><div class="pgi-categories-wrap"><div class="pgi-category">Scenography</div></div></div></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tt-grid-item isotope-item">
+											<div class="ttgr-item-inner">
+												<div class="portfolio-grid-item">
+													<a href="single-project-5.html" class="pgi-image-wrap" data-cursor="View">
+														<div class="pgi-image-holder"><div class="pgi-image-inner tt-anim-zoomin"><figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-5.jpg" loading="lazy" alt="image"></figure></div></div>
+													</a>
+													<div class="pgi-caption"><div class="pgi-caption-inner"><h2 class="pgi-title">Project Title 05</h2><div class="pgi-categories-wrap"><div class="pgi-category">Media Art</div></div></div></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tt-grid-item isotope-item">
+											<div class="ttgr-item-inner">
+												<div class="portfolio-grid-item">
+													<a href="single-project-6.html" class="pgi-image-wrap" data-cursor="View">
+														<div class="pgi-image-holder"><div class="pgi-image-inner tt-anim-zoomin"><figure class="pgi-image ttgr-height"><img src="assets/img/portfolio/1200/portfolio-6.jpg" loading="lazy" alt="image"></figure></div></div>
+													</a>
+													<div class="pgi-caption"><div class="pgi-caption-inner"><h2 class="pgi-title">Project Title 06</h2><div class="pgi-categories-wrap"><div class="pgi-category">Creative Tech</div></div></div></div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150 border-top">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-heading tt-heading-xxlg"><h2 class="tt-heading-title tt-text-reveal">Archive</h2></div>
+							<div class="tt-heading tt-heading-xxlg"><h3 class="tt-heading-subtitle tt-text-reveal">History</h3><h2 class="tt-heading-title tt-text-reveal">Archive</h2></div>
 							<table class="archive-table tt-anim-fadeinup">
-								<tr class="archive-row"><td class="archive-cell cell-year">2025</td><td class="archive-cell">Project Title Here</td><td class="archive-cell">Client Name</td></tr>
+								<tr class="archive-row">
+									<td class="archive-cell cell-year">2025</td>
+									<td class="archive-cell cell-title">Project Name Here</td>
+									<td class="archive-cell cell-field">Scenography</td>
+								</tr>
+								<tr class="archive-row">
+									<td class="archive-cell cell-year">2024</td>
+									<td class="archive-cell cell-title">Interactive Stage Work</td>
+									<td class="archive-cell cell-field">Media Art / Tech</td>
+								</tr>
 							</table>
 						</div>
 					</div>
@@ -80,15 +217,37 @@
 				<footer id="tt-footer" class="border-top">
 					<div class="tt-footer-inner tt-wrap">
 						<div class="tt-row justify-content-center">
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Index</a></li></ul></div> 
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About</a></li><li><a href="portfolio.html" class="tt-link">Work</a></li></ul></div> 
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list"><li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li></ul></div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
+								<h5 class="tt-footer-widget-heading">Home</h5>
+								<ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul>
+							</div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
+								<h5 class="tt-footer-widget-heading">Sitemap</h5>
+								<ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About</a></li><li><a href="portfolio.html" class="tt-link">Work</a></li></ul>
+							</div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
+								<h5 class="tt-footer-widget-heading">Contact</h5>
+								<ul class="tt-footer-widget-list">
+									<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li>
+									<li><a href="https://www.instagram.com/min_jai_i" class="tt-link" target="_blank">Instagram</a></li>
+								</ul> 
+							</div> 
 						</div> 
 					</div> 
 				</footer>
 			</div> 
 		</main>
+
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
+		<script src="assets/vendor/gsap/gsap.min.js"></script> 
+		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
+		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> 
+		<script src="assets/vendor/lenis.min.js"></script> 
+		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
+		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
+		<script src="assets/vendor/isotope/packery-mode.pkgd.min.js"></script> 
+		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
+		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
 	</body>
 </html>
