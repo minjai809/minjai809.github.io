@@ -19,21 +19,21 @@
 		<link rel="stylesheet" href="./assets/css/theme-light.css">
 
 		<style>
-			/* 1. 불필요한 인터페이스 제거 */
+			/* 1. 메뉴바 등 불필요한 요소 제거 */
 			.tt-main-menu, #tt-m-menu-toggle-btn-wrap, .tt-style-switch, .ph-social { display: none !important; }
 			
-			/* 2. 텍스트 디자인 고정 */
+			/* 2. 텍스트 색상 및 스타일 고정 */
 			.ph-caption-title, .tt-heading-title, .tt-text-reveal, .text-xxlg, .pcli-title { 
 				color: #ffffff !important; 
 			}
 			
-			/* 3. 메인 사진 위치 조절 (윗부분 기준) */
+			/* 3. 메인 사진 위치 조절 (상단 노출) */
 			#page-header .ph-image-inner img {
 				object-fit: cover;
 				object-position: top !important; 
 			}
 			
-			/* 4. 자기소개 사진 윗부분 기준 정렬 */
+			/* 4. 자기소개 옆 사진 상단 기준 정렬 */
 			.tt-image img {
 				object-position: top;
 			}
@@ -75,19 +75,31 @@
 			<div id="tt-content-wrap">
 
 				<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
+					
 					<div class="ph-image ph-image-cover-2">
 						<div class="ph-image-inner">
 							<img src="./assets/img/profile.jpg" alt="Profile Image">
 						</div>
 					</div>
+					
 					<div class="page-header-inner tt-wrap">
 						<div class="ph-caption">
 							<div class="ph-caption-inner">
 								<h1 class="ph-caption-title">Minjai<br> Jung</h1>
-								<div class="ph-caption-description max-width-700">Updating...</div>
 							</div>
 						</div>
 					</div> 
+
+					<div class="page-header-inner ph-mask">
+						<div class="ph-mask-inner tt-wrap">
+							<div class="ph-caption">
+								<div class="ph-caption-inner">
+									<h1 class="ph-caption-title">Scenographer<br> Creative Technologist</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="tt-scroll-down">
 						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
 							<div class="tt-scrd-icon"></div>
@@ -201,7 +213,7 @@
 								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2></div></div>
 								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
 									<div class="tt-big-round-ptn tt-anim-fadeinup">
-										<a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item">
+										<a href="contact.html" class="tt-btn-contact-fixed tt-magnetic-item">
 											<div class="tt-big-round-ptn-inner">Let's<br> Connect!</div>
 										</a>
 									</div>
