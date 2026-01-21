@@ -6,6 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet"> 
+
 		<link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"> 
 		<link rel="stylesheet" href="assets/vendor/fancybox/css/fancybox.css"> 
 		<link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css"> 
@@ -14,14 +19,43 @@
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 
 		<style>
+			/* 1. 불필요한 요소 제거 (메뉴, 테마스위치 등) */
 			.tt-main-menu, #tt-m-menu-toggle-btn-wrap, .tt-style-switch, .ph-social { display: none !important; }
-			.ph-caption-title, .tt-heading-title, .tt-text-reveal, .text-xxlg { color: #ffffff; }
+			
+			/* 2. 텍스트 디자인 고정 */
+			.ph-caption-title, .tt-heading-title, .tt-text-reveal, .text-xxlg, .pcli-title { 
+				color: #ffffff !important; 
+			}
+			
+			/* 3. 메인 사진 비율 및 위치 조절 (상단 노출) */
+			#page-header .ph-image-inner img {
+				object-fit: cover;
+				object-position: top !important; 
+			}
+			
+			/* 4. 자기소개 옆 사진 디자인 */
+			.tt-image img {
+				object-position: top;
+				border-radius: 2px;
+			}
 		</style>
 	</head>
 
 	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
 		<main id="body-inner">
-			
+
+			<div id="tt-page-transition">
+				<div class="tt-ptr-overlay-top tt-noise"></div>
+				<div class="tt-ptr-overlay-bottom tt-noise"></div>
+				<div class="tt-ptr-preloader">
+					<div class="tt-ptr-prel-content">
+						<img src="assets/img/logo-light.png" class="tt-ptr-prel-image" alt="Logo">
+					</div> 
+				</div> 
+			</div>
+
+			<div id="magic-cursor"><div id="ball"></div></div>
+
 			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
 				<div class="tt-header-inner tt-noise"> 
 					<div class="tt-header-col tt-header-col-left">
@@ -40,6 +74,7 @@
 			</header>
 
 			<div id="tt-content-wrap">
+
 				<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
 					<div class="ph-image ph-image-cover-2">
 						<div class="ph-image-inner">
@@ -54,9 +89,16 @@
 							</div>
 						</div>
 					</div> 
+					<div class="tt-scroll-down">
+						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
+							<div class="tt-scrd-icon"></div>
+							<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
+						</a>
+					</div>
 				</div>
 
 				<div id="tt-page-content">
+
 					<div class="tt-section padding-top-xlg-140 padding-bottom-xlg-120 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
@@ -85,41 +127,109 @@
 							</div>
 							<div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover margin-top-60">
 								<div class="pcli-inner">
-									<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup">
-										<div class="pcli-item-inner">
-											<div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project1.jpg" alt="Image"></div></div>
-											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">mooniverse</h2><div class="pcli-category">Physical theater</div></div></div>
-										</div>
-									</a>
-									<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup">
-										<div class="pcli-item-inner">
-											<div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project2.jpg" alt="Image"></div></div>
-											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Our planet</h2><div class="pcli-category">Play</div></div></div>
-										</div>
-									</a>
-									<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup">
-										<div class="pcli-item-inner">
-											<div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project3.jpg" alt="Image"></div></div>
-											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Buy, bye my X</h2><div class="pcli-category">Exhibition Performance</div></div></div>
-										</div>
-									</a>
-									<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup">
-										<div class="pcli-item-inner">
-											<div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project4.jpg" alt="Image"></div></div>
-											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Susim</h2><div class="pcli-category">Audience-participatory exhibition</div></div></div>
-										</div>
-									</a>
+									<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project1.jpg" alt="mooniverse"></div></div><div class="pcli-caption"><h2 class="pcli-title">mooniverse</h2><div class="pcli-category">Physical theater</div></div></div></a>
+									<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project2.jpg" alt="Our planet"></div></div><div class="pcli-caption"><h2 class="pcli-title">Our planet</h2><div class="pcli-category">Play</div></div></div></a>
+									<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project3.jpg" alt="Buy, bye my X"></div></div><div class="pcli-caption"><h2 class="pcli-title">Buy, bye my X</h2><div class="pcli-category">Exhibition Performance</div></div></div></a>
+									<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project4.jpg" alt="Susim"></div></div><div class="pcli-caption"><h2 class="pcli-title">Susim</h2><div class="pcli-category">Audience-participatory exhibition</div></div></div></a>
 								</div>
 							</div>
 						</div>
 					</div>
+
+					<div class="tt-section padding-top-xlg-140 border-top">
+						<div class="tt-section-inner tt-wrap">
+							<div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle tt-text-reveal">What I Do</h3><h2 class="tt-heading-title tt-text-reveal">works</h2></div>
+							<div class="tt-horizontal-accordion tt-hac-row tt-hac-alter-hover tt-anim-fadeinup margin-top-60">
+								<div class="tt-hac-item cursor-alter">
+									<div class="tt-hac-item-inner">
+										<div class="tt-haci-inner">
+											<div class="tt-hac-item-content">
+												<div class="tt-haci-content-top">
+													<h2 class="tt-haci-title">Stage</h2>
+													<div class="tt-haci-description">I design stage video and lighting for performing arts such as theater, musicals, and festivals.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tt-hac-item cursor-alter">
+									<div class="tt-hac-item-inner">
+										<div class="tt-haci-inner">
+											<div class="tt-hac-item-content">
+												<div class="tt-haci-content-top">
+													<h2 class="tt-haci-title">Installation</h2>
+													<div class="tt-haci-description">I enjoy interactive work that engages all the senses. I am particularly interested in the audiovisual reconfiguration of physical spaces.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tt-section border-top border-bottom">
+						<div class="tt-section-inner tt-wrap">
+							<div class="tt-sticker">
+								<div class="tt-row">
+									<div class="tt-col-lg-4 margin-bottom-40">
+										<div class="tt-sticker-sticky tt-sticky-element">
+											<div class="tt-heading tt-heading-xxlg"><h3 class="tt-heading-subtitle tt-text-reveal">Philosophy</h3><h2 class="tt-heading-title tt-text-reveal">words</h2></div>
+										</div>
+									</div>
+									<div class="tt-col-lg-8">
+										<div class="tt-sticker-scroller">
+											<div class="tt-sticky-testimonials tt-stte-reversed-colors">
+												<div class="tt-stte-item">
+													<div class="tt-stte-card cursor-alter">
+														<div class="tt-stte-card-caption">
+															<div class="tt-stte-text">"Art is the most intense mode of individualism that the world has known."</div>
+															<div class="tt-stte-subtext">- Oscar Wilde</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="contact-section" class="tt-section padding-top-xlg-120 padding-bottom-xlg-150">
+						<div class="tt-section-inner tt-wrap">
+							<div class="tt-row">
+								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2></div></div>
+								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
+									<div class="tt-big-round-ptn tt-anim-fadeinup">
+										<a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item">
+											<div class="tt-big-round-ptn-inner">Let's<br> Connect!</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div> 
+
+				<a href="#" class="tt-scroll-to-top">
+					<div class="tt-stt-progress tt-magnetic-item">
+						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg>
+					</div> 
+				</a>
 			</div>
 		</main>
 
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
 		<script src="assets/vendor/gsap/gsap.min.js"></script> 
+		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
 		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> 
+		<script src="assets/vendor/lenis.min.js"></script> 
+		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
+		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
+		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
+		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
 	</body>
 </html>
