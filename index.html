@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
-
-		<title>Home | Jesper - Creative Portfolio Showcase HTML Website Template by Themetorium</title>
-
+		<title>Jesper | Creative Portfolio</title>
 		<meta charset="utf-8">
-		<meta name="description" content="Download Jesper - Creative Portfolio Showcase HTML Website Template that comes with rich features and well-commented code. Made by Themetorium.">
-		<meta name="author" content="themetorium.net">
-
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,141 +18,121 @@
 		<link rel="stylesheet" href="assets/css/helper.css">
 		<link rel="stylesheet" href="assets/css/theme.css">
 
-		<link rel="stylesheet" href="assets/css/theme-light.css">
+		<style>
+			/* 1. 모든 글자 흰색 강제 고정 */
+			body, p, h1, h2, h3, h4, h5, h6, span, a, li, blockquote, 
+			.ph-caption-title, .ph-caption-description, .tt-heading-title, .tt-heading-subtitle, .tt-link { 
+				color: #ffffff !important; 
+			}
 
+			/* 2. 깨진 로고 그리드(Collaborations) 복구용 긴급 CSS */
+			.tt-logo-grid {
+				display: flex !important;
+				flex-wrap: wrap !important;
+				list-style: none !important;
+				padding: 0 !important;
+				margin: 0 -15px !important;
+				justify-content: center !important;
+			}
+			.tt-lg-item {
+				flex: 0 0 25% !important;
+				max-width: 25% !important;
+				padding: 15px !important;
+				text-align: center !important;
+			}
+			.tt-lg-link img {
+				max-width: 140px !important;
+				height: auto !important;
+				opacity: 0.5;
+				transition: opacity 0.3s;
+				filter: brightness(0) invert(1); /* 로고 강제 화이트화 */
+			}
+			.tt-lg-link:hover img { opacity: 1; }
+
+			/* 3. Footer 디자인 고정 */
+			.tt-footer-column-wrap { text-align: center !important; }
+			.tt-footer-widget-heading { font-size: 3.5rem !important; font-weight: 900; font-family: 'Big Shoulders Display', sans-serif; text-transform: uppercase; }
+
+			/* Mask Interaction 블랙 반전 */
+			.ph-mask .ph-caption-title { color: #000000 !important; }
+			
+			@media (max-width: 768px) {
+				.tt-lg-item { flex: 0 0 50% !important; max-width: 50% !important; }
+			}
+		</style>
 	</head>
 
-	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
-
+	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll tt-style-dark">
 		<main id="body-inner">
 
 			<div id="tt-page-transition">
 				<div class="tt-ptr-overlay-top tt-noise"></div>
 				<div class="tt-ptr-overlay-bottom tt-noise"></div>
-				<div class="tt-ptr-preloader">
-					<div class="tt-ptr-prel-content">
-						<img src="assets/img/logo-light.png" class="tt-ptr-prel-image" alt="Logo">
-					</div> 
-				</div> 
+				<div class="tt-ptr-preloader"><div class="tt-ptr-prel-content"><img src="assets/img/logo-light.png" class="tt-ptr-prel-image" alt="Logo"></div></div> 
 			</div>
-			<div id="magic-cursor">
-				<div id="ball"></div>
-			</div>
+
+			<div id="magic-cursor"><div id="ball"></div></div>
+
 			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
 				<div class="tt-header-inner tt-noise"> 
-
 					<div class="tt-header-col tt-header-col-left">
-						<div class="tt-logo"> 
-							<a href="index.html" class="tt-magnetic-item">
-								<img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo">
-								<img src="assets/img/logo-dark.png" class="tt-logo-dark" alt="Logo">
-							</a>
-						</div>
-					</div> 
-
+						<div class="tt-logo"><a href="index.html" class="tt-magnetic-item"><img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo"></a></div>
+					</div>
 					<div class="tt-header-col tt-header-col-center">
 						<nav class="tt-main-menu tt-m-menu-center">
 							<div class="tt-main-menu-holder">
 								<div class="tt-main-menu-inner">
 									<div class="tt-main-menu-content">
-
 										<ul class="tt-main-menu-list">
 											<li class="active"><a href="index.html">Home</a></li>
-
-											<li class="tt-submenu-wrap tt-submenu-master">
-												<div class="tt-submenu-trigger"><a href="#">Work</a></div> 
-												<div class="tt-submenu">
-													<ul class="tt-submenu-list">
-														<li><a href="portfolio.html">Creative Grid</a></li>
-														<li><a href="portfolio-compact.html">Compact List</a></li>
-														<li><a href="portfolio-preview.html">Preview List</a></li>
-													</ul>
-												</div> 
-											</li>
-
+											<li><a href="portfolio.html">Work</a></li>
 											<li><a href="about-me.html">About</a></li>
-											<li><a href="blog.html">Blog</a></li>
 											<li><a href="contact.html">Contact</a></li>
 										</ul>
-
-									</div> 
-								</div> 
-							</div> 
-						</nav> 
-					</div> 
-
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
 					<div class="tt-header-col tt-header-col-right">
-						<div id="tt-m-menu-toggle-btn-wrap">
-							<div class="tt-m-menu-toggle-btn-text">
-								<span class="tt-m-menu-text-menu">Menu</span>
-								<span class="tt-m-menu-text-close">Close</span>
-							</div>
-							<div class="tt-m-menu-toggle-btn-holder">
-								<a href="#" class="tt-m-menu-toggle-btn"><span></span></a>
-							</div>
-						</div>
-
-						<a href="contact.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item">
-							<span data-hover="Contact">Contact</span>
-						</a>
-
-						<div class="tt-style-switch">
-							<div class="tt-style-switch-inner tt-magnetic-item">
-								<div class="tt-stsw-light"><i class="fas fa-sun"></i></div>
-								<div class="tt-stsw-dark"><i class="fas fa-moon"></i></div>
-							</div>
-						</div>
-					</div> 
-				</div> 
+						<a href="contact.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item"><span data-hover="Contact">Contact</span></a>
+					</div>
+				</div>
 			</header>
-			<div id="tt-content-wrap">
 
+			<div id="tt-content-wrap">
 				<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
+					<div class="ph-video ph-video-grayscale ph-video-cover-1">
+						<div class="ph-video-inner"><video loop muted autoplay playsinline preload="metadata"><source src="assets/vids/placeholder.mp4" type="video/mp4"></video></div>
+					</div>
 					<div class="page-header-inner tt-wrap">
 						<div class="ph-caption">
 							<div class="ph-caption-inner">
 								<h1 class="ph-caption-title">Jesper<br> Dietrich</h1>
-								<div class="ph-caption-description max-width-700">Over 15 years of experience<br> in the design industry</div>
+								<div class="ph-caption-description max-width-700">Over 15 years of experience in the design industry</div>
 							</div>
 						</div>
 					</div> 
-
 					<div class="page-header-inner ph-mask">
 						<div class="ph-mask-inner tt-wrap">
-							<div class="ph-caption">
-								<div class="ph-caption-inner">
-									<h1 class="ph-caption-title">Digital<br> Designer</h1>
-									<div class="ph-caption-description max-width-700">Over 15 years of experience<br> in the design industry</div>
-								</div>
-							</div>
+							<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Digital<br> Designer</h1></div></div>
 						</div>
 					</div>
-
-					<div class="tt-scroll-down">
-						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
-							<div class="tt-scrd-icon"></div>
-							<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
-						</a>
-					</div>
+					<div class="tt-scroll-down"><a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item"><div class="tt-scrd-icon"></div></a></div>
 				</div>
 
 				<div id="tt-page-content">
-
 					<div class="tt-section padding-top-xlg-140 padding-bottom-xlg-120 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
 								<div class="tt-col-lg-3">
-									<div class="tt-video ttv-portrait ttv-grayscale">
-										<video playsinline muted autoplay loop preload="metadata">
-											<source src="assets/vids/placeholder.mp4" data-src="assets/vids/800/video-1-800.mp4" type="video/mp4">
-										</video>
-									</div>
-									<div class="tt-text-uppercase margin-top-30 tt-text-reveal">Creative designer<br> based in Melbourne</div>
+									<div class="tt-video ttv-portrait ttv-grayscale"><video playsinline muted autoplay loop preload="metadata" class="tt-anim-zoomin"><source src="assets/vids/placeholder.mp4" type="video/mp4"></video></div>
+									<div class="tt-text-uppercase margin-top-30">Creative designer<br> based in Melbourne</div>
 								</div>
 								<div class="tt-col-lg-1"></div>
 								<div class="tt-col-lg-8 tt-align-self-center">
-									<div class="text-xxlg font-500 tt-text-reveal">I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations.</div>
-									<a href="about-me.html" class="tt-btn tt-btn-outline margin-top-40 tt-magnetic-item tt-anim-fadeinup"><span data-hover="More About Me">More About Me</span></a>
+									<div class="text-xxlg font-500">I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations.</div>
+									<a href="about-me.html" class="tt-btn tt-btn-outline margin-top-40 tt-magnetic-item"><span data-hover="Read More">Read More</span></a>
 								</div> 
 							</div>
 						</div>
@@ -169,14 +141,14 @@
 					<div class="tt-section padding-top-xlg-100 padding-bottom-xlg-100 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-heading tt-heading-sm margin-bottom-60 tt-heading-center">
-								<h3 class="tt-heading-subtitle tt-text-reveal">Collaborations</h3>
-								<h2 class="tt-heading-title tt-text-reveal">Companies I have worked with</h2>
+								<h3 class="tt-heading-subtitle">Collaborations</h3>
+								<h2 class="tt-heading-title">Companies I have worked with</h2>
 							</div>
-							<ul class="tt-logo-grid tt-lg-grid-4 tt-lg-grid-md-3 tt-lg-grid-sm-2">
-								<li class="tt-lg-item tt-anim-fadeinup"><a href="#" class="tt-lg-link"><img src="assets/img/clients/client-1.png" class="tt-lg-image" alt="Client"></a></li>
-								<li class="tt-lg-item tt-anim-fadeinup"><a href="#" class="tt-lg-link"><img src="assets/img/clients/client-2.png" class="tt-lg-image" alt="Client"></a></li>
-								<li class="tt-lg-item tt-anim-fadeinup"><a href="#" class="tt-lg-link"><img src="assets/img/clients/client-3.png" class="tt-lg-image" alt="Client"></a></li>
-								<li class="tt-lg-item tt-anim-fadeinup"><a href="#" class="tt-lg-link"><img src="assets/img/clients/client-4.png" class="tt-lg-image" alt="Client"></a></li>
+							<ul class="tt-logo-grid">
+								<li class="tt-lg-item"><div class="tt-lg-link"><img src="assets/img/clients/client-1.png" alt="Client"></div></li>
+								<li class="tt-lg-item"><div class="tt-lg-link"><img src="assets/img/clients/client-2.png" alt="Client"></div></li>
+								<li class="tt-lg-item"><div class="tt-lg-link"><img src="assets/img/clients/client-3.png" alt="Client"></div></li>
+								<li class="tt-lg-item"><div class="tt-lg-link"><img src="assets/img/clients/client-4.png" alt="Client"></div></li>
 							</ul>
 						</div>
 					</div>
@@ -184,56 +156,15 @@
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
-								<div class="tt-col-xl-8">
-									<div class="tt-heading tt-heading-xxxlg">
-										<h3 class="tt-heading-subtitle tt-text-reveal">Featured Work</h3>
-										<h2 class="tt-heading-title tt-text-reveal">Projects</h2>
-									</div>
-								</div>
-								<div class="tt-col-xl-4 tt-align-self-end margin-top-30">
-									<div class="tt-big-round-ptn tt-anim-fadeinup"><a href="portfolio-compact.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">All<br> Projects</div></a></div>
-								</div>
+								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle">Featured Work</h3><h2 class="tt-heading-title">Projects</h2></div></div> 
+								<div class="tt-col-xl-4 tt-align-self-end margin-top-30"><div class="tt-big-round-ptn"><a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">All<br> Projects</div></a></div></div> 
 							</div>
 							<div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover margin-top-60">
 								<div class="pcli-inner">
-									<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project">
-										<div class="pcli-item-inner">
-											<div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" alt="Image"></div></div>
-											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Tortillas</h2><div class="pcli-category">Lifestyle</div></div></div>
-										</div>
-									</a>
-									<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project">
-										<div class="pcli-item-inner">
-											<div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" alt="Image"></div></div>
-											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Coffee Shop</h2><div class="pcli-category">Lifestyle</div></div></div>
-										</div>
-									</a>
+									<a href="single-project-1.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Tortillas</h2><div class="pcli-category">Lifestyle</div></div></div></div></a>
+									<a href="single-project-2.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Coffee Shop</h2><div class="pcli-category">Lifestyle</div></div></div></div></a>
 								</div>
 							</div>
-						</div>
-					</div>
-
-					<div class="tt-section padding-top-xlg-140 border-top">
-						<div class="tt-section-inner tt-wrap">
-							<div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle tt-text-reveal">What I Do</h3><h2 class="tt-heading-title tt-text-reveal">Services</h2></div>
-							<div class="tt-horizontal-accordion tt-hac-alter-hover tt-anim-fadeinup margin-top-60">
-								<div class="tt-hac-item cursor-alter">
-									<div class="tt-hac-item-inner">
-										<div class="tt-hac-item-content">
-											<div class="tt-haci-content-top"><h2 class="tt-haci-title">Digital<br> Strategy</h2><div class="tt-haci-description">Crafting data-driven strategies to elevate your online presence.</div></div>
-											<div class="tt-haci-content-bottom"><a href="services.html" class="tt-btn tt-btn-outline tt-magnetic-item"><span data-hover="Read More">Read More</span></a></div>
-										</div>
-									</div>
-								</div>
-								</div>
-						</div>
-					</div>
-
-					<div class="tt-section no-padding-top border-top">
-						<div class="tt-clipper">
-							<a href="https://www.youtube.com/watch?v=6nGs9iGrpok" class="tt-clipper-inner" data-cursor="Play<br>Reel" data-fancybox data-caption="My awesome showreel. :)">
-								<div class="tt-clipper-bg"><video loop muted autoplay playsinline preload="metadata"><source src="assets/vids/placeholder.mp4" data-src="assets/vids/1920/showreel-1920.mp4" type="video/mp4"></video></div>
-							</a>
 						</div>
 					</div>
 
@@ -244,9 +175,9 @@
 									<div class="tt-col-lg-4 margin-bottom-40">
 										<div class="tt-sticker-sticky tt-sticky-element">
 											<div class="tt-heading tt-heading-xxlg">
-												<h3 class="tt-heading-subtitle tt-text-reveal">Testimonials</h3>
-												<h2 class="tt-heading-title tt-text-reveal">What<br> They Say</h2>
-												<p class="max-width-500 tt-text-uppercase tt-text-reveal">Genuine words from the people I’ve had the pleasure to work with.</p>
+												<h3 class="tt-heading-subtitle">Testimonials</h3>
+												<h2 class="tt-heading-title">What<br> They Say</h2>
+												<p class="max-width-500 tt-text-uppercase">Genuine words from the people I’ve had the pleasure to work with.</p>
 											</div>
 										</div>
 									</div>
@@ -256,15 +187,15 @@
 												<div class="tt-stte-item">
 													<div class="tt-stte-card cursor-alter">
 														<div class="tt-stte-card-caption">
-															<div class="tt-stte-text">"One of the best template I've ever had. I love it! It's fully customizable, well coded, fast and responsive - fitting for all kind of devices".</div>
-															<div class="tt-stte-subtext"><a href="#" class="tt-link">- Wironimo</a></div>
+															<div class="tt-stte-text">"One of the best template I've ever had. I love it! It's fully customizable, well coded, fast and responsive."</div>
+															<div class="tt-stte-subtext">- Wironimo</div>
 														</div>
 													</div>
 												</div>
 												<div class="tt-stte-item">
 													<div class="tt-stte-card cursor-alter">
 														<div class="tt-stte-card-caption">
-															<div class="tt-stte-text">"Brilliant template. Tons of options, many concepts, design flexibility, code quality, explanatory comments".</div>
+															<div class="tt-stte-text">"Brilliant template. Tons of options, many concepts, design flexibility, code quality."</div>
 															<div class="tt-stte-subtext">- Gneto</div>
 														</div>
 													</div>
@@ -279,38 +210,31 @@
 
 					<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-row margin-bottom-40">
-								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h2 class="tt-heading-title tt-text-reveal">Let's Work<br> Together</h2></div></div>
+							<div class="tt-row">
+								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h2 class="tt-heading-title">Let's Work Together</h2></div></div> 
 								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
-									<div class="tt-big-round-ptn tt-anim-fadeinup"><a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">Let's<br> Connect!</div></a></div>
+									<div class="tt-big-round-ptn"><a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">Let's Connect!</div></a></div>
 								</div>
 							</div>
-						</div>
+						</div> 
 					</div>
+				</div> 
 
-				</div> <footer id="tt-footer" class="border-top">
+				<footer id="tt-footer" class="border-top">
 					<div class="tt-footer-inner tt-wrap">
-						<div class="tt-row">
-							<div class="tt-col-xl-3 tt-col-sm-6">
-								<div class="tt-footer-widget"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li><li><a href="about-me.html" class="tt-link">About Me</a></li></ul></div>
-							</div>
-							<div class="tt-col-xl-3 tt-col-sm-6">
-								<div class="tt-footer-widget"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list"><li><a href="mailto:company@email.com" class="tt-link">company@email.com</a></li></ul></div>
-							</div>
-							<div class="tt-col-xl-6 tt-col-sm-6 tt-justify-content-xl-end">
-								<div class="tt-footer-logo"><a href="index.html" class="tt-magnetic-item"><img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo"></a></div>
-							</div>
-						</div>
-					</div>
+						<div class="tt-row justify-content-center">
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul></div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="portfolio.html" class="tt-link">Work</a></li><li><a href="about-me.html" class="tt-link">About</a></li></ul></div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list">
+								<li><a href="mailto:company@email.com" class="tt-link">Email</a></li>
+								<li><a href="https://www.instagram.com/" class="tt-link" target="_blank">Instagram</a></li>
+							</ul></div> 
+						</div> 
+					</div> 
 				</footer>
 
-				<a href="#" class="tt-scroll-to-top">
-					<div class="tt-stt-progress tt-magnetic-item">
-						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg>
-					</div> 
-				</a>
-
-			</div>
+				<a href="#" class="tt-scroll-to-top"><div class="tt-stt-progress tt-magnetic-item"><svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg></div></a>
+			</div> 
 		</main>
 
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
@@ -323,6 +247,5 @@
 		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
 		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
-
 	</body>
 </html>
