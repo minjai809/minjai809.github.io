@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Minjai Jung | Home</title>
+		<title>Minjai Jung | Bio</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
@@ -14,53 +13,79 @@
 		<link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"> 
 		<link rel="stylesheet" href="assets/vendor/fancybox/css/fancybox.css"> 
 		<link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css"> 
-
 		<link rel="stylesheet" href="assets/css/helper.css">
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			/* 1. 모든 글자 흰색 고정 (기본 폰트 스타일 유지) */
-			body, p, h1, h2, h3, h4, h5, h6, span, a, li, blockquote, 
-			.ph-caption-title, .ph-caption-description, .tt-heading-title, .tt-heading-subtitle, .tt-link { 
-				color: #ffffff !important; 
-			}
-			.tt-btn-outline { color: #ffffff !important; border-color: #ffffff !important; }
-			.tt-btn-outline:hover { background: #ffffff !important; color: #000000 !important; }
-
-			/* 2. 비정형 MJ 로고 */
+			/* 1. 비정형 MJ 로고 (세로축 위치 하향 조정) */
 			.mj-logo-blob {
-				display: inline-flex; align-items: center; justify-content: center;
-				width: 65px; height: 65px; border: 1.5px solid #ffffff;
-				font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 800;
-				color: #ffffff !important; text-decoration: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 65px;
+				height: 65px;
+				border: 1.5px solid #ffffff;
+				font-family: 'Big Shoulders Display', sans-serif;
+				font-size: 1.6rem;
+				font-weight: 800;
+				color: #ffffff !important;
+				text-decoration: none;
 				border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-				animation: blob-morph 8s infinite alternate; transition: all 0.5s ease;
-				text-align: center; padding: 0;
+				animation: blob-morph 8s infinite alternate;
+				transition: all 0.5s ease;
+				text-align: center;
+				padding: 0;
 			}
-			.mj-logo-blob span { display: block; line-height: 1; transform: translateY(4px); }
+			.mj-logo-blob span {
+				display: block;
+				line-height: 1;
+				/* 세로축 위치를 더 아래로 조정 */
+				transform: translateY(4px); 
+			}
 			@keyframes blob-morph {
 				0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
 				100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; }
 			}
 
-			/* 3. Footer 디자인 (중앙 정렬 및 대형 폰트) */
-			.tt-footer-column-wrap { text-align: center; }
-			.tt-footer-widget-heading { font-size: 3.5rem !important; font-weight: 900; font-family: 'Big Shoulders Display', sans-serif; margin-bottom: 30px; text-transform: uppercase; }
+			/* 2. Technical Skill Bar (White) */
+			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
+			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
+			.skill-bar-inner { height: 100%; background: #ffffff !important; transition: width 1.5s ease-in-out; }
 
-			/* Mask Interaction 블랙 반전 고정 */
-			.ph-mask .ph-caption-title { color: #000000 !important; }
+			/* 3. Philosophy Circles (No Link) */
+			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
+			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); color: inherit; position: relative; overflow: hidden; cursor: default; }
+			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
+
+			/* 4. Footer Styling (Title Size x2 & Center) */
+			.tt-footer-column-wrap { text-align: center; }
+			.tt-footer-widget-heading { 
+				font-size: 3.2rem !important; /* 기존 1.6rem의 2배 */
+				margin-bottom: 30px; 
+				font-weight: 800; 
+				letter-spacing: -1px; 
+				color: #fff;
+				font-family: 'Big Shoulders Display', sans-serif;
+				text-transform: uppercase;
+			}
+			.tt-footer-widget-list li { margin-bottom: 10px; }
+			.tt-footer-widget-list li a { font-size: 1.1rem; opacity: 0.7; transition: opacity 0.3s ease; }
+			.tt-footer-widget-list li a:hover { opacity: 1; }
 		</style>
 	</head>
 
 	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll tt-style-dark">
 		<main id="body-inner">
-
 			<div id="tt-page-transition">
 				<div class="tt-ptr-overlay-top tt-noise"></div>
 				<div class="tt-ptr-overlay-bottom tt-noise"></div>
-				<div class="tt-ptr-preloader"><div class="tt-ptr-prel-content"><div class="mj-logo-blob" style="width: 100px; height: 100px; font-size: 2.5rem;"><span>MJ</span></div></div></div> 
+				<div class="tt-ptr-preloader">
+					<div class="tt-ptr-prel-content">
+						<div class="mj-logo-blob" style="width: 100px; height: 100px; font-size: 2.5rem;"><span>MJ</span></div>
+					</div> 
+				</div> 
 			</div>
-
 			<div id="magic-cursor"><div id="ball"></div></div>
 
 			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
@@ -75,9 +100,8 @@
 									<div class="tt-main-menu-content">
 										<ul class="tt-main-menu-list">
 											<li class="active"><a href="index.html">Home</a></li>
-											<li><a href="portfolio.html">Work</a></li>
 											<li><a href="about-me.html">About</a></li>
-											<li><a href="contact.html">Contact</a></li>
+											<li><a href="portfolio.html">Work</a></li>
 										</ul>
 									</div>
 								</div>
@@ -90,141 +114,108 @@
 				</div>
 			</header>
 
-			<div id="tt-content-wrap">
-				<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
-					<div class="ph-bg-slider" style="position: absolute; width: 100%; height: 100%; background: #000; z-index: -1;">
-						<div class="ph-bg-image bg-img-1" style="background-color: rgba(255,255,255,0.05); width: 100%; height: 100%;"></div>
-					</div>
-					<div class="page-header-inner tt-wrap">
-						<div class="ph-caption">
-							<div class="ph-caption-inner">
-								<h1 class="ph-caption-title">Minjai<br> Jung</h1>
-								<div class="ph-caption-description max-width-700">서울예술대학교 재학생</div>
-							</div>
+			<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
+				<div class="ph-bg-slider" style="position: absolute; width: 100%; height: 100%; background: #000; z-index: -1;">
+					<div class="ph-bg-image bg-img-1" style="background-color: rgba(255,0,0,0.1); width: 100%; height: 100%;"></div>
+				</div>
+				<div class="page-header-inner tt-wrap">
+					<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title tt-text-reveal">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700 tt-text-reveal">Scenographer & Creative Technologist</div></div></div>
+				</div>
+				<div class="page-header-inner ph-mask">
+					<div class="ph-mask-inner tt-wrap"><div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Minjai<br> Jung</h1><div class="ph-caption-description max-width-700">Scenographer & Creative Technologist</div></div></div></div>
+				</div>
+				
+				<div class="tt-scroll-down">
+					<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
+						<div class="tt-scrd-icon"></div>
+						<svg viewBox="0 0 500 500">
+							<defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs>
+							<text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text>
+						</svg>
+					</a>
+				</div>
+			</div>
+
+			<div id="tt-page-content">
+				<div class="tt-section padding-top-xlg-140 border-top">
+					<div class="tt-section-inner tt-wrap max-width-1500">
+						<div class="tt-row">
+							<div class="tt-col-xl-4 margin-bottom-60"><div class="tt-heading tt-heading-xxlg"><h3 class="tt-heading-subtitle tt-text-reveal">What I Use</h3><h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2></div></div> 
+							<div class="tt-col-xl-1"></div>
+							<div class="tt-col-xl-7 tt-align-self-center">
+								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Media server</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 80%;"></div></div></div>
+								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">AI</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 70%;"></div></div></div>
+								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Rendering</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 60%;"></div></div></div>
+							</div> 
 						</div>
 					</div> 
-					<div class="page-header-inner ph-mask">
-						<div class="ph-mask-inner tt-wrap">
-							<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Scenographer &<br> Creative Technologist</h1></div></div>
-						</div>
-					</div>
-					<div class="tt-scroll-down"><a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item"><div class="tt-scrd-icon"></div></a></div>
 				</div>
 
-				<div id="tt-page-content">
-					<div class="tt-section padding-top-xlg-140 padding-bottom-xlg-120 border-top">
-						<div class="tt-section-inner tt-wrap">
-							<div class="tt-row">
-								<div class="tt-col-lg-3">
-									<div class="tt-video ttv-portrait ttv-grayscale"><video playsinline muted autoplay loop preload="metadata" class="tt-anim-zoomin"><source src="assets/vids/placeholder.mp4" type="video/mp4"></video></div>
-									<div class="tt-text-uppercase margin-top-30">Scenographer, Creative Technologist<br> based in Seoul</div>
-								</div>
-								<div class="tt-col-lg-1"></div>
-								<div class="tt-col-lg-8 tt-align-self-center">
-									<div class="text-xxlg font-500">I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations.</div>
-									<a href="about-me.html" class="tt-btn tt-btn-outline margin-top-40 tt-magnetic-item"><span data-hover="Read More">More About Me</span></a>
-								</div> 
-							</div>
+				<div class="tt-section padding-top-xlg-140 border-top">
+					<div class="tt-section-inner tt-wrap">
+						<div class="tt-heading tt-heading-xxxlg tt-heading-center"><h3 class="tt-heading-subtitle tt-text-reveal">Core Vision</h3><h2 class="tt-heading-title tt-text-reveal">Philosophy</h2></div>
+						<div class="expertise-circles tt-anim-fadeinup">
+							<div class="exp-circle-item"><div class="exp-circle-text">Technology</div></div>
+							<div class="exp-circle-item"><div class="exp-circle-text">Interactive</div></div>
+							<div class="exp-circle-item"><div class="exp-circle-text">Disruption<br>in the field</div></div>
 						</div>
 					</div>
+				</div>
 
-					<div class="tt-section padding-top-xlg-100 padding-bottom-xlg-100 border-top">
-						<div class="tt-section-inner tt-wrap">
-							<div class="tt-heading tt-heading-sm margin-bottom-60 tt-heading-center">
-								<h3 class="tt-heading-subtitle">Collaborations</h3>
-								<h2 class="tt-heading-title">Companies I have worked with</h2>
-							</div>
-							<ul class="tt-logo-grid tt-lg-grid-4 tt-lg-grid-md-3 tt-lg-grid-sm-2">
-								<li class="tt-lg-item"><a href="#" class="tt-lg-link"><img src="assets/img/clients/client-1.png" class="tt-lg-image" alt="Client"></a></li>
-								<li class="tt-lg-item"><a href="#" class="tt-lg-link"><img src="assets/img/clients/client-2.png" class="tt-lg-image" alt="Client"></a></li>
-								<li class="tt-lg-item"><a href="#" class="tt-lg-link"><img src="assets/img/clients/client-3.png" class="tt-lg-image" alt="Client"></a></li>
-								<li class="tt-lg-item"><a href="#" class="tt-lg-link"><img src="assets/img/clients/client-4.png" class="tt-lg-image" alt="Client"></a></li>
-							</ul>
+				<div class="tt-section padding-top-xlg-140 border-top">
+					<div class="tt-section-inner tt-wrap">
+						<div class="tt-row">
+							<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle tt-text-reveal">Work</h3><h2 class="tt-heading-title tt-text-reveal">Projects</h2></div></div> 
+							<div class="tt-col-xl-4 tt-align-self-end margin-top-30"><div class="tt-big-round-ptn tt-anim-fadeinup"><a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">All Projects</div></a></div></div> 
 						</div>
-					</div>
-
-					<div class="tt-section padding-top-xlg-140 border-top">
-						<div class="tt-section-inner tt-wrap">
-							<div class="tt-row">
-								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle">Featured Work</h3><h2 class="tt-heading-title">Projects</h2></div></div> 
-								<div class="tt-col-xl-4 tt-align-self-end margin-top-30"><div class="tt-big-round-ptn"><a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">All<br> Projects</div></a></div></div> 
-							</div>
-							<div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover margin-top-60">
-								<div class="pcli-inner">
-									<a href="single-project-1.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Tortillas</h2><div class="pcli-category">Lifestyle</div></div></div></div></a>
-									<a href="single-project-2.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Coffee Shop</h2><div class="pcli-category">Lifestyle</div></div></div></div></a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="tt-section border-top border-bottom">
-						<div class="tt-section-inner tt-wrap">
-							<div class="tt-sticker">
-								<div class="tt-row">
-									<div class="tt-col-lg-4 margin-bottom-40">
-										<div class="tt-sticker-sticky tt-sticky-element">
-											<div class="tt-heading tt-heading-xxlg">
-												<h3 class="tt-heading-subtitle">Testimonials</h3>
-												<h2 class="tt-heading-title">What<br> They Say</h2>
-												<p class="max-width-500 tt-text-uppercase">Genuine words from the people I’ve had the pleasure to work with.</p>
-											</div>
-										</div>
-									</div>
-									<div class="tt-col-lg-8">
-										<div class="tt-sticker-scroller">
-											<div class="tt-sticky-testimonials tt-stte-reversed-colors">
-												<div class="tt-stte-item">
-													<div class="tt-stte-card cursor-alter">
-														<div class="tt-stte-card-caption">
-															<div class="tt-stte-text">"One of the best template I've ever had. I love it! It's fully customizable, well coded, fast and responsive."</div>
-															<div class="tt-stte-subtext">- Wironimo</div>
-														</div>
-													</div>
-												</div>
-												<div class="tt-stte-item">
-													<div class="tt-stte-card cursor-alter">
-														<div class="tt-stte-card-caption">
-															<div class="tt-stte-text">"Brilliant template. Tons of options, many concepts, design flexibility, code quality."</div>
-															<div class="tt-stte-subtext">- Gneto</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120">
-						<div class="tt-section-inner tt-wrap">
-							<div class="tt-row">
-								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h2 class="tt-heading-title">Let's Work Together</h2></div></div> 
-								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
-									<div class="tt-big-round-ptn"><a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">Let's Connect!</div></a></div>
-								</div>
-							</div>
-						</div> 
-					</div>
-				</div> 
-
-				<footer id="tt-footer" class="border-top">
-					<div class="tt-footer-inner tt-wrap">
-						<div class="tt-row justify-content-center">
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul></div> 
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="portfolio.html" class="tt-link">Work</a></li><li><a href="about-me.html" class="tt-link">About</a></li></ul></div> 
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list">
-								<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li>
-								<li><a href="https://www.instagram.com/min_jai_i" class="tt-link" target="_blank">Instagram</a></li>
-							</ul></div> 
+					</div> 
+				</div>
+				<div class="tt-section">
+					<div class="tt-section-inner max-width-2200">
+						<div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover">
+							<div class="pcli-inner">
+								<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 01</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 02</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-3.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 03</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-4.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 04</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-5.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-5.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 05</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+								<a href="single-project-6.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 06</h2><div class="pcli-categories"><div class="pcli-category">Category</div></div></div></div></div></a>
+							</div> 
 						</div> 
 					</div> 
-				</footer>
+				</div>
 
-				<a href="#" class="tt-scroll-to-top"><div class="tt-stt-progress tt-magnetic-item"><svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg></div></a>
+				<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120 border-top">
+					<div class="tt-section-inner tt-wrap">
+						<div class="tt-row">
+							<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h3 class="tt-heading-subtitle tt-text-reveal">Contact</h3><h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2></div></div> 
+							<div class="tt-col-xl-4 tt-align-self-end margin-top-40"><div class="tt-big-round-ptn tt-anim-fadeinup"><a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">Let's Connect!</div></a></div></div> 
+						</div>
+					</div> 
+				</div>
 			</div> 
+
+			<footer id="tt-footer" class="border-top">
+				<div class="tt-footer-inner tt-wrap">
+					<div class="tt-row justify-content-center">
+						<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
+							<h5 class="tt-footer-widget-heading">Home</h5>
+							<ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul>
+						</div> 
+						<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
+							<h5 class="tt-footer-widget-heading">Sitemap</h5>
+							<ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About</a></li><li><a href="portfolio.html" class="tt-link">Work</a></li></ul>
+						</div> 
+						<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
+							<h5 class="tt-footer-widget-heading">Contact</h5>
+							<ul class="tt-footer-widget-list">
+								<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li>
+								<li><a href="https://www.instagram.com/min_jai_i" class="tt-link" target="_blank">Instagram</a></li>
+							</ul> 
+						</div> 
+					</div> 
+				</div> 
+			</footer>
 		</main>
 
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
