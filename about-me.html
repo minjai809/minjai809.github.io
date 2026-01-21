@@ -17,113 +17,41 @@
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			/* 1. 비정형 MJ 로고 (중앙 보정) */
+			/* 1. 글로벌 텍스트 색상 화이트 고정 */
+			body, p, h1, h2, h3, h4, h5, h6, span, a, .ph-caption-subtitle, .ph-caption-description, .sc-description { 
+				color: #ffffff !important; 
+			}
+
+			/* 2. 비정형 MJ 로고 (중앙 보정) */
 			.mj-logo-blob { display: inline-flex; align-items: center; justify-content: center; width: 65px; height: 65px; border: 1.5px solid #ffffff; font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 800; color: #ffffff !important; text-decoration: none; border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; animation: blob-morph 8s infinite alternate; transition: all 0.5s ease; text-align: center; }
 			.mj-logo-blob span { display: block; line-height: 1; transform: translateY(4px); }
 			@keyframes blob-morph { 0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; } 100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; } }
 
-			/* 2. Page Header (Hero) Styling - White text fixed */
-			.ph-caption-subtitle { color: #ffffff !important; font-weight: 600; letter-spacing: 2px; }
-			.ph-caption-title { color: #ffffff !important; }
-			.ph-caption-description { color: #ffffff !important; font-weight: 500; opacity: 0.8; letter-spacing: 1px; }
-			.ph-mask .ph-caption-title { color: #000000 !important; }
+			/* 3. Hero Section Mask Interaction */
+			.ph-caption-subtitle { font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+			.ph-caption-title { font-size: 8vw !important; font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; }
+			.ph-caption-description { font-weight: 500; opacity: 1 !important; letter-spacing: 1px; }
+			.ph-mask .ph-caption-title { color: #000000 !important; } /* 마스크 영역만 블랙 반전 */
 
-			/* 3. Intro Section Button (Orange Border & Text) */
-			.tt-btn-orange-outline {
-				color: #FF5722; /* 주황색 */
-				border-color: #FF5722;
-			}
-			.tt-btn-orange-outline:hover {
-				background-color: #FF5722;
-				color: #ffffff;
-			}
-			.tt-big-round-ptn-holder.orange-style {
-				border-color: #FF5722;
-				color: #FF5722;
-			}
-			.tt-big-round-ptn-holder.orange-style:hover {
-				background-color: #FF5722;
-				color: #ffffff;
-			}
+			/* 4. Service Card (What I Do) Styling */
+			.tt-service-card { background: transparent; padding: 40px; border-radius: 20px; border: 1px solid #333; height: 100%; transition: all 0.3s ease; }
+			.tt-service-card:hover { border-color: #FF5722; transform: translateY(-10px); }
+			.sc-number { font-family: 'Big Shoulders Display', sans-serif; font-size: 3rem; font-weight: 800; color: #555; margin-bottom: 20px; line-height: 1; }
+			.tt-service-card:hover .sc-number { color: #FF5722; }
+			.sc-title { font-size: 1.8rem; font-weight: 700; font-family: 'Big Shoulders Display', sans-serif; margin-bottom: 20px; }
+			.sc-description { opacity: 0.8; font-size: 1rem; margin-bottom: 30px; }
 
-			/* 4. What I Do (Services) Card Slider Styling */
-			.tt-services-slider .swiper-slide {
-				height: auto;
-				display: flex;
-			}
-			.tt-service-card {
-				background: #1a1a1a; /* 다크 모드 카드 배경 */
-				padding: 40px;
-				border-radius: 20px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				height: 100%;
-				transition: transform 0.3s ease;
-				border: 1px solid #333;
-			}
-			.tt-service-card:hover {
-				transform: translateY(-10px);
-				border-color: #FF5722; /* 호버 시 주황색 테두리 */
-			}
-			.sc-number {
-				font-family: 'Big Shoulders Display', sans-serif;
-				font-size: 3rem;
-				font-weight: 800;
-				color: #333; /* 어두운 회색 번호 */
-				margin-bottom: 20px;
-				line-height: 1;
-			}
-			.tt-service-card:hover .sc-number {
-				color: #FF5722; /* 호버 시 주황색 번호 */
-			}
-			.sc-title {
-				font-size: 1.8rem;
-				font-weight: 700;
-				margin-bottom: 20px;
-				text-transform: uppercase;
-				font-family: 'Big Shoulders Display', sans-serif;
-			}
-			.sc-description {
-				font-size: 1rem;
-				opacity: 0.7;
-				margin-bottom: 30px;
-				flex-grow: 1;
-			}
-			.sc-btn {
-				display: inline-flex;
-				align-items: center;
-				padding: 10px 25px;
-				border: 1px solid #fff;
-				border-radius: 30px;
-				text-decoration: none;
-				color: #fff;
-				font-weight: 600;
-				text-transform: uppercase;
-				font-size: 0.9rem;
-				transition: all 0.3s ease;
-			}
-			.sc-btn:hover {
-				background: #FF5722;
-				border-color: #FF5722;
-				color: #fff;
-			}
-
-			/* 5. Skill Bar (White) */
-			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
-			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
-			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
-			.skill-bar-inner { height: 100%; background: #ffffff !important; transition: width 1.5s ease-in-out; }
-
-			/* 6. Philosophy Circles */
+			/* 5. Philosophy Circles (Home에서 이전) */
 			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
-			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #e2e2e2; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); color: inherit; position: relative; overflow: hidden; cursor: default; }
+			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #ffffff; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); color: #ffffff; position: relative; overflow: hidden; cursor: default; }
+			.exp-circle-item:hover { background: #ffffff; color: #000000; }
 			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
 
-			/* 7. Footer Styling */
+			/* 6. Footer Layout & Large Headings */
 			.tt-footer-column-wrap { text-align: center; }
-			.tt-footer-widget-heading { font-size: 3.2rem !important; margin-bottom: 30px; font-weight: 800; letter-spacing: -1px; color: #fff; font-family: 'Big Shoulders Display', sans-serif; text-transform: uppercase; }
-			.tt-footer-widget-list li a { font-size: 1.1rem; opacity: 0.7; transition: opacity 0.3s ease; }
+			.tt-footer-widget-heading { font-size: 3.2rem !important; font-weight: 800; font-family: 'Big Shoulders Display', sans-serif; margin-bottom: 30px; text-transform: uppercase; }
+			.orange-round-btn { border: 2px solid #FF5722 !important; color: #FF5722 !important; }
+			.orange-round-btn:hover { background: #FF5722 !important; color: #ffffff !important; }
 		</style>
 	</head>
 
@@ -161,7 +89,7 @@
 							<div class="ph-caption-inner">
 								<h2 class="ph-caption-subtitle tt-text-reveal">Minjai Jung</h2>
 								<h1 class="ph-caption-title tt-text-reveal">ABOUT ME</h1>
-								<div class="ph-caption-description tt-text-reveal max-width-800 margin-top-20">
+								<div class="ph-caption-description max-width-800 margin-top-20 tt-text-reveal">
 									DESIGN THAT DOESN'T JUST LOOK GOOD, BUT WORKS BEAUTIFULLY TOO.
 								</div>
 							</div>
@@ -169,40 +97,26 @@
 					</div> 
 					<div class="page-header-inner ph-mask">
 						<div class="ph-mask-inner tt-wrap">
-							<div class="ph-caption">
-								<div class="ph-caption-inner">
-									<h1 class="ph-caption-title">WHO I AM</h1>
-								</div>
-							</div>
+							<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">WHO I AM</h1></div></div>
 						</div>
 					</div>
-					<div class="tt-scroll-down">
-						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
-							<div class="tt-scrd-icon"></div>
-							<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
-						</a>
-					</div>
+					<div class="tt-scroll-down"><a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item"><div class="tt-scrd-icon"></div></a></div>
 				</div>
 
 				<div id="tt-page-content">
-					
 					<div class="tt-section no-padding-bottom padding-bottom-xlg-40 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row tt-lg-row-reverse">
-								<div class="tt-col-lg-6 margin-bottom-20">
-									<div class="tt-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" class="tt-anim-zoomin" alt="Minjai Jung"></div>
-								</div>
+								<div class="tt-col-lg-6 margin-bottom-20"><div class="tt-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" class="tt-anim-zoomin" alt="Minjai Jung"></div></div>
 								<div class="tt-col-lg-1"></div>
 								<div class="tt-col-lg-5">
-									<h2 class="tt-font-alter tt-anim-fadeinup" style="font-size: 4rem; line-height: 1; margin-bottom: 30px;">Hello!</h2>
-									<div class="text-lg tt-anim-fadeinup">
+									<h2 class="tt-font-alter tt-anim-fadeinup" style="font-size: 5rem; line-height: 1;">Hello!</h2>
+									<div class="text-lg tt-anim-fadeinup margin-top-40">
 										<p>I’m Minjai Jung, a Seoul-based Scenographer and Creative Technologist with a focus on immersive digital experiences.</p>
 										<p>I believe great design is more than just aesthetics—it’s about strategy, usability, and creating meaningful connections between brands and their audiences.</p>
-										<p>With a keen eye for detail, a passion for innovation, and a user-centered approach, I collaborate with brands of all sizes to bring their vision to life.</p>
-										
-										<div class="tt-big-round-ptn margin-top-50">
-											<a href="portfolio.html" class="tt-big-round-ptn-holder orange-style tt-magnetic-item">
-												<div class="tt-big-round-ptn-inner">EXPLORE<br> MY WORK</div>
+										<div class="tt-big-round-ptn margin-top-60">
+											<a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item" style="border-color: #FF5722; color: #FF5722;">
+												<div class="tt-big-round-ptn-inner">Explore<br> My Work</div>
 											</a>
 										</div>
 									</div>
@@ -231,45 +145,22 @@
 							<div class="tt-heading tt-heading-xxlg margin-bottom-60">
 								<h3 class="tt-heading-subtitle tt-text-reveal">Capabilities</h3>
 								<h2 class="tt-heading-title tt-text-reveal">What I Do</h2>
-								<div class="tt-heading-description max-width-600 tt-text-reveal">Comprehensive services to bring your vision to life through innovative design and technology.</div>
 							</div>
-
-							<div class="tt-services-slider swiper-container tt-anim-fadeinup" data-slides-per-view="3" data-space-between="30" data-breakpoints='{"0": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 3}}'>
+							<div class="tt-services-slider swiper-container tt-anim-fadeinup" data-slides-per-view="3" data-space-between="30">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="tt-service-card">
-											<div class="sc-number">01</div>
-											<h3 class="sc-title">Scenography</h3>
-											<div class="sc-description">Crafting immersive spatial environments that tell compelling stories and engage audiences on a deeper level.</div>
-											<div><a href="service-scenography.html" class="sc-btn tt-magnetic-item">Read More</a></div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="tt-service-card">
-											<div class="sc-number">02</div>
-											<h3 class="sc-title">Stage Video Design</h3>
-											<div class="sc-description">Designing dynamic video content and projection mapping that seamlessly integrates with live performances and events.</div>
-											<div><a href="service-video-design.html" class="sc-btn tt-magnetic-item">Read More</a></div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="tt-service-card">
-											<div class="sc-number">03</div>
-											<h3 class="sc-title">Installation Art</h3>
-											<div class="sc-description">Creating interactive and site-specific installations that blend art, technology, and audience participation.</div>
-											<div><a href="service-installation.html" class="sc-btn tt-magnetic-item">Read More</a></div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="tt-service-card">
-											<div class="sc-number">04</div>
-											<h3 class="sc-title">Electrical Engineering</h3>
-											<div class="sc-description">Applying technical expertise to ensure the safe, reliable, and efficient implementation of complex systems.</div>
-											<div><a href="service-engineering.html" class="sc-btn tt-magnetic-item">Read More</a></div>
-										</div>
-									</div>
+									<div class="swiper-slide"><div class="tt-service-card">
+										<div class="sc-number">01</div><h3 class="sc-title">Scenography</h3><p class="sc-description">Creating immersive spatial stories.</p>
+										<a href="service-scenography.html" class="tt-link">Read More</a>
+									</div></div>
+									<div class="swiper-slide"><div class="tt-service-card">
+										<div class="sc-number">02</div><h3 class="sc-title">Stage Design</h3><p class="sc-description">Innovative visual environments.</p>
+										<a href="service-stage.html" class="tt-link">Read More</a>
+									</div></div>
+									<div class="swiper-slide"><div class="tt-service-card">
+										<div class="sc-number">03</div><h3 class="sc-title">Media Tech</h3><p class="sc-description">Integrating art and data.</p>
+										<a href="service-tech.html" class="tt-link">Read More</a>
+									</div></div>
 								</div>
-								<div class="tt-ts-pagination swiper-pagination margin-top-40"></div>
 							</div>
 						</div>
 					</div>
@@ -288,7 +179,7 @@
 						</div> 
 					</div>
 
-					<div class="tt-section padding-top-xlg-140 border-top padding-bottom-xlg-150">
+					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-heading tt-heading-xxxlg tt-heading-center"><h3 class="tt-heading-subtitle tt-text-reveal">Core Vision</h3><h2 class="tt-heading-title tt-text-reveal">Philosophy</h2></div>
 							<div class="expertise-circles tt-anim-fadeinup">
@@ -303,18 +194,15 @@
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
 								<div class="tt-col-xl-8">
-									<div class="tt-heading tt-heading-xxxlg no-margin">
-										<h3 class="tt-heading-subtitle tt-text-reveal">Contact</h3>
+									<div class="tt-heading tt-heading-xxxlg">
 										<h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2>
-										<div class="tt-heading-description max-width-600 tt-text-reveal margin-top-20" style="font-size: 1.2rem; opacity: 0.8;">
-											Feeling good about a new project? Write me what's in your mind and let's talk about it!
-										</div>
+										<p class="margin-top-20 opacity-07 tt-text-reveal" style="font-size: 1.2rem;">Feeling good about a new project? Write me what's in your mind and let's talk about it!</p>
 									</div>
 								</div> 
 								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
 									<div class="tt-big-round-ptn tt-anim-fadeinup">
-										<a href="contact.html" class="tt-big-round-ptn-holder orange-style tt-magnetic-item">
-											<div class="tt-big-round-ptn-inner">LET'S<br> CONTACT</div>
+										<a href="contact.html" class="tt-big-round-ptn-holder orange-round-btn tt-magnetic-item">
+											<div class="tt-big-round-ptn-inner" style="font-size: 1.5rem; line-height: 1.2;">LET'S<br>CONTACT</div>
 										</a>
 									</div>
 								</div> 
@@ -326,30 +214,16 @@
 				<footer id="tt-footer" class="border-top">
 					<div class="tt-footer-inner tt-wrap">
 						<div class="tt-row justify-content-center">
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
-								<h5 class="tt-footer-widget-heading">Home</h5>
-								<ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul>
-							</div> 
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
-								<h5 class="tt-footer-widget-heading">Sitemap</h5>
-								<ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About</a></li><li><a href="portfolio.html" class="tt-link">Work</a></li></ul>
-							</div> 
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap">
-								<h5 class="tt-footer-widget-heading">Contact</h5>
-								<ul class="tt-footer-widget-list">
-									<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li>
-									<li><a href="https://www.instagram.com/min_jai_i" class="tt-link" target="_blank">Instagram</a></li>
-								</ul> 
-							</div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul></div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="about-me.html" class="tt-link">About</a></li><li><a href="portfolio.html" class="tt-link">Work</a></li></ul></div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list"><li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li></ul></div> 
 						</div> 
 					</div> 
 				</footer>
 
 				<a href="#" class="tt-scroll-to-top">
 					<div class="tt-stt-progress tt-magnetic-item">
-						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
-							<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
-						</svg>
+						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg>
 					</div> 
 				</a>
 			</div> 
@@ -357,12 +231,8 @@
 
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
 		<script src="assets/vendor/gsap/gsap.min.js"></script> 
-		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
 		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> 
 		<script src="assets/vendor/lenis.min.js"></script> 
-		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
-		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
-		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
 		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
 	</body>
