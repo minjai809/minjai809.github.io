@@ -17,41 +17,35 @@
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			/* 1. 글로벌 텍스트 색상 화이트 고정 */
-			body, p, h1, h2, h3, h4, h5, h6, span, a, .ph-caption-subtitle, .ph-caption-description, .sc-description { 
-				color: #ffffff !important; 
-			}
+			/* [글로벌] 모든 글자 흰색 고정 */
+			body, p, h1, h2, h3, h4, h5, h6, span, a, .sc-description { color: #ffffff !important; }
 
-			/* 2. 비정형 MJ 로고 (중앙 보정) */
+			/* MJ 로고 */
 			.mj-logo-blob { display: inline-flex; align-items: center; justify-content: center; width: 65px; height: 65px; border: 1.5px solid #ffffff; font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 800; color: #ffffff !important; text-decoration: none; border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; animation: blob-morph 8s infinite alternate; transition: all 0.5s ease; text-align: center; }
-			.mj-logo-blob span { display: block; line-height: 1; transform: translateY(4px); }
-			@keyframes blob-morph { 0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; } 100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; } }
+			.mj-logo-blob span { display: block; line-height: 1; transform: translateY(4px); color: #ffffff !important; }
 
-			/* 3. Hero Section Mask Interaction */
-			.ph-caption-subtitle { font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
-			.ph-caption-title { font-size: 8vw !important; font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; }
-			.ph-caption-description { font-weight: 500; opacity: 1 !important; letter-spacing: 1px; }
-			.ph-mask .ph-caption-title { color: #000000 !important; } /* 마스크 영역만 블랙 반전 */
+			/* Hero Section */
+			.ph-caption-subtitle { color: #ffffff !important; font-weight: 600; letter-spacing: 2px; }
+			.ph-caption-title { color: #ffffff !important; font-size: 8vw !important; font-family: 'Big Shoulders Display', sans-serif; }
+			.ph-mask .ph-caption-title { color: #000000 !important; }
 
-			/* 4. Service Card (What I Do) Styling */
-			.tt-service-card { background: transparent; padding: 40px; border-radius: 20px; border: 1px solid #333; height: 100%; transition: all 0.3s ease; }
-			.tt-service-card:hover { border-color: #FF5722; transform: translateY(-10px); }
-			.sc-number { font-family: 'Big Shoulders Display', sans-serif; font-size: 3rem; font-weight: 800; color: #555; margin-bottom: 20px; line-height: 1; }
-			.tt-service-card:hover .sc-number { color: #FF5722; }
-			.sc-title { font-size: 1.8rem; font-weight: 700; font-family: 'Big Shoulders Display', sans-serif; margin-bottom: 20px; }
-			.sc-description { opacity: 0.8; font-size: 1rem; margin-bottom: 30px; }
-
-			/* 5. Philosophy Circles (Home에서 이전) */
+			/* Philosophy Circles (Bubbles) */
 			.expertise-circles { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 60px; gap: 30px; }
 			.exp-circle-item { width: 250px; height: 250px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; border: 2px solid #ffffff; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); color: #ffffff; position: relative; overflow: hidden; cursor: default; }
-			.exp-circle-item:hover { background: #ffffff; color: #000000; }
-			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
+			.exp-circle-item:hover { background: #ffffff; color: #000000 !important; }
+			.exp-circle-item:hover .exp-circle-text { color: #000000 !important; }
+			.exp-circle-text { font-family: 'Big Shoulders Display', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; color: #ffffff !important; }
 
-			/* 6. Footer Layout & Large Headings */
-			.tt-footer-column-wrap { text-align: center; }
-			.tt-footer-widget-heading { font-size: 3.2rem !important; font-weight: 800; font-family: 'Big Shoulders Display', sans-serif; margin-bottom: 30px; text-transform: uppercase; }
-			.orange-round-btn { border: 2px solid #FF5722 !important; color: #FF5722 !important; }
-			.orange-round-btn:hover { background: #FF5722 !important; color: #ffffff !important; }
+			/* Skill Bar */
+			.skill-bar-outer { height: 12px; border: 1px solid #ffffff !important; background: transparent; }
+			.skill-bar-inner { height: 100%; background: #ffffff !important; }
+
+			/* What I Do Card Style */
+			.tt-service-card { border: 1px solid rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; transition: 0.3s; }
+			.tt-service-card:hover { border-color: #FF5722; }
+
+			/* Footer */
+			.tt-footer-widget-heading { font-size: 3.2rem !important; font-weight: 800; font-family: 'Big Shoulders Display', sans-serif; text-transform: uppercase; }
 		</style>
 	</head>
 
@@ -62,20 +56,15 @@
 				<div class="tt-ptr-overlay-bottom tt-noise"></div>
 				<div class="tt-ptr-preloader"><div class="tt-ptr-prel-content"><div class="mj-logo-blob" style="width: 100px; height: 100px; font-size: 2.5rem;"><span>MJ</span></div></div></div> 
 			</div>
-			<div id="magic-cursor"><div id="ball"></div></div>
 
 			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
 				<div class="tt-header-inner tt-noise"> 
 					<div class="tt-header-col tt-header-col-left"><div class="tt-logo"><a href="index.html" class="mj-logo-blob tt-magnetic-item"><span>MJ</span></a></div></div>
 					<div class="tt-header-col tt-header-col-center">
 						<nav class="tt-main-menu tt-m-menu-center">
-							<div class="tt-main-menu-holder">
-								<div class="tt-main-menu-inner">
-									<div class="tt-main-menu-content">
-										<ul class="tt-main-menu-list"><li><a href="index.html">Home</a></li><li class="active"><a href="about-me.html">About</a></li><li><a href="portfolio.html">Work</a></li></ul>
-									</div>
-								</div>
-							</div>
+							<div class="tt-main-menu-holder"><div class="tt-main-menu-inner"><div class="tt-main-menu-content">
+								<ul class="tt-main-menu-list"><li><a href="index.html">Home</a></li><li class="active"><a href="about-me.html">About</a></li><li><a href="portfolio.html">Work</a></li></ul>
+							</div></div></div>
 						</nav>
 					</div>
 					<div class="tt-header-col tt-header-col-right"><a href="contact.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item"><span data-hover="Contact">Contact</span></a></div>
@@ -87,20 +76,15 @@
 					<div class="page-header-inner tt-wrap">
 						<div class="ph-caption">
 							<div class="ph-caption-inner">
-								<h2 class="ph-caption-subtitle tt-text-reveal">Minjai Jung</h2>
-								<h1 class="ph-caption-title tt-text-reveal">ABOUT ME</h1>
-								<div class="ph-caption-description max-width-800 margin-top-20 tt-text-reveal">
-									DESIGN THAT DOESN'T JUST LOOK GOOD, BUT WORKS BEAUTIFULLY TOO.
-								</div>
+								<h2 class="ph-caption-subtitle">Minjai Jung</h2>
+								<h1 class="ph-caption-title">ABOUT ME</h1>
+								<div class="ph-caption-description max-width-800 margin-top-20">DESIGN THAT DOESN'T JUST LOOK GOOD, BUT WORKS BEAUTIFULLY TOO.</div>
 							</div>
 						</div> 
 					</div> 
 					<div class="page-header-inner ph-mask">
-						<div class="ph-mask-inner tt-wrap">
-							<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">WHO I AM</h1></div></div>
-						</div>
+						<div class="ph-mask-inner tt-wrap"><div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">WHO I AM</h1></div></div></div>
 					</div>
-					<div class="tt-scroll-down"><a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item"><div class="tt-scrd-icon"></div></a></div>
 				</div>
 
 				<div id="tt-page-content">
@@ -112,12 +96,9 @@
 								<div class="tt-col-lg-5">
 									<h2 class="tt-font-alter tt-anim-fadeinup" style="font-size: 5rem; line-height: 1;">Hello!</h2>
 									<div class="text-lg tt-anim-fadeinup margin-top-40">
-										<p>I’m Minjai Jung, a Seoul-based Scenographer and Creative Technologist with a focus on immersive digital experiences.</p>
-										<p>I believe great design is more than just aesthetics—it’s about strategy, usability, and creating meaningful connections between brands and their audiences.</p>
+										<p>I’m Minjai Jung, a Scenographer and Creative Technologist.</p>
 										<div class="tt-big-round-ptn margin-top-60">
-											<a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item" style="border-color: #FF5722; color: #FF5722;">
-												<div class="tt-big-round-ptn-inner">Explore<br> My Work</div>
-											</a>
+											<a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item" style="border-color: #FF5722; color: #FF5722;"><div class="tt-big-round-ptn-inner">Explore<br> My Work</div></a>
 										</div>
 									</div>
 								</div> 
@@ -127,39 +108,19 @@
 
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-row">
-								<div class="tt-col-xl-4 margin-bottom-60"><div class="tt-heading tt-heading-xxlg"><h3 class="tt-heading-subtitle tt-text-reveal">Biography</h3><h2 class="tt-heading-title tt-text-reveal">Education</h2></div></div>
-								<div class="tt-col-xl-1"></div>
-								<div class="tt-col-xl-7">
-									<div class="tt-accordion tt-ac-xlg tt-ac-counter tt-ac-borders">
-										<div class="tt-accordion-item tt-anim-fadeinup"><div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University Name 01</h4><div class="tt-ac-head-subtitle">2018 - 2022</div></div></div></div></div>
-										<div class="tt-accordion-item tt-anim-fadeinup"><div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">University Name 02</h4><div class="tt-ac-head-subtitle">2015 - 2018</div></div></div></div></div>
-									</div>
-								</div>
+							<div class="tt-heading tt-heading-xxlg"><h2 class="tt-heading-title tt-text-reveal">Education</h2></div>
+							<div class="tt-accordion tt-ac-xlg tt-ac-counter tt-ac-borders margin-top-60">
+								<div class="tt-accordion-item tt-anim-fadeinup"><div class="tt-accordion-heading"><div class="tt-ac-head"><div class="tt-ac-head-inner"><h4 class="tt-ac-head-title">Seoul Institute of the Arts</h4></div></div></div></div>
 							</div>
 						</div>
 					</div>
 
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-heading tt-heading-xxlg margin-bottom-60">
-								<h3 class="tt-heading-subtitle tt-text-reveal">Capabilities</h3>
-								<h2 class="tt-heading-title tt-text-reveal">What I Do</h2>
-							</div>
-							<div class="tt-services-slider swiper-container tt-anim-fadeinup" data-slides-per-view="3" data-space-between="30">
+							<div class="tt-heading tt-heading-xxlg"><h2 class="tt-heading-title tt-text-reveal">What I Do</h2></div>
+							<div class="tt-services-slider swiper-container tt-anim-fadeinup margin-top-60" data-slides-per-view="3" data-space-between="30">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide"><div class="tt-service-card">
-										<div class="sc-number">01</div><h3 class="sc-title">Scenography</h3><p class="sc-description">Creating immersive spatial stories.</p>
-										<a href="service-scenography.html" class="tt-link">Read More</a>
-									</div></div>
-									<div class="swiper-slide"><div class="tt-service-card">
-										<div class="sc-number">02</div><h3 class="sc-title">Stage Design</h3><p class="sc-description">Innovative visual environments.</p>
-										<a href="service-stage.html" class="tt-link">Read More</a>
-									</div></div>
-									<div class="swiper-slide"><div class="tt-service-card">
-										<div class="sc-number">03</div><h3 class="sc-title">Media Tech</h3><p class="sc-description">Integrating art and data.</p>
-										<a href="service-tech.html" class="tt-link">Read More</a>
-									</div></div>
+									<div class="swiper-slide"><div class="tt-service-card"><h3 class="sc-title">Scenography</h3><p class="sc-description">Creative spatial design.</p></div></div>
 								</div>
 							</div>
 						</div>
@@ -167,25 +128,20 @@
 
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap max-width-1500">
-							<div class="tt-row">
-								<div class="tt-col-xl-4 margin-bottom-60"><div class="tt-heading tt-heading-xxlg"><h3 class="tt-heading-subtitle tt-text-reveal">Expertise</h3><h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2></div></div> 
-								<div class="tt-col-xl-1"></div>
-								<div class="tt-col-xl-7 tt-align-self-center">
-									<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Media server</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 80%;"></div></div></div>
-									<div class="skill-container tt-anim-fadeinup"><div class="skill-label">AI</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 70%;"></div></div></div>
-									<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Rendering</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 60%;"></div></div></div>
-								</div> 
+							<div class="tt-heading tt-heading-xxlg"><h2 class="tt-heading-title tt-text-reveal">Technical Skills</h2></div>
+							<div class="margin-top-60">
+								<div class="skill-container tt-anim-fadeinup"><div class="skill-label">Media Server</div><div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 80%;"></div></div></div>
 							</div>
 						</div> 
 					</div>
 
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-heading tt-heading-xxxlg tt-heading-center"><h3 class="tt-heading-subtitle tt-text-reveal">Core Vision</h3><h2 class="tt-heading-title tt-text-reveal">Philosophy</h2></div>
+							<div class="tt-heading tt-heading-xxxlg tt-heading-center"><h2 class="tt-heading-title tt-text-reveal">Philosophy</h2></div>
 							<div class="expertise-circles tt-anim-fadeinup">
 								<div class="exp-circle-item"><div class="exp-circle-text">Technology</div></div>
 								<div class="exp-circle-item"><div class="exp-circle-text">Interactive</div></div>
-								<div class="exp-circle-item"><div class="exp-circle-text">Disruption<br>in the field</div></div>
+								<div class="exp-circle-item"><div class="exp-circle-text">Disruption</div></div>
 							</div>
 						</div>
 					</div>
@@ -193,19 +149,8 @@
 					<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
-								<div class="tt-col-xl-8">
-									<div class="tt-heading tt-heading-xxxlg">
-										<h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2>
-										<p class="margin-top-20 opacity-07 tt-text-reveal" style="font-size: 1.2rem;">Feeling good about a new project? Write me what's in your mind and let's talk about it!</p>
-									</div>
-								</div> 
-								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
-									<div class="tt-big-round-ptn tt-anim-fadeinup">
-										<a href="contact.html" class="tt-big-round-ptn-holder orange-round-btn tt-magnetic-item">
-											<div class="tt-big-round-ptn-inner" style="font-size: 1.5rem; line-height: 1.2;">LET'S<br>CONTACT</div>
-										</a>
-									</div>
-								</div> 
+								<div class="tt-col-xl-8"><h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2><p class="margin-top-20 opacity-07">Feeling good about a new project? Write me what's in your mind!</p></div> 
+								<div class="tt-col-xl-4 tt-align-self-end margin-top-40"><div class="tt-big-round-ptn tt-anim-fadeinup"><a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item" style="border-color: #FF5722; color: #FF5722;"><div class="tt-big-round-ptn-inner">LET'S<br>CONTACT</div></a></div></div> 
 							</div>
 						</div> 
 					</div>
@@ -220,12 +165,6 @@
 						</div> 
 					</div> 
 				</footer>
-
-				<a href="#" class="tt-scroll-to-top">
-					<div class="tt-stt-progress tt-magnetic-item">
-						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg>
-					</div> 
-				</a>
 			</div> 
 		</main>
 
