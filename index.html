@@ -19,10 +19,9 @@
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			/* 1. 모든 글자 흰색 고정 */
+			/* 1. 모든 글자 흰색 고정 (기본 폰트 스타일 유지) */
 			body, p, h1, h2, h3, h4, h5, h6, span, a, li, blockquote, 
-			.ph-caption-title, .ph-caption-description, .tt-heading-title, .tt-heading-subtitle,
-			.pcli-title, .pcli-category, .tt-footer-widget-heading, .tt-link { 
+			.ph-caption-title, .ph-caption-description, .tt-heading-title, .tt-heading-subtitle, .tt-link { 
 				color: #ffffff !important; 
 			}
 			.tt-btn-outline { color: #ffffff !important; border-color: #ffffff !important; }
@@ -44,11 +43,11 @@
 				100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; }
 			}
 
-			/* 3. Footer 대형 타이틀 중앙 정렬 */
+			/* 3. Footer 디자인 (중앙 정렬 및 대형 폰트) */
 			.tt-footer-column-wrap { text-align: center; }
 			.tt-footer-widget-heading { font-size: 3.5rem !important; font-weight: 900; font-family: 'Big Shoulders Display', sans-serif; margin-bottom: 30px; text-transform: uppercase; }
 
-			/* Mask Interaction 블랙 반전 */
+			/* Mask Interaction 블랙 반전 고정 */
 			.ph-mask .ph-caption-title { color: #000000 !important; }
 		</style>
 	</head>
@@ -116,14 +115,14 @@
 					<div class="tt-section padding-top-xlg-140 padding-bottom-xlg-120 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
-								<div class="tt-col-lg-4">
-									<div class="tt-image ttv-portrait"><img src="assets/img/portfolio/800/portfolio-1.jpg" class="tt-anim-zoomin" alt="Minjai Jung"></div>
+								<div class="tt-col-lg-3">
+									<div class="tt-video ttv-portrait ttv-grayscale"><video playsinline muted autoplay loop preload="metadata" class="tt-anim-zoomin"><source src="assets/vids/placeholder.mp4" type="video/mp4"></video></div>
 									<div class="tt-text-uppercase margin-top-30">Scenographer, Creative Technologist<br> based in Seoul</div>
 								</div>
 								<div class="tt-col-lg-1"></div>
-								<div class="tt-col-lg-7 tt-align-self-center">
-									<div class="text-xxlg font-500">I am dedicated to developing innovative solutions and impactful experiences through visual art and technology.</div>
-									<a href="about-me.html" class="tt-btn tt-btn-outline margin-top-40 tt-magnetic-item"><span data-hover="Read More">Read More</span></a>
+								<div class="tt-col-lg-8 tt-align-self-center">
+									<div class="text-xxlg font-500">I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations.</div>
+									<a href="about-me.html" class="tt-btn tt-btn-outline margin-top-40 tt-magnetic-item"><span data-hover="Read More">More About Me</span></a>
 								</div> 
 							</div>
 						</div>
@@ -147,44 +146,64 @@
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
-								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg"><h2 class="tt-heading-title">Projects</h2></div></div> 
+								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle">Featured Work</h3><h2 class="tt-heading-title">Projects</h2></div></div> 
 								<div class="tt-col-xl-4 tt-align-self-end margin-top-30"><div class="tt-big-round-ptn"><a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">All<br> Projects</div></a></div></div> 
 							</div>
 							<div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover margin-top-60">
 								<div class="pcli-inner">
-									<a href="single-project-1.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 01</h2><div class="pcli-category">Scenography</div></div></div></div></a>
-									<a href="single-project-2.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 02</h2><div class="pcli-category">Media Art</div></div></div></div></a>
-									<a href="single-project-3.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-3.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 03</h2><div class="pcli-category">Creative Tech</div></div></div></div></a>
-									<a href="single-project-4.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-4.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 04</h2><div class="pcli-category">Installation</div></div></div></div></a>
+									<a href="single-project-1.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Tortillas</h2><div class="pcli-category">Lifestyle</div></div></div></div></a>
+									<a href="single-project-2.html" class="pcli-item"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Coffee Shop</h2><div class="pcli-category">Lifestyle</div></div></div></div></a>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150 border-top">
+					<div class="tt-section border-top border-bottom">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-heading tt-heading-xxlg margin-bottom-60">
-								<h3 class="tt-heading-subtitle">Testimonials</h3>
-								<h2 class="tt-heading-title">What They Say</h2>
-							</div>
-							<div class="tt-testimonials-slider swiper-container" data-speed="1000" data-autoplay="5000">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide"><div class="tt-testimonial-item"><blockquote class="tt-testimonial-quote">"Minjai's work pushes the boundaries of scenography."</blockquote><div class="tt-testimonial-author">- Partner Agency</div></div></div>
-									<div class="swiper-slide"><div class="tt-testimonial-item"><blockquote class="tt-testimonial-quote">"A unique blend of technology and artistic vision."</blockquote><div class="tt-testimonial-author">- Creative Director</div></div></div>
+							<div class="tt-sticker">
+								<div class="tt-row">
+									<div class="tt-col-lg-4 margin-bottom-40">
+										<div class="tt-sticker-sticky tt-sticky-element">
+											<div class="tt-heading tt-heading-xxlg">
+												<h3 class="tt-heading-subtitle">Testimonials</h3>
+												<h2 class="tt-heading-title">What<br> They Say</h2>
+												<p class="max-width-500 tt-text-uppercase">Genuine words from the people I’ve had the pleasure to work with.</p>
+											</div>
+										</div>
+									</div>
+									<div class="tt-col-lg-8">
+										<div class="tt-sticker-scroller">
+											<div class="tt-sticky-testimonials tt-stte-reversed-colors">
+												<div class="tt-stte-item">
+													<div class="tt-stte-card cursor-alter">
+														<div class="tt-stte-card-caption">
+															<div class="tt-stte-text">"One of the best template I've ever had. I love it! It's fully customizable, well coded, fast and responsive."</div>
+															<div class="tt-stte-subtext">- Wironimo</div>
+														</div>
+													</div>
+												</div>
+												<div class="tt-stte-item">
+													<div class="tt-stte-card cursor-alter">
+														<div class="tt-stte-card-caption">
+															<div class="tt-stte-text">"Brilliant template. Tons of options, many concepts, design flexibility, code quality."</div>
+															<div class="tt-stte-subtext">- Gneto</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="tt-ts-pagination swiper-pagination"></div>
 							</div>
 						</div>
 					</div>
 
-					<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120 border-top">
+					<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
 								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h2 class="tt-heading-title">Let's Work Together</h2></div></div> 
 								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
-									<div class="tt-big-round-ptn tt-anim-fadeinup">
-										<a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">Let's Connect!</div></a>
-									</div>
+									<div class="tt-big-round-ptn"><a href="contact.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">Let's Connect!</div></a></div>
 								</div>
 							</div>
 						</div> 
@@ -195,7 +214,7 @@
 					<div class="tt-footer-inner tt-wrap">
 						<div class="tt-row justify-content-center">
 							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="index.html" class="tt-link">Home</a></li></ul></div> 
-							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Home</h5><ul class="tt-footer-widget-list"><li><a href="portfolio.html" class="tt-link">Work</a></li><li><a href="about-me.html" class="tt-link">About</a></li></ul></div> 
+							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Sitemap</h5><ul class="tt-footer-widget-list"><li><a href="portfolio.html" class="tt-link">Work</a></li><li><a href="about-me.html" class="tt-link">About</a></li></ul></div> 
 							<div class="tt-col-xl-4 tt-col-sm-4 tt-footer-column-wrap"><h5 class="tt-footer-widget-heading">Contact</h5><ul class="tt-footer-widget-list">
 								<li><a href="mailto:minjaiworks@gmail.com" class="tt-link">Email</a></li>
 								<li><a href="https://www.instagram.com/min_jai_i" class="tt-link" target="_blank">Instagram</a></li>
