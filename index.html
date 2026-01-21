@@ -4,8 +4,6 @@
 		<title>Home | Jesper - Creative Portfolio Showcase HTML Website Template by Themetorium</title>
 
 		<meta charset="utf-8">
-		<meta name="description" content="Download Jesper - Creative Portfolio Showcase HTML Website Template that comes with rich features and well-commented code. Made by Themetorium.">
-		<meta name="author" content="themetorium.net">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -25,8 +23,13 @@
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 
 		<style>
-			/* 메뉴바 제거를 위한 추가 스타일 */
-			.tt-main-menu { display: none !important; }
+			/* 메뉴바 및 불필요 요소 강제 제거 */
+			.tt-main-menu, 
+			#tt-m-menu-toggle-btn-wrap, 
+			.tt-style-switch, 
+			.ph-social { 
+				display: none !important; 
+			}
 		</style>
 	</head>
 
@@ -64,12 +67,6 @@
 						<a href="contact.html" class="tt-btn tt-btn-secondary tt-magnetic-item">
 							<span data-hover="Contact">Contact</span>
 						</a>
-						<div class="tt-style-switch">
-							<div class="tt-style-switch-inner tt-magnetic-item">
-								<div class="tt-stsw-light"><i class="fas fa-sun"></i></div>
-								<div class="tt-stsw-dark"><i class="fas fa-moon"></i></div>
-							</div>
-						</div>
 					</div> 
 				</div> 
 			</header>
@@ -79,7 +76,7 @@
 				<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
 					<div class="ph-image ph-image-cover-2">
 						<div class="ph-image-inner">
-							<img src="assets/img/프로필.jpg" alt="Profile Image">
+							<img src="assets/img/profile.jpg" alt="Profile Image">
 						</div>
 					</div>
 						
@@ -118,7 +115,7 @@
 							<div class="tt-row">
 								<div class="tt-col-lg-3">
 									<div class="tt-image ttv-portrait ttv-grayscale">
-										<img src="assets/img/프로필.jpg" class="tt-anim-zoomin" alt="Profile Image">
+										<img src="assets/img/profile.jpg" class="tt-anim-zoomin" alt="Profile Image">
 									</div>
 									<div class="tt-text-uppercase margin-top-30 tt-text-reveal">Creative designer<br> based in Melbourne</div>
 								</div>
@@ -156,16 +153,6 @@
 											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Coffee Shop</h2><div class="pcli-category">Lifestyle</div></div></div>
 										</div>
 									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="tt-section no-padding">
-						<div class="tt-scrolling-text scrt-color-reverse" data-scroll-speed="6" data-change-direction="true">
-							<div class="tt-scrt-inner">
-								<div class="tt-scrt-content">
-									I Am Highly motivated <span class="tt-scrt-separator"><i class="fa-regular fa-face-smile"></i></span> 
 								</div>
 							</div>
 						</div>
@@ -210,7 +197,7 @@
 												<div class="tt-stte-item">
 													<div class="tt-stte-card cursor-alter">
 														<div class="tt-stte-card-caption">
-															<div class="tt-stte-text">"One of the best template I've ever had. I love it! It's fully customizable, well coded, fast and responsive."</div>
+															<div class="tt-stte-text">"One of the best template I've ever had. I love it!"</div>
 															<div class="tt-stte-subtext">- Wironimo</div>
 														</div>
 													</div>
@@ -223,12 +210,12 @@
 						</div>
 					</div>
 
-					<div id="contact-section" class="tt-section padding-top-xlg-120 padding-bottom-xlg-120">
+					<div id="contact-section" class="tt-section padding-top-xlg-120 padding-bottom-xlg-150">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
 								<div class="tt-col-xl-8">
 									<div class="tt-heading tt-heading-xxxlg no-margin">
-										<h2 class="tt-heading-title tt-text-reveal">Let's Work<br> Together</h2>
+										<h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2>
 									</div>
 								</div>
 								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
@@ -244,28 +231,6 @@
 
 				</div> 
 
-				<footer id="tt-footer" class="border-top">
-					<div class="tt-footer-inner tt-wrap">
-						<div class="tt-row">
-							<div class="tt-col-xl-6 tt-col-sm-6">
-								<div class="tt-footer-widget">
-									<h5 class="tt-footer-widget-heading">Contact</h5>
-									<ul class="tt-footer-widget-list">
-										<li><a href="mailto:company@email.com" class="tt-link">company@email.com</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="tt-col-xl-6 tt-col-sm-6 tt-justify-content-xl-end">
-								<div class="tt-footer-logo"> 
-									<a href="index.html" class="tt-magnetic-item">
-										<img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo">
-									</a>
-								</div> 
-							</div>
-						</div>
-					</div>
-				</footer>
-
 				<a href="#" class="tt-scroll-to-top">
 					<div class="tt-stt-progress tt-magnetic-item">
 						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg>
@@ -277,11 +242,8 @@
 
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
 		<script src="assets/vendor/gsap/gsap.min.js"></script> 
-		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
 		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> 
 		<script src="assets/vendor/lenis.min.js"></script> 
-		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
-		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
 		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
 		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
