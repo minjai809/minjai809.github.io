@@ -11,32 +11,24 @@
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet"> 
 
-		<link rel="stylesheet" href="./assets/vendor/fontawesome/css/all.min.css"> 
-		<link rel="stylesheet" href="./assets/vendor/fancybox/css/fancybox.css"> 
-		<link rel="stylesheet" href="./assets/vendor/swiper/css/swiper-bundle.min.css"> 
-		<link rel="stylesheet" href="./assets/css/helper.css">
-		<link rel="stylesheet" href="./assets/css/theme.css">
-		<link rel="stylesheet" href="./assets/css/theme-light.css">
+		<link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"> 
+		<link rel="stylesheet" href="assets/vendor/fancybox/css/fancybox.css"> 
+		<link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css"> 
+		<link rel="stylesheet" href="assets/css/helper.css">
+		<link rel="stylesheet" href="assets/css/theme.css">
+		<link rel="stylesheet" href="assets/css/theme-light.css">
 
 		<style>
-			/* 1. 메뉴바 등 불필요한 요소 제거 */
+			/* UI 제거 및 스타일 고정 */
 			.tt-main-menu, #tt-m-menu-toggle-btn-wrap, .tt-style-switch, .ph-social { display: none !important; }
+			.ph-caption-title, .tt-heading-title, .tt-text-reveal, .text-xxlg, .pcli-title { color: #ffffff !important; }
 			
-			/* 2. 텍스트 색상 및 스타일 고정 */
-			.ph-caption-title, .tt-heading-title, .tt-text-reveal, .text-xxlg, .pcli-title { 
-				color: #ffffff !important; 
-			}
-			
-			/* 3. 메인 사진 위치 조절 (상단 노출) */
+			/* 이미지 위치 상단 고정 (민재님 요청 반영) */
 			#page-header .ph-image-inner img {
 				object-fit: cover;
 				object-position: top !important; 
 			}
-			
-			/* 4. 자기소개 옆 사진 상단 기준 정렬 */
-			.tt-image img {
-				object-position: top;
-			}
+			.tt-image img { object-position: top; }
 		</style>
 	</head>
 
@@ -48,7 +40,7 @@
 				<div class="tt-ptr-overlay-bottom tt-noise"></div>
 				<div class="tt-ptr-preloader">
 					<div class="tt-ptr-prel-content">
-						<img src="./assets/img/logo-light.png" class="tt-ptr-prel-image" alt="Logo">
+						<img src="assets/img/mj-logo.png" class="tt-ptr-prel-image" alt="Logo">
 					</div> 
 				</div> 
 			</div>
@@ -60,7 +52,8 @@
 					<div class="tt-header-col tt-header-col-left">
 						<div class="tt-logo"> 
 							<a href="index.html" class="tt-magnetic-item">
-								<img src="./assets/img/logo-light.png" class="tt-logo-light" alt="Logo">
+								<img src="assets/img/mj-logo.png" class="tt-logo-light" alt="Logo">
+								<img src="assets/img/mj-logo.png" class="tt-logo-dark" alt="Logo">
 							</a>
 						</div>
 					</div> 
@@ -75,10 +68,9 @@
 			<div id="tt-content-wrap">
 
 				<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
-					
 					<div class="ph-image ph-image-cover-2">
 						<div class="ph-image-inner">
-							<img src="./assets/img/profile.jpg" alt="Profile Image">
+							<img src="assets/img/profile.jpg" alt="Profile Image">
 						</div>
 					</div>
 					
@@ -115,7 +107,7 @@
 							<div class="tt-row">
 								<div class="tt-col-lg-4">
 									<div class="tt-image ttv-portrait ttv-grayscale">
-										<img src="./assets/img/profile.jpg" class="tt-anim-zoomin" alt="Profile Image">
+										<img src="assets/img/profile.jpg" class="tt-anim-zoomin" alt="Profile Image">
 									</div>
 									<div class="tt-text-uppercase margin-top-30 tt-text-reveal">
 										Scenographer<br>Creative Technologist<br>based in Seoul
@@ -138,10 +130,10 @@
 							</div>
 							<div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover margin-top-60">
 								<div class="pcli-inner">
-									<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="./assets/img/portfolio/project1.jpg" alt="mooniverse"></div></div><div class="pcli-caption"><h2 class="pcli-title">mooniverse</h2><div class="pcli-category">Physical theater</div></div></div></a>
-									<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="./assets/img/portfolio/project2.jpg" alt="Our planet"></div></div><div class="pcli-caption"><h2 class="pcli-title">Our planet</h2><div class="pcli-category">Play</div></div></div></a>
-									<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="./assets/img/portfolio/project3.jpg" alt="Buy, bye my X"></div></div><div class="pcli-caption"><h2 class="pcli-title">Buy, bye my X</h2><div class="pcli-category">Exhibition Performance</div></div></div></a>
-									<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="./assets/img/portfolio/project4.jpg" alt="Susim"></div></div><div class="pcli-caption"><h2 class="pcli-title">Susim</h2><div class="pcli-category">Audience-participatory exhibition</div></div></div></a>
+									<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project1.jpg" alt="mooniverse"></div></div><div class="pcli-caption"><h2 class="pcli-title">mooniverse</h2><div class="pcli-category">Physical theater</div></div></div></a>
+									<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project2.jpg" alt="Our planet"></div></div><div class="pcli-caption"><h2 class="pcli-title">Our planet</h2><div class="pcli-category">Play</div></div></div></a>
+									<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project3.jpg" alt="Buy, bye my X"></div></div><div class="pcli-caption"><h2 class="pcli-title">Buy, bye my X</h2><div class="pcli-category">Exhibition Performance</div></div></div></a>
+									<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/project4.jpg" alt="Susim"></div></div><div class="pcli-caption"><h2 class="pcli-title">Susim</h2><div class="pcli-category">Audience-participatory exhibition</div></div></div></a>
 								</div>
 							</div>
 						</div>
@@ -149,7 +141,9 @@
 
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle tt-text-reveal">What I Do</h3><h2 class="tt-heading-title tt-text-reveal">works</h2></div>
+							<div class="tt-row">
+								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle tt-text-reveal">What I Do</h3><h2 class="tt-heading-title tt-text-reveal">works</h2></div></div>
+							</div>
 							<div class="tt-horizontal-accordion tt-hac-row tt-hac-alter-hover tt-anim-fadeinup margin-top-60">
 								<div class="tt-hac-item cursor-alter">
 									<div class="tt-hac-item-inner">
@@ -206,21 +200,6 @@
 							</div>
 						</div>
 					</div>
-
-					<div id="contact-section" class="tt-section padding-top-xlg-120 padding-bottom-xlg-150">
-						<div class="tt-section-inner tt-wrap">
-							<div class="tt-row">
-								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h2 class="tt-heading-title tt-text-reveal">Let's Work Together</h2></div></div>
-								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
-									<div class="tt-big-round-ptn tt-anim-fadeinup">
-										<a href="contact.html" class="tt-btn-contact-fixed tt-magnetic-item">
-											<div class="tt-big-round-ptn-inner">Let's<br> Connect!</div>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div> 
 
 				<a href="#" class="tt-scroll-to-top">
@@ -231,15 +210,15 @@
 			</div>
 		</main>
 
-		<script src="./assets/vendor/jquery/jquery.min.js"></script> 
-		<script src="./assets/vendor/gsap/gsap.min.js"></script> 
-		<script src="./assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
-		<script src="./assets/vendor/gsap/ScrollTrigger.min.js"></script> 
-		<script src="./assets/vendor/lenis.min.js"></script> 
-		<script src="./assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
-		<script src="./assets/vendor/isotope/isotope.pkgd.min.js"></script> 
-		<script src="./assets/vendor/fancybox/js/fancybox.umd.js"></script> 
-		<script src="./assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
-		<script src="./assets/js/theme.js"></script>
+		<script src="assets/vendor/jquery/jquery.min.js"></script> 
+		<script src="assets/vendor/gsap/gsap.min.js"></script> 
+		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
+		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> 
+		<script src="assets/vendor/lenis.min.js"></script> 
+		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
+		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
+		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
+		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
+		<script src="assets/js/theme.js"></script>
 	</body>
 </html>
