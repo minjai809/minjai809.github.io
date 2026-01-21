@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Home | Jesper - Creative Portfolio Showcase HTML Website Template by Themetorium</title>
+		<title>Minjai Jung | Portfolio</title>
 
 		<meta charset="utf-8">
-		<meta name="description" content="Download Jesper - Creative Portfolio Showcase HTML Website Template that comes with rich features and well-commented code. Made by Themetorium.">
-		<meta name="author" content="themetorium.net">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,115 +20,94 @@
 		<link rel="stylesheet" href="assets/css/helper.css">
 		<link rel="stylesheet" href="assets/css/theme.css">
 
-		<link rel="stylesheet" href="assets/css/theme-light.css">
-
 		<style>
-			/* 메뉴바 제거를 위한 추가 스타일 */
+			/* 1. 모든 글자 흰색 고정 */
+			body, p, h1, h2, h3, h4, h5, h6, span, a, li, blockquote, 
+			.ph-caption-title, .ph-caption-description, .tt-heading-title, .tt-heading-subtitle,
+			.pcli-title, .pcli-category, .tt-link { 
+				color: #ffffff !important; 
+			}
+			.tt-btn-outline { color: #ffffff !important; border-color: #ffffff !important; }
+			.tt-btn-outline:hover { background: #ffffff !important; color: #000000 !important; }
+
+			/* 2. 비정형 MJ 로고 */
+			.mj-logo-blob {
+				display: inline-flex; align-items: center; justify-content: center;
+				width: 65px; height: 65px; border: 1.5px solid #ffffff;
+				font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 800;
+				color: #ffffff !important; text-decoration: none;
+				border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+				animation: blob-morph 8s infinite alternate; transition: all 0.5s ease;
+				text-align: center; padding: 0;
+			}
+			.mj-logo-blob span { display: block; line-height: 1; transform: translateY(4px); }
+			@keyframes blob-morph {
+				0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+				100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; }
+			}
+
+			/* 메뉴바 제거 */
 			.tt-main-menu { display: none !important; }
+			
+			/* Mask Interaction 블랙 반전 */
+			.ph-mask .ph-caption-title { color: #000000 !important; }
 		</style>
 	</head>
 
-	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
-
+	<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll tt-style-dark">
 		<main id="body-inner">
 
 			<div id="tt-page-transition">
 				<div class="tt-ptr-overlay-top tt-noise"></div>
 				<div class="tt-ptr-overlay-bottom tt-noise"></div>
-				<div class="tt-ptr-preloader">
-					<div class="tt-ptr-prel-content">
-						<img src="assets/img/logo-light.png" class="tt-ptr-prel-image" alt="Logo">
-					</div> 
-				</div> 
+				<div class="tt-ptr-preloader"><div class="tt-ptr-prel-content"><div class="mj-logo-blob" style="width: 100px; height: 100px; font-size: 2.5rem;"><span>MJ</span></div></div></div> 
 			</div>
 
-			<div id="magic-cursor">
-				<div id="ball"></div>
-			</div>
+			<div id="magic-cursor"><div id="ball"></div></div>
 
 			<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
 				<div class="tt-header-inner tt-noise"> 
-
 					<div class="tt-header-col tt-header-col-left">
-						<div class="tt-logo"> 
-							<a href="index.html" class="tt-magnetic-item">
-								<img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo">
-								<img src="assets/img/logo-dark.png" class="tt-logo-dark" alt="Logo">
-							</a>
-						</div>
-					</div> 
-
+						<div class="tt-logo"><a href="index.html" class="mj-logo-blob tt-magnetic-item"><span>MJ</span></a></div>
+					</div>
 					<div class="tt-header-col tt-header-col-right">
-						<a href="#contact-section" class="tt-btn tt-btn-secondary tt-magnetic-item">
-							<span data-hover="Contact">Contact</span>
-						</a>
-
-						<div class="tt-style-switch">
-							<div class="tt-style-switch-inner tt-magnetic-item">
-								<div class="tt-stsw-light"><i class="fas fa-sun"></i></div>
-								<div class="tt-stsw-dark"><i class="fas fa-moon"></i></div>
-							</div>
-						</div>
-					</div> 
-				</div> 
+						<a href="mailto:minjaiworks@gmail.com" class="tt-btn tt-btn-secondary tt-magnetic-item"><span data-hover="Contact">Contact</span></a>
+					</div>
+				</div>
 			</header>
 
 			<div id="tt-content-wrap">
-
 				<div id="page-header" class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
 					<div class="ph-video ph-video-grayscale ph-video-cover-1">
-						<div class="ph-video-inner">
-							<video loop muted autoplay playsinline preload="metadata" poster="assets/vids/1920/video-1-1920.jpg">
-								<source src="assets/vids/placeholder.mp4" data-src="assets/vids/1920/video-1-1920.mp4" type="video/mp4">
-								<source src="assets/vids/placeholder.webm" data-src="assets/vids/1920/video-1-1920.webm" type="video/webm">
-							</video>
-						</div>
+						<div class="ph-video-inner"><video loop muted autoplay playsinline preload="metadata"><source src="assets/vids/placeholder.mp4" type="video/mp4"></video></div>
 					</div>
-						
 					<div class="page-header-inner tt-wrap">
 						<div class="ph-caption">
 							<div class="ph-caption-inner">
-								<h1 class="ph-caption-title">Jesper<br> Dietrich</h1>
-								<div class="ph-caption-description max-width-700">Over 15 years of experience<br> in the design industry</div>
+								<h1 class="ph-caption-title">Minjai<br> Jung</h1>
+								<div class="ph-caption-description max-width-700">서울예술대학교 재학생</div>
 							</div>
 						</div>
 					</div> 
-
 					<div class="page-header-inner ph-mask">
 						<div class="ph-mask-inner tt-wrap">
-							<div class="ph-caption">
-								<div class="ph-caption-inner">
-									<h1 class="ph-caption-title">Digital<br> Designer</h1>
-									<div class="ph-caption-description max-width-700">Over 15 years of experience<br> in the design industry</div>
-								</div>
-							</div>
+							<div class="ph-caption"><div class="ph-caption-inner"><h1 class="ph-caption-title">Scenographer &<br> Creative Technologist</h1></div></div>
 						</div>
 					</div>
-
-					<div class="tt-scroll-down">
-						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
-							<div class="tt-scrd-icon"></div>
-							<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
-						</a>
-					</div>
+					<div class="tt-scroll-down"><a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item"><div class="tt-scrd-icon"></div></a></div>
 				</div>
 
 				<div id="tt-page-content">
-
 					<div class="tt-section padding-top-xlg-140 padding-bottom-xlg-120 border-top">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
-								<div class="tt-col-lg-3">
-									<div class="tt-video ttv-portrait ttv-grayscale">
-										<video playsinline muted autoplay loop preload="metadata" poster="assets/vids/800/video-1-800.jpg">
-											<source src="assets/vids/placeholder.mp4" data-src="assets/vids/800/video-1-800.mp4" type="video/mp4">
-										</video>
-									</div>
-									<div class="tt-text-uppercase margin-top-30 tt-text-reveal">Creative designer<br> based in Melbourne</div>
+								<div class="tt-col-lg-4">
+									<div class="tt-image ttv-portrait"><img src="assets/img/portfolio/800/portfolio-1.jpg" class="tt-anim-zoomin" alt="Minjai Jung"></div>
+									<div class="tt-text-uppercase margin-top-30">Scenographer, Creative Technologist<br> based in Seoul</div>
 								</div>
-								<div class="tt-col-lg-1 padding-top-30"></div>
-								<div class="tt-col-lg-8 tt-align-self-center">
-									<div class="text-xxlg font-500 tt-text-reveal">I am dedicated to developing innovative solutions and impactful experiences that meet user needs and exceed expectations.</div>
+								<div class="tt-col-lg-1"></div>
+								<div class="tt-col-lg-7 tt-align-self-center">
+									<div class="text-xxlg font-500">I am dedicated to developing innovative solutions and impactful experiences through visual art and technology.</div>
 								</div> 
 							</div>
 						</div>
@@ -139,92 +115,41 @@
 
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-row">
-								<div class="tt-col-xl-8">
-									<div class="tt-heading tt-heading-xxxlg">
-										<h3 class="tt-heading-subtitle tt-text-reveal">Featured Work</h3>
-										<h2 class="tt-heading-title tt-text-reveal">Projects</h2>
-									</div>
-								</div>
-							</div>
+							<div class="tt-heading tt-heading-xxxlg"><h3 class="tt-heading-subtitle">Featured Work</h3><h2 class="tt-heading-title">Projects</h2></div>
 							<div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover margin-top-60">
 								<div class="pcli-inner">
-									<a href="#" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project">
-										<div class="pcli-item-inner">
-											<div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" alt="Image"></div></div>
-											<div class="pcli-col pcli-col-count"><div class="pcli-count"></div></div>
-											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Tortillas</h2><div class="pcli-category">Lifestyle</div></div></div>
-										</div>
-									</a>
-									<a href="#" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project">
-										<div class="pcli-item-inner">
-											<div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" alt="Image"></div></div>
-											<div class="pcli-col pcli-col-count"><div class="pcli-count"></div></div>
-											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Coffee Shop</h2><div class="pcli-category">Lifestyle</div></div></div>
-										</div>
-									</a>
-									<a href="#" class="pcli-item tt-anim-fadeinup" data-cursor="View<br>Project">
-										<div class="pcli-item-inner">
-											<div class="pcli-col pcli-col-image"><div class="pcli-video"><video loop muted preload="metadata"><source src="assets/vids/placeholder.mp4" data-src="assets/vids/800/video-4-800.mp4" type="video/mp4"></video></div></div>
-											<div class="pcli-col pcli-col-count"><div class="pcli-count"></div></div>
-											<div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Fashion Shoot</h2><div class="pcli-category">Artistic</div></div></div>
-										</div>
-									</a>
+									<a href="#" class="pcli-item" onclick="return false;"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-count"><div class="pcli-count"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 01</h2><div class="pcli-category">Scenography</div></div></div></div></a>
+									<a href="#" class="pcli-item" onclick="return false;"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" alt="Image"></div></div><div class="pcli-col pcli-col-count"><div class="pcli-count"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Project Title 02</h2><div class="pcli-category">Creative Tech</div></div></div></div></a>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<div class="tt-section no-padding">
-						<div class="tt-scrolling-text scrt-color-reverse" data-scroll-speed="6" data-change-direction="true">
-							<div class="tt-scrt-inner">
-								<div class="tt-scrt-content">
-									I Am Highly motivated <span class="tt-scrt-separator"><i class="fa-regular fa-face-smile"></i></span> 
-								</div>
-							</div>
+						<div class="tt-scrolling-text scrt-color-reverse" data-scroll-speed="10">
+							<div class="tt-scrt-inner"><div class="tt-scrt-content">Believe in the power of immersive experiences • Technology as an extension of Art • </div></div>
 						</div>
 					</div>
 
 					<div class="tt-section padding-top-xlg-140 border-top">
 						<div class="tt-section-inner tt-wrap">
-							<div class="tt-heading tt-heading-xxxlg">
-								<h3 class="tt-heading-subtitle tt-text-reveal">What I Do</h3>
-								<h2 class="tt-heading-title tt-text-reveal">Services</h2>
-							</div>
+							<div class="tt-heading tt-heading-xxxlg"><h2 class="tt-heading-title">What I Do</h2></div>
 							<div class="tt-horizontal-accordion tt-hac-alter-hover tt-anim-fadeinup margin-top-60">
 								<div class="tt-hac-item cursor-alter">
 									<div class="tt-hac-item-inner">
 										<div class="tt-hac-item-content">
-											<div class="tt-haci-content-top">
-												<h2 class="tt-haci-title">Digital Strategy</h2>
-												<div class="tt-haci-description">Crafting data-driven strategies to elevate your online presence.</div>
-											</div>
+											<div class="tt-haci-content-top"><h2 class="tt-haci-title">Digital Strategy</h2><div class="tt-haci-description">Designing immersive digital strategies for spatial environments.</div></div>
 										</div>
 									</div>
 								</div>
 								<div class="tt-hac-item cursor-alter">
 									<div class="tt-hac-item-inner">
 										<div class="tt-hac-item-content">
-											<div class="tt-haci-content-top">
-												<h2 class="tt-haci-title">UI / UX Design</h2>
-												<div class="tt-haci-description">Designing intuitive and engaging experiences.</div>
-											</div>
+											<div class="tt-haci-content-top"><h2 class="tt-haci-title">Media Design</h2><div class="tt-haci-description">Creating dynamic visual content for stages.</div></div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-
-					<div class="tt-section no-padding-top border-top">
-						<div class="tt-clipper">
-							<a href="https://www.youtube.com/watch?v=6nGs9iGrpok" class="tt-clipper-inner" data-cursor="Play<br>Reel" data-fancybox data-caption="My awesome showreel. :)">
-								<div class="tt-clipper-bg">
-									<video loop muted autoplay playsinline preload="metadata" poster="assets/vids/1920/showreel-1920.jpg">
-										<source src="assets/vids/placeholder.mp4" data-src="assets/vids/1920/showreel-1920.mp4" type="video/mp4">
-									</video>
-								</div>
-							</a>
 						</div>
 					</div>
 
@@ -235,22 +160,14 @@
 									<div class="tt-col-lg-4 margin-bottom-40">
 										<div class="tt-sticker-sticky tt-sticky-element">
 											<div class="tt-heading tt-heading-xxlg">
-												<h3 class="tt-heading-subtitle tt-text-reveal">Testimonials</h3>
-												<h2 class="tt-heading-title tt-text-reveal">What They Say</h2>
+												<h2 class="tt-heading-title">What They Say</h2>
 											</div>
 										</div>
 									</div>
 									<div class="tt-col-lg-8">
 										<div class="tt-sticker-scroller">
 											<div class="tt-sticky-testimonials tt-stte-reversed-colors">
-												<div class="tt-stte-item">
-													<div class="tt-stte-card cursor-alter">
-														<div class="tt-stte-card-caption">
-															<div class="tt-stte-text">"One of the best template I've ever had. I love it! It's fully customizable, well coded, fast and responsive."</div>
-															<div class="tt-stte-subtext">- Wironimo</div>
-														</div>
-													</div>
-												</div>
+												<div class="tt-stte-item"><div class="tt-stte-card cursor-alter"><div class="tt-stte-card-caption"><div class="tt-stte-text">"Minjai's technical precision is remarkable."</div><div class="tt-stte-subtext">- Partner</div></div></div></div>
 											</div>
 										</div>
 									</div>
@@ -259,48 +176,17 @@
 						</div>
 					</div>
 
-					<div id="contact-section" class="tt-section padding-top-xlg-120 padding-bottom-xlg-120">
+					<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-150">
 						<div class="tt-section-inner tt-wrap">
 							<div class="tt-row">
-								<div class="tt-col-xl-8">
-									<div class="tt-heading tt-heading-xxxlg no-margin">
-										<h2 class="tt-heading-title tt-text-reveal">Let's Work<br> Together</h2>
-									</div>
-								</div>
+								<div class="tt-col-xl-8"><div class="tt-heading tt-heading-xxxlg no-margin"><h2 class="tt-heading-title">Let's Work Together</h2></div></div> 
 								<div class="tt-col-xl-4 tt-align-self-end margin-top-40">
-									<div class="tt-big-round-ptn tt-anim-fadeinup">
-										<a href="mailto:company@email.com" class="tt-big-round-ptn-holder tt-magnetic-item">
-											<div class="tt-big-round-ptn-inner">Let's<br> Connect!</div>
-										</a>
-									</div>
+									<div class="tt-big-round-ptn"><a href="mailto:minjaiworks@gmail.com" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">Let's Connect!</div></a></div>
 								</div>
 							</div>
-						</div>
+						</div> 
 					</div>
-
 				</div> 
-
-				<footer id="tt-footer" class="border-top">
-					<div class="tt-footer-inner tt-wrap">
-						<div class="tt-row">
-							<div class="tt-col-xl-6 tt-col-sm-6">
-								<div class="tt-footer-widget">
-									<h5 class="tt-footer-widget-heading">Contact</h5>
-									<ul class="tt-footer-widget-list">
-										<li><a href="mailto:company@email.com" class="tt-link">company@email.com</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="tt-col-xl-6 tt-col-sm-6 tt-justify-content-xl-end">
-								<div class="tt-footer-logo"> 
-									<a href="index.html" class="tt-magnetic-item">
-										<img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo">
-									</a>
-								</div> 
-							</div>
-						</div>
-					</div>
-				</footer>
 
 				<a href="#" class="tt-scroll-to-top">
 					<div class="tt-stt-progress tt-magnetic-item">
@@ -313,14 +199,10 @@
 
 		<script src="assets/vendor/jquery/jquery.min.js"></script> 
 		<script src="assets/vendor/gsap/gsap.min.js"></script> 
-		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> 
 		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> 
 		<script src="assets/vendor/lenis.min.js"></script> 
-		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> 
-		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> 
 		<script src="assets/vendor/fancybox/js/fancybox.umd.js"></script> 
 		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> 
 		<script src="assets/js/theme.js"></script>
-
 	</body>
 </html>
