@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="assets/css/theme.css">
 
 		<style>
-			/* 1. 비정형 MJ 로고 */
+			/* 1. 비정형 MJ 로고 (세로축 중앙 보정) */
 			.mj-logo-blob { display: flex; align-items: center; justify-content: center; width: 65px; height: 65px; border: 1.5px solid #ffffff; font-family: 'Big Shoulders Display', sans-serif; font-size: 1.6rem; font-weight: 800; color: #ffffff !important; text-decoration: none; border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; animation: blob-morph 8s infinite alternate; transition: all 0.5s ease; text-align: center; padding: 0; }
 			.mj-logo-blob span { display: block; line-height: 1; transform: translateY(4px); }
 			@keyframes blob-morph { 0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; } 100% { border-radius: 60% 40% 30% 70% / 55% 55% 45% 45%; } }
@@ -25,19 +25,16 @@
 			/* 2. 히어로 마스크 텍스트 */
 			.ph-mask-inner .ph-caption-title { font-size: 3.5vw !important; line-height: 1.2; font-weight: 600; text-transform: uppercase; }
 
-			/* 3. 흘러가는 텍스트 (Placard) */
-			.tt-scrolling-text { padding: 40px 0; background: #fff; color: #000; font-weight: 700; text-transform: uppercase; }
+			/* 3. Skill Bar (White) */
+			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
+			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
+			.skill-bar-inner { height: 100%; background: #ffffff !important; transition: width 1.5s ease-in-out; }
 
 			/* 4. Footer Styling (Large & Centered) */
 			.tt-footer-column-wrap { text-align: center; }
 			.tt-footer-widget-heading { font-size: 3.2rem !important; margin-bottom: 30px; font-weight: 800; letter-spacing: -1px; color: #fff; font-family: 'Big Shoulders Display', sans-serif; text-transform: uppercase; }
 			.tt-footer-widget-list li a { font-size: 1.1rem; opacity: 0.7; transition: opacity 0.3s ease; }
-			
-			/* 5. Skill Bar (White) */
-			.skill-container { width: 100%; display: flex; align-items: center; margin-bottom: 30px; }
-			.skill-label { width: 180px; font-family: 'Poppins', sans-serif; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
-			.skill-bar-outer { flex-grow: 1; height: 12px; border: 1px solid #ffffff !important; position: relative; background: transparent; }
-			.skill-bar-inner { height: 100%; background: #ffffff !important; transition: width 1.5s ease-in-out; }
 		</style>
 	</head>
 
@@ -90,17 +87,50 @@
 						<div class="tt-row">
 							<div class="tt-col-lg-4">
 								<div class="tt-image ttv-portrait"><img src="assets/img/portfolio/800/portfolio-1.jpg" class="tt-anim-zoomin" alt="Minjai Jung"></div>
+								<div class="tt-text-uppercase margin-top-30 tt-text-reveal">Seoul-based Scenographer</div>
 							</div>
 							<div class="tt-col-lg-1"></div>
 							<div class="tt-col-lg-7 tt-align-self-center">
-								<h2 class="tt-heading-title tt-text-reveal">Seoul-based Scenographer</h2>
-								<div class="text-xxlg font-500 tt-text-reveal margin-top-30">
+								<div class="text-xxlg font-500 tt-text-reveal">
 									I create immersive spaces where technology meets art. My goal is to deliver unforgettable experiences through visual sophistication and technical precision.
 								</div>
 								<a href="about-me.html" class="tt-btn tt-btn-outline margin-top-40 tt-magnetic-item tt-anim-fadeinup"><span data-hover="More About Me">More About Me</span></a>
 							</div> 
 						</div>
 					</div> 
+				</div>
+
+				<div class="tt-section padding-top-xlg-140 border-top">
+					<div class="tt-section-inner tt-wrap">
+						<div class="tt-row">
+							<div class="tt-col-xl-8">
+								<div class="tt-heading tt-heading-xxxlg">
+									<h3 class="tt-heading-subtitle tt-text-reveal">Selected Work</h3>
+									<h2 class="tt-heading-title tt-text-reveal">Projects</h2>
+									<div class="tt-heading-description max-width-600 tt-text-reveal">
+										A short summary of my featured work. Bringing vision to life through innovative stagecraft.
+									</div>
+								</div>
+							</div> 
+							<div class="tt-col-xl-4 tt-align-self-end margin-top-30"><div class="tt-big-round-ptn tt-anim-fadeinup"><a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">All Projects</div></a></div></div> 
+						</div>
+					</div> 
+				</div>
+				<div class="tt-section"><div class="tt-section-inner max-width-2200"><div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover"><div class="pcli-inner">
+					<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 01</h2><div class="pcli-categories"><div class="pcli-category">Scenography</div></div></div></div></div></a>
+					<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 02</h2><div class="pcli-categories"><div class="pcli-category">Media Art</div></div></div></div></div></a>
+					<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-3.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 03</h2><div class="pcli-categories"><div class="pcli-category">Creative Tech</div></div></div></div></div></a>
+					<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-4.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 04</h2><div class="pcli-categories"><div class="pcli-category">Installation</div></div></div></div></div></a>
+					<a href="single-project-5.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-5.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 05</h2><div class="pcli-categories"><div class="pcli-category">Stage Design</div></div></div></div></div></a>
+					<a href="single-project-6.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 06</h2><div class="pcli-categories"><div class="pcli-category">Live Visuals</div></div></div></div></div></a>
+				</div></div></div></div>
+
+				<div class="tt-section no-padding-bottom">
+					<div class="tt-scrolling-text scr-text-font-alter" data-scroll-speed="10">
+						<div class="tt-scrolling-text-inner" data-text="Believe in the power of immersive experiences • Technology as an extension of Art • Stay Hungry Stay Foolish • ">
+							Believe in the power of immersive experiences • Technology as an extension of Art • Stay Hungry Stay Foolish •
+						</div>
+					</div>
 				</div>
 
 				<div class="tt-section padding-top-xlg-140 border-top">
@@ -115,14 +145,6 @@
 							</div> 
 						</div>
 					</div> 
-				</div>
-
-				<div class="tt-section no-padding-bottom">
-					<div class="tt-scrolling-text scr-text-font-alter" data-scroll-speed="10">
-						<div class="tt-scrolling-text-inner" data-text="Believe in the power of immersive experiences • Technology as an extension of Art • Stay Hungry Stay Foolish • ">
-							Believe in the power of immersive experiences • Technology as an extension of Art • Stay Hungry Stay Foolish •
-						</div>
-					</div>
 				</div>
 
 				<div class="tt-section padding-top-xlg-140 border-top">
@@ -140,36 +162,11 @@
 					</div>
 				</div>
 
-				<div class="tt-section padding-top-xlg-140 border-top">
-					<div class="tt-section-inner tt-wrap">
-						<div class="tt-row">
-							<div class="tt-col-xl-8">
-								<div class="tt-heading tt-heading-xxxlg">
-									<h3 class="tt-heading-subtitle tt-text-reveal">Selected Work</h3>
-									<h2 class="tt-heading-title tt-text-reveal">Projects</h2>
-									<div class="tt-heading-description max-width-600 tt-text-reveal">
-										A collection of projects bridging the gap between technical experiments and visual artistry.
-									</div>
-								</div>
-							</div> 
-							<div class="tt-col-xl-4 tt-align-self-end margin-top-30"><div class="tt-big-round-ptn tt-anim-fadeinup"><a href="portfolio.html" class="tt-big-round-ptn-holder tt-magnetic-item"><div class="tt-big-round-ptn-inner">All Projects</div></a></div></div> 
-						</div>
-					</div> 
-				</div>
-				<div class="tt-section"><div class="tt-section-inner max-width-2200"><div class="tt-portfolio-compact-list pcl-caption-hover pcl-image-hover"><div class="pcli-inner">
-					<a href="single-project-1.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 01</h2><div class="pcli-categories"><div class="pcli-category">Scenography</div></div></div></div></div></a>
-					<a href="single-project-2.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-2.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 02</h2><div class="pcli-categories"><div class="pcli-category">Media Art</div></div></div></div></div></a>
-					<a href="single-project-3.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-3.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 03</h2><div class="pcli-categories"><div class="pcli-category">Creative Tech</div></div></div></div></div></a>
-					<a href="single-project-4.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-4.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 04</h2><div class="pcli-categories"><div class="pcli-category">Installation</div></div></div></div></div></a>
-					<a href="single-project-5.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-5.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 05</h2><div class="pcli-categories"><div class="pcli-category">Stage Design</div></div></div></div></div></a>
-					<a href="single-project-6.html" class="pcli-item tt-anim-fadeinup" data-cursor="View"><div class="pcli-item-inner"><div class="pcli-col pcli-col-image"><div class="pcli-image"><img src="assets/img/portfolio/800/portfolio-1.jpg" loading="lazy" alt="Image"></div></div><div class="pcli-col pcli-col-caption"><div class="pcli-caption"><h2 class="pcli-title">Featured Project 06</h2><div class="pcli-categories"><div class="pcli-category">Live Visuals</div></div></div></div></div></a>
-				</div></div></div></div>
-
 				<div class="tt-section padding-top-xlg-140 padding-bottom-xlg-140 border-top">
 					<div class="tt-section-inner tt-wrap">
 						<div class="tt-heading tt-heading-xxlg margin-bottom-60">
 							<h3 class="tt-heading-subtitle tt-text-reveal">Mindset</h3>
-							<h2 class="tt-heading-title tt-text-reveal">Philosophy</h2>
+							<h2 class="tt-heading-title tt-text-reveal">Words</h2>
 						</div>
 						<div class="tt-testimonials-slider swiper-container tt-anim-fadeinup" data-speed="1000" data-autoplay="5000">
 							<div class="swiper-wrapper">
