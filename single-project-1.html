@@ -21,13 +21,9 @@
 		<link rel="stylesheet" href="assets/css/theme-light.css">
 
 		<style>
-			/* 요청하신 메뉴바, 다크모드 스위치, 공유 버튼, 푸터 제거 */
-			.tt-main-menu, #tt-m-menu-toggle-btn-wrap, .tt-style-switch, .ph-share, #tt-footer, .ph-social { 
+			/* UI 제거용 스타일 */
+			.tt-main-menu, #tt-m-menu-toggle-btn-wrap, .tt-style-switch, .ph-share, #tt-footer { 
 				display: none !important; 
-			}
-			/* 텍스트 색상 고정 (메인 페이지와 통일) */
-			.ph-caption-title, .tt-heading-title, .tt-text-reveal, .text-xxlg { 
-				color: #ffffff !important; 
 			}
 		</style>
 	</head>
@@ -59,7 +55,7 @@
 					</div> 
 
 					<div class="tt-header-col tt-header-col-right">
-						<a href="contact.html" class="tt-btn tt-btn-secondary tt-magnetic-item">
+						<a href="contact.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item">
 							<span data-hover="Contact">Contact</span>
 						</a>
 					</div> 
@@ -88,6 +84,7 @@
 					<div class="tt-scroll-down">
 						<a href="#tt-page-content" class="tt-scroll-down-inner tt-magnetic-item">
 							<div class="tt-scrd-icon"></div>
+							<svg viewBox="0 0 500 500"><defs><path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path></defs><text dy="30"><textPath xlink:href="#textcircle">Scroll to Explore - Scroll to Explore -</textPath></text></svg>
 						</a>
 					</div>
 				</div>
@@ -101,12 +98,10 @@
 										<h2 class="tt-heading-title tt-text-reveal">About the<br> Project</h2>
 									</div>
 								</div> 
-
 								<div class="tt-col-lg-8">
 									<div class="tt-anim-fadeinup">
 										<p>Whole every miles as tiled at seven or. Wished he entire esteem mr oh by. Possible bed you pleasure civility boy elegance ham. He prevent request by if in pleased. Picture too and concern has was comfort. Ten difficult resembled eagerness nor. Same park bore on be. Warmth his law design say are person. Welcomed humoured rejoiced.</p>
 									</div>
-
 									<div class="tt-project-info-list tt-pil-inline tt-anim-fadeinup margin-top-40">
 										<ul>
 											<li><div class="pi-list-heading">Client</div><div class="pi-list-cont">Themetorium</div></li>
@@ -133,20 +128,44 @@
 
 					<div class="tt-section">
 						<div class="tt-section-inner tt-wrap">
+							<div class="tt-row">
+								<div class="tt-col-lg-9">
+									<div class="text-xxlg tt-text-reveal">Creepeth upon after face. Fish subdue won't third. Brought appear earth abundantly lights you're appear. Kind without in moved, stars shall unto it.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tt-section">
+						<div class="tt-section-inner tt-wrap">
 							<div class="tt-gallery ttga-hover">
 								<div class="tt-grid ttgr-layout-2 ttgr-gap-2">
 									<div class="tt-grid-items-wrap isotope-items-wrap">
 										<div class="tt-grid-item isotope-item">
 											<div class="ttgr-item-inner">
-												<a href="assets/img/portfolio/single-project/project-1/1920/project-1-2.jpg" class="tt-gallery-item" data-cursor="View" data-fancybox="gallery-459719">
+												<a href="assets/img/portfolio/single-project/project-1/1920/project-1-2.jpg" class="tt-gallery-item" data-cursor="View" data-fancybox="gallery">
 													<div class="tt-gallery-item-inner"><div class="tt-gallery-image-wrap tt-anim-zoomin"><figure class="tt-gallery-image ttgr-height"><img src="assets/img/portfolio/single-project/project-1/1200/project-1-2.jpg" loading="lazy" alt="image"></figure></div></div>
 												</a>
 											</div>
 										</div>
 										<div class="tt-grid-item isotope-item">
 											<div class="ttgr-item-inner">
-												<a href="assets/img/portfolio/single-project/project-1/1920/project-1-3.jpg" class="tt-gallery-item" data-cursor="View" data-fancybox="gallery-459719">
+												<a href="assets/img/portfolio/single-project/project-1/1920/project-1-3.jpg" class="tt-gallery-item" data-cursor="View" data-fancybox="gallery">
 													<div class="tt-gallery-item-inner"><div class="tt-gallery-image-wrap tt-anim-zoomin"><figure class="tt-gallery-image ttgr-height"><img src="assets/img/portfolio/single-project/project-1/1200/project-1-3.jpg" loading="lazy" alt="image"></figure></div></div>
+												</a>
+											</div>
+										</div>
+										<div class="tt-grid-item isotope-item">
+											<div class="ttgr-item-inner">
+												<a href="assets/img/portfolio/single-project/project-1/1920/project-1-4.jpg" class="tt-gallery-item" data-cursor="View" data-fancybox="gallery">
+													<div class="tt-gallery-item-inner"><div class="tt-gallery-image-wrap tt-anim-zoomin"><figure class="tt-gallery-image ttgr-height"><img src="assets/img/portfolio/single-project/project-1/1200/project-1-4.jpg" loading="lazy" alt="image"></figure></div></div>
+												</a>
+											</div>
+										</div>
+										<div class="tt-grid-item isotope-item">
+											<div class="ttgr-item-inner">
+												<a href="assets/img/portfolio/single-project/project-1/1920/project-1-5.jpg" class="tt-gallery-item" data-cursor="View" data-fancybox="gallery">
+													<div class="tt-gallery-item-inner"><div class="tt-gallery-image-wrap tt-anim-zoomin"><figure class="tt-gallery-image ttgr-height"><img src="assets/img/portfolio/single-project/project-1/1200/project-1-5.jpg" loading="lazy" alt="image"></figure></div></div>
 												</a>
 											</div>
 										</div>
@@ -162,7 +181,7 @@
 								<div class="tt-row">
 									<div class="tt-col-md-7">
 										<div class="tt-next-project-caption">
-											<div class="tt-np-top tt-anim-fadeinup"><a href="portfolio.html" class="tt-btn tt-btn-link"><span data-hover="All Works">All Works</span><span class="tt-btn-icon"><i class="fas fa-arrow-right"></i></span></a></div>
+											<div class="tt-np-top tt-anim-fadeinup"><a href="index.html" class="tt-btn tt-btn-link"><span data-hover="All Works">All Works</span><span class="tt-btn-icon"><i class="fas fa-arrow-right"></i></span></a></div>
 											<h3 class="tt-np-title tt-text-reveal">Next<br> Project</h3>
 										</div>
 									</div> 
@@ -180,9 +199,7 @@
 
 				<a href="#" class="tt-scroll-to-top">
 					<div class="tt-stt-progress tt-magnetic-item">
-						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
-							<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
-						</svg>
+						<svg class="tt-stt-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg>
 					</div> 
 				</a>
 			</div>
